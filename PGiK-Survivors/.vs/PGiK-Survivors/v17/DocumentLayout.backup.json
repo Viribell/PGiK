@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\worldscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\worldscroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\abstract\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\abstract\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\interacttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interacttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorldScroll.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\WorldScroll.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WorldScroll.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\WorldScroll.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WorldScroll.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T19:19:53.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMove.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T19:02:38.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InteractTest.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\InteractTest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractTest.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\InteractTest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InteractTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T18:30:50.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerInteract.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerInteract.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInteract.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerInteract.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInteract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T18:16:04.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Interactable.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Abstract\\Interactable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Abstract\\Interactable.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Abstract\\Interactable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Abstract\\Interactable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T18:14:13.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraFollow.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraFollow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T18:09:52.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameInput.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\GameInput.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameInput.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\GameInput.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T17:30:20.614Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
