@@ -1,85 +1,96 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class WorldScroll : MonoBehaviour {
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private int tileHorizontalCount;
-    [SerializeField] private int tileVerticalCount;
     [SerializeField] private float tileSize = 20.0f;
-    [SerializeField] private Vector2Int playerTilePos;
-    [SerializeField] private int fovHeight = 3;
-    [SerializeField] private int fovWidth = 3;
 
-    private Vector2Int currentTilePos;
-    private Vector2Int tileGridPos;
+    [SerializeField] private Vector2 lastPlayerPos;
+    [SerializeField] private Vector2 lastTilePos;
+    [SerializeField] private float tileUpdateDistance;
 
-    private GameObject[,] tiles;
-
+    private List<GameObject> tiles;
 
     private void Awake() {
-        tiles = new GameObject[tileHorizontalCount, tileVerticalCount];
-        currentTilePos = new Vector2Int( 0, 0 );
+        tiles = new List<GameObject>();
+
+
+        lastPlayerPos = playerTransform.position;
+        lastTilePos = GetTileCoords( playerTransform.position );
+
+        if( tileUpdateDistance == default ) tileUpdateDistance = 5;
     }
 
     private void Update() {
-        playerTilePos.x = ( int )( playerTransform.position.x / (tileSize / 2) );
-        playerTilePos.y = ( int )( playerTransform.position.y / (tileSize / 2 ) );
-
-        playerTilePos.x -= playerTransform.position.x < 0 ? 1 : 0;
-        playerTilePos.y -= playerTransform.position.y < 0 ? 1 : 0;
-
-        if ( currentTilePos != playerTilePos ) {
-            currentTilePos = playerTilePos;
-
-            tileGridPos.x = CalculateWrapPos( tileGridPos.x, true );
-            tileGridPos.y = CalculateWrapPos( tileGridPos.y, false );
-
-            UpdateTiles();
-        }
+        CheckForUpdate();
     }
 
-    private int CalculateWrapPos(float currVal, bool horizontal) {
-        if( horizontal ) {
-            if( currVal >= 0 ) {
-                currVal = currVal % tileHorizontalCount;
+    private void CheckForUpdate() {
+        if ( Vector2.Distance( playerTransform.position, lastPlayerPos ) > tileUpdateDistance ) {
+            lastPlayerPos = playerTransform.position;
+            Vector2 currTilePos = GetTileCoords( playerTransform.position );
 
-            } else {
-                currVal++;
-                currVal = tileHorizontalCount + currVal % tileHorizontalCount;
-            }
-
-        } else {
-            if ( currVal >= 0 ) {
-                currVal = currVal % tileVerticalCount;
-
-            } else {
-                currVal++;
-                currVal = tileVerticalCount + currVal % tileVerticalCount;
-            }
-        }
-
-        return (int)currVal;
-    }
-
-    private void UpdateTiles() {
-        for(int i = -(fovWidth/2); i <= fovWidth/2; i++ ) {
-            for(int j = -(fovHeight/2); j <= fovHeight/2; j++ ) {
-                int tileUpdateX = CalculateWrapPos( playerTilePos.x + i, true );
-                int tileUpdateY = CalculateWrapPos( playerTilePos.y + j, false );
-
-                GameObject tile = tiles[tileUpdateX, tileUpdateY];
-                tile.transform.position = CalculateTile(playerTilePos.x + i, playerTilePos.y + j);
+            if ( currTilePos != lastTilePos ) {
+                UpdateTiles( currTilePos );
+                lastTilePos = currTilePos;
             }
         }
     }
 
-    private Vector2 CalculateTile(int x, int y) {
-        return new Vector2(x * tileSize, y * tileSize);
+    private void UpdateTiles(Vector2 playerTile) {
+        List<GameObject> activeTiles = new List<GameObject>();
+        List<GameObject> freeTiles = new List<GameObject>();
+
+        for ( int i = -2; i <= 1; i++ ) {
+            for ( int j = -2; j <= 1; j++ ) {
+                Vector2 tileCoords = new Vector2( playerTile.x + i, playerTile.y + j );
+                GameObject tile = TileExistsAt( tileCoords );
+
+                if ( tile != null ) activeTiles.Add( tile );
+
+            }
+        }
+
+        foreach(GameObject tile in tiles) {
+            if ( activeTiles.IndexOf( tile ) >= 0 ) continue;
+            freeTiles.Add( tile );
+        }
+
+        for ( int i = -2; i <= 1; i++ ) {
+            for ( int j = -2; j <= 1; j++ ) {
+                Vector2 tileCoords = new Vector2( playerTile.x + i, playerTile.y + j );
+
+                if( !TileExistsAt(tileCoords) ) {
+                    Vector2 newPos = new Vector2( tileCoords.x * tileSize, tileCoords.y * tileSize );
+                    if( freeTiles.Count > 0 ) {
+                        freeTiles[0].transform.position = newPos;
+                        freeTiles.RemoveAt( 0 );
+                    }
+                }
+            }
+        }
+    }
+    
+    private Vector2 GetTileCoords(Vector2 pos) {
+        int tileX =  (int)(pos.x / tileSize );
+        int tileY = (int)(pos.y / tileSize );
+
+        return new Vector2( tileX, tileY );
     }
 
+    private GameObject TileExistsAt(Vector2 tileCoords) {
+        foreach(GameObject tile in tiles) {
+            Vector2 pos = tile.transform.position;
+            if ( pos.x == tileCoords.x * tileSize && pos.y == tileCoords.y * tileSize ) return tile;
+        }
+        
+        return null;
+    }
 
-    public void Add(GameObject tileObject, Vector2Int tilePos) {
-        tiles[tilePos.x, tilePos.y] = tileObject;
+    public void Add( GameObject tileObject ) {
+        tiles.Add( tileObject );
     }
 }
