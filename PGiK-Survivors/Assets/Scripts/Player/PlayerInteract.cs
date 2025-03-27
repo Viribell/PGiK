@@ -22,6 +22,8 @@ public class PlayerInteract : MonoBehaviour {
 
         if ( GameInput.Instance.myInputActions.Player.Interact.triggered ) {
             interactableInRange.BaseInteract();
+
+            if ( !interactableInRange.BaseCanInteract() ) interactIcon.SetActive( false );
         }
     }
 
