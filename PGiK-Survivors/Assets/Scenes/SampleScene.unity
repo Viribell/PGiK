@@ -1248,8 +1248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1665769320}
-  tileHorizontalCount: 3
-  tileVerticalCount: 3
   tileSize: 20
   lastPlayerPos: {x: 0, y: 0}
   lastTilePos: {x: 0, y: 0}
@@ -2344,8 +2342,8 @@ GameObject:
   - component: {fileID: 1665769320}
   - component: {fileID: 1665769319}
   - component: {fileID: 1665769318}
-  - component: {fileID: 1665769321}
   - component: {fileID: 1665769322}
+  - component: {fileID: 1665769321}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2454,7 +2452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115acf540a610b744a9cab812c978f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 2
 --- !u!114 &1665769322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2467,6 +2465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3410838c0394184c9e9988d31ba91dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerClass: {fileID: 11400000, guid: 7753ada0147ad9348b39ee0788d7a6f0, type: 2}
 --- !u!1 &1757976082
 GameObject:
   m_ObjectHideFlags: 0
