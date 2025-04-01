@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048d27120a6f9fb47996ddb276f008a3, type: 3}
-  m_Name: SmallExpPoint
+  m_Script: {fileID: 11500000, guid: c7600c8d926a7024bb6df6e27badf785, type: 3}
+  m_Name: OnLevelUpEvent
   m_EditorClassIdentifier: 
-  amount: 1
-  sprite: {fileID: 0}
-  prefab: {fileID: 4229082396255060708, guid: 254d4eacf4cb46046954ceede7484160, type: 3}

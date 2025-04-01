@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceDropPickup : Pickupable {
-
-    [SerializeField] private ResourceSO drop;
-    [SerializeField] public int amount;
+public class ExpPointPickup : Pickupable {
+    [SerializeField] private ExpPointSO expData;
 
     private void Awake() {
-        if( drop.Sprite != null ) {
+        if ( expData.sprite != null ) {
             SpriteRenderer spriteRenderer = gameObject.transform.Find( "Visual" ).GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = drop.Sprite;
-        }  
+            spriteRenderer.sprite = expData.sprite;
+        }
     }
 
     protected override void Interact() {
-        GameResources.Instance.AddToResource( drop, amount );
+        PlayerControl.Instance.PlayerLevel.GainXP( expData.amount );
     }
 
     protected override bool CanInteract() {

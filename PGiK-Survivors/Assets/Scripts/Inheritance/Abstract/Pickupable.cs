@@ -9,6 +9,7 @@ public abstract class Pickupable : MonoBehaviour {
 
         if ( collision.TryGetComponent( out Player player ) ) {
             Interact();
+            Destroy( gameObject );
         }
     }
 
