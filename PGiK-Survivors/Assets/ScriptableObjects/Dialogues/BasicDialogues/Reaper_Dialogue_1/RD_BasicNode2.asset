@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac4907f599058d4382d84eb9da9fb6e, type: 3}
+  m_Name: RD_BasicNode2
+  m_EditorClassIdentifier: 
+  dialogueLine:
+    line: I hope you are having fun on your journey.
+  nextNode: {fileID: 11400000, guid: 367dc0f58c3e5e24794cd3d473b6fc22, type: 2}
+  options: []

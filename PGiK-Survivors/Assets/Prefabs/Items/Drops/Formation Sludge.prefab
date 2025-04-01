@@ -175,5 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5b4450a0a90cf4a9a722c230f39ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossDrop: {fileID: 11400000, guid: 24f665f24fdba4b499f5db476ebe7500, type: 2}
+  drop: {fileID: 11400000, guid: 24f665f24fdba4b499f5db476ebe7500, type: 2}
   amount: 1
