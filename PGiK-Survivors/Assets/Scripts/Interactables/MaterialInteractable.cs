@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MaterialInteractable : Interactable {
-    [SerializeField] private Resource material;
+    [SerializeField] private ResourceSO material;
     [SerializeField] public int amount;
     [SerializeField] private GameObject visual;
     [SerializeField] private GameObject depletedVisual;

@@ -13,6 +13,11 @@ public class Enemy : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        if ( PauseControl.IsGamePaused ) {
+            rb.velocity = Vector2.zero;
+            return;
+        }
+
         MoveToTarget();
     }
 

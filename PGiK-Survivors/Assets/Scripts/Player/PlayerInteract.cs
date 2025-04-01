@@ -14,6 +14,7 @@ public class PlayerInteract : MonoBehaviour {
     }
 
     private void Update() {
+        if ( PauseControl.IsGamePaused ) return;
         Interact();
     }
 

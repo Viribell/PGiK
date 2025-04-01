@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class ResourceDropPickup : Pickupable {
 
-    [SerializeField] private Resource bossDrop;
+    [SerializeField] private ResourceSO drop;
     [SerializeField] public int amount;
 
     private void Awake() {
-        if( bossDrop.Sprite != null ) {
+        if( drop.Sprite != null ) {
             SpriteRenderer spriteRenderer = gameObject.transform.Find( "Visual" ).GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = bossDrop.Sprite;
+            spriteRenderer.sprite = drop.Sprite;
         }  
     }
 
     protected override void Interact() {
-        GameResources.Instance.AddToResource( bossDrop, amount );
+        GameResources.Instance.AddToResource( drop, amount );
         Destroy( gameObject );
     }
 
     protected override bool CanInteract() {
         return true;
     }
-
 }

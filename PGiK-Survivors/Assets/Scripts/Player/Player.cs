@@ -4,19 +4,14 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public static Player Instance { get; private set; }
-
-    [SerializeField] public Class playerClass;
+    [SerializeField] public ClassSO playerClass;
 
     private Dictionary<StatType, Stat> playerStats;
     private List<StatModifier> classLvlMods;
 
     private void Awake() {
-        if ( Instance == null ) { Instance = this; }
-
         playerStats = playerClass?.GetStats();
-        classLvlMods = playerClass?.GetLevelUpMods();
-        
+        classLvlMods = playerClass?.GetLevelUpMods();    
     }
 
     public Stat GetStat( StatType type ) {
@@ -33,7 +28,4 @@ public class Player : MonoBehaviour {
 
         return total;
     }
-
-    private void OnDisable() { Instance = null; }
-
 }
