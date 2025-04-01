@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour {
     [field: SerializeField] public Player Player { get; private set; }
     [field: SerializeField] public PlayerMove PlayerMove { get; private set; }
     [field: SerializeField] public PlayerPickupGravity PlayerPickup { get; private set; }
+    [field: SerializeField] public PlayerLevel PlayerLevel { get; private set; }
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; }

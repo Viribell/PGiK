@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048d27120a6f9fb47996ddb276f008a3, type: 3}
   m_Name: MediumExpPoint
   m_EditorClassIdentifier: 
-  amount: 0
+  amount: 5
   sprite: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 8418197154599997064, guid: a134b7c36bc077d4db4aaa4edc9a1cd6, type: 3}

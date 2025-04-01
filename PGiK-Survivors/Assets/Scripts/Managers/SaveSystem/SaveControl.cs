@@ -29,7 +29,7 @@ public class SaveControl : MonoBehaviour {
     }
 
     public void NewGame() {
-        this.saveData = new SaveData();
+        saveData = new SaveData();
     }
 
     public void LoadGame() {

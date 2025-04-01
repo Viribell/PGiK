@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
@@ -27,5 +26,24 @@ public class Player : MonoBehaviour {
         }
 
         return total;
+    }
+
+    public void OnLevelUp() {
+        foreach( StatModifier mod in classLvlMods ) {
+            playerStats[mod.affectedStat].AddMod( mod );
+            UpdateEdgeCaseStat( mod.affectedStat );
+        }
+        //for memory saving, it prolly would be better to just remove those mods from stat, modify value of them X level and then insert again
+        //otherwise the list prolly will get quite long for them
+    }
+
+    public void TestFunc() {
+        Debug.Log( GetStatTotal( StatType.Health ) );
+    }
+
+    public void UpdateEdgeCaseStat(StatType stat) {
+        switch( stat ) {
+            case StatType.PickupRange: { PlayerControl.Instance.PlayerPickup.UpdatePickupRange(); } break;
+        }
     }
 }
