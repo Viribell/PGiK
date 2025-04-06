@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
@@ -10,7 +11,11 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         playerStats = playerClass?.GetStats();
-        classLvlMods = playerClass?.GetLevelUpMods();    
+        classLvlMods = playerClass?.GetLevelUpMods();
+
+        if ( playerClass.sprite != null ) {
+            gameObject.transform.Find( "Model" ).GetComponent<SpriteRenderer>().sprite = playerClass.sprite;
+        }
     }
 
     public Stat GetStat( StatType type ) {

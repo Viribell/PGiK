@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vulgo
   m_EditorClassIdentifier: 
   npcName: Vulgo
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9f24dfd0cfea8e1429bf2c2d84e1de4c, type: 3}
   dialogueData: {fileID: 11400000, guid: 58dc6d2b878568a409412edcd2f1a0e8, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Canvet
   m_EditorClassIdentifier: 
   npcName: Canvet
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 942731bb8bdaf064b9be92f3a5ba7e4e, type: 3}
   dialogueData: {fileID: 11400000, guid: 6825e3187be2bbe47ba933ab6ca3e9fe, type: 2}
