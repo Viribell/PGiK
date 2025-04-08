@@ -1229,6 +1229,56 @@ MonoBehaviour:
   useMapPhaseFactor: 1
   limitNumberOfDrops: 0
   maxNumberOfDrops: 2
+--- !u!1 &441931880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441931881}
+  - component: {fileID: 441931882}
+  m_Layer: 0
+  m_Name: OnStatChanged
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441931881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441931880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1687662357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441931882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441931880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033148805b2706b488ac6b63640d718f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 282595f8e9681f44582be7f1c3936f51, type: 2}
+  destroyObjectOnRaise: 0
+  destroyListenerOnRaise: 0
+  respone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &455926168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7739193400962298110, guid: 0d13f1505ccba474e96cf4d38134c6d7, type: 3}
@@ -3339,19 +3389,7 @@ MonoBehaviour:
   destroyListenerOnRaise: 0
   respone:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: f7287993baa4a5540bd265e6ad7063ed, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1602959944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,6 +3655,7 @@ GameObject:
   - component: {fileID: 1665769321}
   - component: {fileID: 1665769324}
   - component: {fileID: 1665769325}
+  - component: {fileID: 1665769326}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3739,6 +3778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerClass: {fileID: 11400000, guid: ac30804ef25bec84c97efdc5b4a179d0, type: 2}
+  OnStatChanged: {fileID: 11400000, guid: 282595f8e9681f44582be7f1c3936f51, type: 2}
 --- !u!114 &1665769323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3756,6 +3796,7 @@ MonoBehaviour:
   <PlayerPickup>k__BackingField: {fileID: 1867541546}
   <PlayerLevel>k__BackingField: {fileID: 1665769324}
   <PlayerHealth>k__BackingField: {fileID: 1665769325}
+  <PlayerStatuses>k__BackingField: {fileID: 1665769326}
 --- !u!114 &1665769324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3793,6 +3834,18 @@ MonoBehaviour:
   maxHealth: 0
   OnHealthChanged: {fileID: 11400000, guid: baf89d567388b7e418ace656ba374b89, type: 2}
   OnPlayerDeath: {fileID: 11400000, guid: 5146d9000e09116408d65e555a763dab, type: 2}
+--- !u!114 &1665769326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665769317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d315724a6bf5446b20bf03178f02dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687662356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +3878,7 @@ Transform:
   - {fileID: 1602959945}
   - {fileID: 372093125}
   - {fileID: 1589849762}
+  - {fileID: 441931881}
   - {fileID: 1331042204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

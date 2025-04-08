@@ -436,14 +436,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3282876254398999032, guid: 0101767ab14343f42b085c3d230bd5c6, type: 3}
-      propertyPath: enableAutoSave
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3282876254398999032, guid: 0101767ab14343f42b085c3d230bd5c6, type: 3}
-      propertyPath: secondsBetweenAutoSave
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6273772880276084043, guid: 0101767ab14343f42b085c3d230bd5c6, type: 3}
       propertyPath: m_Name
       value: SaveControl

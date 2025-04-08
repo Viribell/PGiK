@@ -48,3 +48,5 @@ MonoBehaviour:
   saveName: saveData.json
   formatJson: 1
   findDisabledObjects: 1
+  secondsBetweenAutoSave: 5
+  enableAutoSave: 0

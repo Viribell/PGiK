@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\scriptableobjects\\classso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\classso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\ui\\uiconfirmationpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiconfirmationpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\player\\playerstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\managers\\dialoguecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\dialoguecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\scriptableobjects\\statuseffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\statuseffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\managers\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\managers\\savesystem\\savecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\savesystem\\savecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\scriptableobjects\\itemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\itemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\player\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\MainMenuControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenuControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\ui\\uiconfirmationpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiconfirmationpopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\managers\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gameinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\inheritance\\abstract\\destructible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,55 +62,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClassSO.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\ClassSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\ClassSO.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\ClassSO.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\ClassSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlayerStatuses.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerStatuses.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerStatuses.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerStatuses.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerStatuses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:28:58.67Z",
+              "WhenOpened": "2025-04-03T19:29:00.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DialogueControl.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\DialogueControl.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\DialogueControl.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\DialogueControl.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\DialogueControl.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PlayerControl.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerControl.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:13:59.949Z"
+              "WhenOpened": "2025-04-02T13:28:47.995Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UIConfirmationPopup.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T15:59:56.431Z",
+              "WhenOpened": "2025-04-03T19:06:41.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ItemSO.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\ItemSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\ItemSO.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\ItemSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\ItemSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T18:56:12.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StatusEffectSO.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\StatusEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\StatusEffectSO.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\StatusEffectSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\StatusEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T18:55:57.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UIConfirmationPopup.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIConfirmationPopup.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T16:39:18.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MainMenuControl.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\MainMenuControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuControl.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\MainMenuControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\MainMenuControl.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T18:47:36.426Z"
             },
@@ -114,13 +159,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SaveSystem\\SaveControl.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\SaveSystem\\SaveControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\SaveSystem\\SaveControl.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T19:20:32.353Z"
+              "WhenOpened": "2025-04-02T19:20:32.353Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DropBehaviour.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Behaviours\\DropBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behaviours\\DropBehaviour.cs",
@@ -132,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Destructible.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Abstract\\Destructible.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Abstract\\Destructible.cs",
@@ -144,31 +190,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlayerControl.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerControl.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerControl.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\PlayerControl.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:28:47.995Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T19:36:02.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "GameInput.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\GameInput.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameInput.cs",
@@ -180,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SpawnControl.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\SpawnControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SpawnControl.cs",
