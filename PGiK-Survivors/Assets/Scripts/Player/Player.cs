@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    [SerializeField] public ClassSO playerClass;
+    [Header("Player Class Info")]
+    [SerializeField] private ClassSO playerClass;
+
+    [Header( "Event Channels" )]
+    [SerializeField] private EventChannelSO OnStatChanged;
 
     private Dictionary<StatType, Stat> playerStats;
     private List<StatModifier> classLvlMods;
@@ -28,10 +32,18 @@ public class Player : MonoBehaviour {
         return total;
     }
 
+    public void AddStatMod( StatModifier mod ) {
+        if ( mod == null ) return;
+
+        GetStat( mod.affectedStat )?.AddMod( mod );
+
+        OnStatChanged?.Raise();
+    }
+
     public void OnLevelUp() {
         foreach( StatModifier mod in classLvlMods ) {
-            playerStats[mod.affectedStat].AddMod( mod );
-            UpdateEdgeCaseStat( mod.affectedStat );
+            AddStatMod( mod );
+            UpdateEdgeCaseStat( mod.affectedStat ); //depending on how it will change, it may be useless later
         }
         //for memory saving, it prolly would be better to just remove those mods from stat, modify value of them X level and then insert again
         //otherwise the list prolly will get quite long for them
@@ -44,6 +56,10 @@ public class Player : MonoBehaviour {
     public void UpdateEdgeCaseStat(StatType stat) {
         switch( stat ) {
             case StatType.PickupRange: { PlayerControl.Instance.PlayerPickup.UpdatePickupRange(); } break;
+            case StatType.Health: { PlayerControl.Instance.PlayerHealth.UpdateMaxHealth(); } break;
         }
     }
+
+    public void SetClass(ClassSO playerClass) { this.playerClass = playerClass; }
+    public ClassSO GetClass() { return playerClass; }
 }

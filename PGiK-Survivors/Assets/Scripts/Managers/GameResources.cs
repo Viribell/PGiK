@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameResources : MonoBehaviour, IPersistentData {
     public static GameResources Instance { get; private set; }
@@ -11,8 +12,6 @@ public class GameResources : MonoBehaviour, IPersistentData {
         if ( Instance == null ) { Instance = this; }
 
     }
-
-    private void OnDisable() { Instance = null; }
 
     public int GetCount( ResourceSO resource ) {
         if ( Resources.TryGetValue( resource, out int count ) ) return count;
@@ -34,16 +33,26 @@ public class GameResources : MonoBehaviour, IPersistentData {
 
         if ( resourcesData == null || resourcesData.Count == 0 ) return;
 
-        foreach( ResourceSaveData resourceData in resourcesData ) {
-            if ( Resources.ContainsKey( resourceData.resource ) ) Resources[resourceData.resource] = resourceData.amount;
+        List<ResourceSO> tempKeys = new List<ResourceSO>();
+
+        foreach(ResourceSO key in Resources.Keys) {
+            tempKeys.Add( key );
         }
+
+        foreach(ResourceSO key in tempKeys) {
+            ResourceSaveData resourceData = resourcesData.Find( item => string.Equals( item.resource, key.itemName ) );
+
+            if ( resourceData != null ) Resources[key] = resourceData.amount;
+        }
+
+        tempKeys.Clear();
     }
 
-    public void SaveData( ref SaveData data ) {
+    public void SaveData( SaveData data ) {
         data.resources.Clear();
 
         foreach ( KeyValuePair<ResourceSO, int> entry in Resources) {
-            ResourceSaveData resourceData = new ResourceSaveData { resource = entry.Key, amount = entry.Value };
+            ResourceSaveData resourceData = new ResourceSaveData { resource = entry.Key.itemName, amount = entry.Value };
             data.resources.Add( resourceData );
         }
     }

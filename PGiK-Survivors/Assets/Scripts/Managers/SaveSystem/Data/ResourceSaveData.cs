@@ -4,6 +4,6 @@ using UnityEngine;
 
 [System.Serializable]
 public class ResourceSaveData {
-    public ResourceSO resource;
+    public string resource;
     public int amount;
 }

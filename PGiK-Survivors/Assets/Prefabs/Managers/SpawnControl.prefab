@@ -44,3 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a97fff0c376184c9da59313ed60527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceDropPrefab: {fileID: 9005874158558055072, guid: f72e6b3f3d4dde24b907aba77f5ffa35, type: 3}
+  magneticResourceDropPrefab: {fileID: 424031139450320907, guid: 05d1d3881d722bf45b1398f5693a35af, type: 3}
+  materialPrefab: {fileID: 2634641600831345503, guid: 160a4375103575744afe7a27f6c3ff2a, type: 3}
+  expPointPrefab: {fileID: 6597343439258990489, guid: d536c6808aba48540918aaae0e4a2215, type: 3}
+  consumablePrefab: {fileID: 8672600357339374021, guid: cf18e3956d07d9d47a4545fd78f25fea, type: 3}
+  basicDestructPrefab: {fileID: 2652540601878258397, guid: 648a3ffc35f1c774a91b6270f5e66fd3, type: 3}
+  useForceOnDrop: 1
+  dropForce: 200
+  forceMode: 1
+  rbMass: 60
+  rbLiniearDrag: 2
+  rbAngularDrag: 0

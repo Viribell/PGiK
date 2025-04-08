@@ -4,6 +4,6 @@ using UnityEngine;
 
 [System.Serializable]
 public class NPCSaveData {
-    public NPCSO npc;
+    public string npc;
     public bool isAvailable;
 }

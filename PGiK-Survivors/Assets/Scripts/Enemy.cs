@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
     [SerializeField] private Transform moveTarget;
     [SerializeField] private float speed;
+    [SerializeField] private List<DropBehaviour> dropBehaviours = new List<DropBehaviour>();
 
     private Rigidbody2D rb;
 
@@ -25,5 +26,19 @@ public class Enemy : MonoBehaviour {
         Vector2 dir = ( moveTarget.position - transform.position ).normalized;
 
         rb.velocity = dir * speed;
+    }
+
+    public void TestDie() {
+        Drop();
+
+        //Destroy( gameObject );
+    }
+
+    private void Drop() {
+        if( dropBehaviours == null || dropBehaviours.Count == 0 ) { Debug.Log("No drop behaviour on enemy!"); return; }
+
+        foreach(DropBehaviour dropBehaviour in dropBehaviours ) {
+            dropBehaviour?.Drop( transform.position );
+        }
     }
 }

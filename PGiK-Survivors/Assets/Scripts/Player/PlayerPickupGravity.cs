@@ -18,6 +18,8 @@ public class PlayerPickupGravity : MonoBehaviour {
     }
 
     private void FixedUpdate() {
+        if ( PauseControl.IsGamePaused ) { return; }
+
         foreach ( MagneticBehaviour pickup in pickupables ) {
             pickup.Gravitate( GravitySpeed );
         }
