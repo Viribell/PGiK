@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class MaterialInteractable : Interactable {
@@ -32,7 +33,7 @@ public class MaterialInteractable : Interactable {
         depletedVisual.SetActive( true );
     }
 
-    private void Init() {
+    public void Init() {
         if ( material.defaultVisual != null ) { visual.GetComponent<SpriteRenderer>().sprite = material.defaultVisual; }
         if ( material.depletedVisual != null ) { depletedVisual.GetComponent<SpriteRenderer>().sprite = material.depletedVisual; }
     }
@@ -50,3 +51,26 @@ public class MaterialInteractable : Interactable {
         if ( material != null ) Init();
     }
 }
+
+#if UNITY_EDITOR
+
+[CustomEditor(typeof(MaterialInteractable))]
+public class MaterialInteractableEditor : Editor {
+    private MaterialInteractable myObject;
+
+    private void OnEnable() {
+        myObject = ( MaterialInteractable )target;
+    }
+
+    public override void OnInspectorGUI() {
+        base.OnInspectorGUI();
+
+        EditorGUILayout.Space( 20.0f );
+
+        if( GUILayout.Button("Init Object") ) {
+            myObject.Init();
+        }
+    }
+}
+
+#endif
