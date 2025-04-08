@@ -14,7 +14,11 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         playerStats = playerClass?.GetStats();
-        classLvlMods = playerClass?.GetLevelUpMods();    
+        classLvlMods = playerClass?.GetLevelUpMods();
+    }
+
+    private void Start() {
+        if ( playerClass != null ) Init();
     }
 
     public Stat GetStat( StatType type ) {
@@ -58,6 +62,10 @@ public class Player : MonoBehaviour {
             case StatType.PickupRange: { PlayerControl.Instance.PlayerPickup.UpdatePickupRange(); } break;
             case StatType.Health: { PlayerControl.Instance.PlayerHealth.UpdateMaxHealth(); } break;
         }
+    }
+
+    private void Init() {
+        if ( playerClass.sprite != null ) PlayerControl.Instance.SpriteRenderer.sprite = playerClass.sprite;
     }
 
     public void SetClass(ClassSO playerClass) { this.playerClass = playerClass; }

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sunflower
   itemType: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9ca868f24a02e8d49b8dbc9cbf3d643f, type: 3}
   prefab: {fileID: 5573742579384158472, guid: 7abed191b859db64aa97df1b316f7223, type: 3}
   usesDropChance: 0
   dropChance: 0
   isMaterial: 1
-  defaultVisual: {fileID: 0}
-  depletedVisual: {fileID: 0}
+  defaultVisual: {fileID: 21300000, guid: 6a2cc7decf1569a43945d6322b9a9a86, type: 3}
+  depletedVisual: {fileID: 21300000, guid: f12b0bc1d2a702e408b4df00ee3fcf01, type: 3}

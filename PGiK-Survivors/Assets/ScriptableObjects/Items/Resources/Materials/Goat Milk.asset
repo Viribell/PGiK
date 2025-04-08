@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Goat Milk
   itemType: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 6ce9c798ae89bc244a56365f947395ec, type: 3}
   prefab: {fileID: 5341665288850274645, guid: 7c28d8bce88346647a7472da2af4c698, type: 3}
   usesDropChance: 0
   dropChance: 0
   isMaterial: 1
-  defaultVisual: {fileID: 0}
-  depletedVisual: {fileID: 0}
+  defaultVisual: {fileID: 21300000, guid: ddff0818f58ed3d48944a8b65f6226ab, type: 3}
+  depletedVisual: {fileID: 21300000, guid: 2cb4594ab2b142c41be7beb8819d50a4, type: 3}

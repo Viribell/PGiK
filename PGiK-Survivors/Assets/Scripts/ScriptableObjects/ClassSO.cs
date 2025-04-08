@@ -4,6 +4,9 @@ using UnityEngine;
 
 [CreateAssetMenu( fileName = "ClassSO" )]
 public class ClassSO : ScriptableObject {
+    [Header("Basic Info")]
+    [field: SerializeField] public string className;
+    [field: SerializeField] public Sprite sprite;
     [field: SerializeField] public SerializableDictionary<StatType, float> stats { get; private set; }
     [field: SerializeField] public List<StatModifier> levelUpMods { get; private set; }
 

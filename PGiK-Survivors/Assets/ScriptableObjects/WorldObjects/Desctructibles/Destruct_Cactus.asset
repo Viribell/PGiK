@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Cactus
   m_EditorClassIdentifier: 
   objectName: Cactus
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9df3808d86f5dbc46966d1784bee6bda, type: 3}
   prefab: {fileID: 3157385625010770380, guid: 8c6b44af65302c64f9264279bbeda4f3, type: 3}

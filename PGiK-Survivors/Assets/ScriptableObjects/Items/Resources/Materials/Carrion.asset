@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Carrion
   itemType: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: dfc01fe944e7d9447bac2b20725fe56c, type: 3}
   prefab: {fileID: 6859314637471680806, guid: c98dd4270bd230d4b873d62daa6a1d2a, type: 3}
   usesDropChance: 0
   dropChance: 0
   isMaterial: 1
-  defaultVisual: {fileID: 0}
-  depletedVisual: {fileID: 0}
+  defaultVisual: {fileID: 21300000, guid: 2c16701a9e864a04bb446bf2c8ceefe6, type: 3}
+  depletedVisual: {fileID: 21300000, guid: 2d94ab3d2b8779e4795b85825fd6cc7d, type: 3}

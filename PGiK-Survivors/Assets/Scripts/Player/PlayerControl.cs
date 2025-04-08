@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
     [field: SerializeField] public PlayerLevel PlayerLevel { get; private set; }
     [field: SerializeField] public PlayerHealth PlayerHealth { get; private set; }
     [field: SerializeField] public PlayerStatuses PlayerStatuses { get; private set; }
+    [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; }
