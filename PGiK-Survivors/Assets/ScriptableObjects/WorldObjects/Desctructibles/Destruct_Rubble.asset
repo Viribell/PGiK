@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Rubble
   m_EditorClassIdentifier: 
   objectName: Rubble
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 58ae46b626e6db64289a771994fac0b5, type: 3}
   prefab: {fileID: 3461228834743738702, guid: fb896636feaa3b04fafd092a3fa032a3, type: 3}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Bush
   m_EditorClassIdentifier: 
   objectName: Bush
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: dd5b4198b56b55249b0e5333724750fa, type: 3}
   prefab: {fileID: 9068888523083422457, guid: e7c3e09c012ee884e80e7e9be760398a, type: 3}

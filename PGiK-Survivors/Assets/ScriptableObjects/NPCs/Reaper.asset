@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Reaper
   m_EditorClassIdentifier: 
   npcName: "\u017Bniwiarz"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 367d7ba849ef27c438ebc7dc2831aa1a, type: 3}
   dialogueData: {fileID: 11400000, guid: a55346cf760c3bb4483f2d69c477802c, type: 2}
-  voiceSound: {fileID: 0}
-  voicePitch: 1

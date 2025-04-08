@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Trunk
   m_EditorClassIdentifier: 
   objectName: Trunk
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 3769eef40e7145e45acd98fb274fbed6, type: 3}
   prefab: {fileID: 7088530844332364150, guid: ad262564daeecd642ae0030ae1a31c5b, type: 3}

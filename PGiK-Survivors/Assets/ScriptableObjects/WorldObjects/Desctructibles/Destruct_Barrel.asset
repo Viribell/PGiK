@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Barrel
   m_EditorClassIdentifier: 
   objectName: Barrel
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 7ddeef5bd7e2dc845821ff8c901b8b70, type: 3}
   prefab: {fileID: 7701574156192441033, guid: 53ab9de3b1b6a6d4196f9da7f912a81a, type: 3}

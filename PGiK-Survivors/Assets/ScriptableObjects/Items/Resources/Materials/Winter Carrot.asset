@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Winter Carrot
   itemType: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2f7d8b257fb72a642b522e55ddfe0d4b, type: 3}
   prefab: {fileID: 1794939098130914470, guid: 26a4fe26c6134c7408b1de23bf86493c, type: 3}
   usesDropChance: 0
   dropChance: 0
   isMaterial: 1
-  defaultVisual: {fileID: 0}
-  depletedVisual: {fileID: 0}
+  defaultVisual: {fileID: 21300000, guid: 406a11bffb3bb214a8d44d3db2d200f0, type: 3}
+  depletedVisual: {fileID: 21300000, guid: 8addfeb1ff26f4c479aeae02dd783728, type: 3}

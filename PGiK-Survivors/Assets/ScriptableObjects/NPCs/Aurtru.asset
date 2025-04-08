@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Aurtru
   m_EditorClassIdentifier: 
   npcName: Aurtru
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 3472c7ccd66747e429ab488d51c0121d, type: 3}
   dialogueData: {fileID: 11400000, guid: 4a016d619fddb4a4d9c318cefdf72841, type: 2}

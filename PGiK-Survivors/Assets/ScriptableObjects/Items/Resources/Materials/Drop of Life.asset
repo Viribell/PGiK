@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Drop Of Life
   itemType: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f092b8539b8109244b1d188742999e94, type: 3}
   prefab: {fileID: 5654974608896420157, guid: b85e3a3c28f73d34f99ca6ca5839622d, type: 3}
   usesDropChance: 0
   dropChance: 0
   isMaterial: 1
-  defaultVisual: {fileID: 0}
-  depletedVisual: {fileID: 0}
+  defaultVisual: {fileID: 21300000, guid: 15471fc4b87af604687dfa8700105f12, type: 3}
+  depletedVisual: {fileID: 21300000, guid: 33d44d0b5ffd44e4a8fdded19368af13, type: 3}

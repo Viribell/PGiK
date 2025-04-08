@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Spiderweb
   m_EditorClassIdentifier: 
   objectName: Spiderweb
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9ce587a662ba215409c0facbe085334a, type: 3}
   prefab: {fileID: 4441343082740849901, guid: adbdc283272b4a34191a6d30b1114957, type: 3}

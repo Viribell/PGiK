@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Sapling
   m_EditorClassIdentifier: 
   objectName: Sapling
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 4f0c8fe0d4d1c294e88f10352214616c, type: 3}
   prefab: {fileID: 7317820657622522963, guid: 23266c4c6055fee4889eeab2372df817, type: 3}

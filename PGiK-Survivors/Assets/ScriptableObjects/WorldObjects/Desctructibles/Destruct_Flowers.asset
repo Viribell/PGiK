@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Destruct_Flowers
   m_EditorClassIdentifier: 
   objectName: Flowers
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 44de9b2d47a3f4649b838e56989772ac, type: 3}
   prefab: {fileID: 6922144386586545336, guid: 77f03319175dffc4ab0adf5aa4b71d00, type: 3}
