@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048d27120a6f9fb47996ddb276f008a3, type: 3}
+  m_Name: BigExpPoint
+  m_EditorClassIdentifier: 
+  itemName: Big Exp Point
+  itemType: 7
+  sprite: {fileID: 0}
+  prefab: {fileID: 2853437529196285818, guid: d787c556e58029547b58a3a5538a4458, type: 3}
+  usesDropChance: 1
+  dropChance: 1
+  amount: 10

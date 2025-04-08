@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6fa3bfa877c7a4d8847a73ff70f078, type: 3}
+  m_Name: Destruct_Trunk
+  m_EditorClassIdentifier: 
+  objectName: Trunk
+  sprite: {fileID: 0}
+  prefab: {fileID: 7088530844332364150, guid: ad262564daeecd642ae0030ae1a31c5b, type: 3}

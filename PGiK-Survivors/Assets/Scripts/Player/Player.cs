@@ -44,6 +44,7 @@ public class Player : MonoBehaviour {
     public void UpdateEdgeCaseStat(StatType stat) {
         switch( stat ) {
             case StatType.PickupRange: { PlayerControl.Instance.PlayerPickup.UpdatePickupRange(); } break;
+            case StatType.Health: { PlayerControl.Instance.PlayerHealth.UpdateMaxHealth(); } break;
         }
     }
 }

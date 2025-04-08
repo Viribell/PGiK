@@ -31,6 +31,8 @@ public class PlayerLevel : MonoBehaviour {
     }
 
     private void Update() {
+        if ( PauseControl.IsGamePaused ) { return; }
+
         if ( HasEnoughXP() ) LevelUp();
     }
 

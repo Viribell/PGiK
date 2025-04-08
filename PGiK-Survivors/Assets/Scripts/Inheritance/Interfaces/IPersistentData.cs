@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IPersistentData {
     void LoadData( SaveData data );
-    void SaveData( ref SaveData data );
+    void SaveData( SaveData data );
 }

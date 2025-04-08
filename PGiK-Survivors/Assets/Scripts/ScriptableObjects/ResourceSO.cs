@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ResourceSO" )]
-public class ResourceSO : ScriptableObject {
-
-    [field: SerializeField] public string DisplayName { get; private set; }
-    [field: SerializeField] public Sprite Sprite { get; private set; }
-    [field: SerializeField] public Transform Prefab { get; private set; }
+[CreateAssetMenu( menuName = "Scriptable Objects/Item/Resource" )]
+public class ResourceSO : ItemSO {
+    [Header( "Interactable Material Info" )]
+    [field: SerializeField] public bool isMaterial = false;
+    [field: SerializeField] public Sprite defaultVisual;
+    [field: SerializeField] public Sprite depletedVisual;
 }

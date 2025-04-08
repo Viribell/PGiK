@@ -42,16 +42,26 @@ public class GameState : MonoBehaviour, IPersistentData {
 
         if ( npcDataList == null || npcDataList.Count == 0 ) return;
 
-        foreach ( NPCSaveData npcData in npcDataList ) {
-            if ( availableNPC.ContainsKey( npcData.npc ) ) availableNPC[npcData.npc] = npcData.isAvailable;
+        List<NPCSO> tempKeys = new List<NPCSO>();
+
+        foreach ( NPCSO key in availableNPC.Keys ) {
+            tempKeys.Add( key );
         }
+
+        foreach ( NPCSO key in tempKeys ) {
+            NPCSaveData npcSaveData = npcDataList.Find( item => string.Equals( item.npc, key.npcName ) );
+
+            if ( npcSaveData != null ) availableNPC[key] = npcSaveData.isAvailable;
+        }
+
+        tempKeys.Clear();
     }
 
-    public void SaveData( ref SaveData data ) {
+    public void SaveData( SaveData data ) {
         data.availableNPC.Clear();
 
         foreach ( KeyValuePair<NPCSO, bool> entry in availableNPC ) {
-            NPCSaveData npcSaveData = new NPCSaveData { npc = entry.Key, isAvailable = entry.Value };
+            NPCSaveData npcSaveData = new NPCSaveData { npc = entry.Key.npcName, isAvailable = entry.Value };
             data.availableNPC.Add( npcSaveData );
         }
     }

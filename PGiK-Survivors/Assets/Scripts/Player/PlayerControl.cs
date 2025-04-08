@@ -9,10 +9,9 @@ public class PlayerControl : MonoBehaviour {
     [field: SerializeField] public PlayerMove PlayerMove { get; private set; }
     [field: SerializeField] public PlayerPickupGravity PlayerPickup { get; private set; }
     [field: SerializeField] public PlayerLevel PlayerLevel { get; private set; }
+    [field: SerializeField] public PlayerHealth PlayerHealth { get; private set; }
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; }
     }
-
-    private void OnDisable() { Instance = null; }
 }

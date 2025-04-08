@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public enum ActionMapType {
     Player,
     Dialogue,
-    UI
+    UI,
+    MapFinishScreen
 }
 
 public class GameInput : MonoBehaviour {
@@ -57,6 +58,7 @@ public class GameInput : MonoBehaviour {
         actionMaps[ActionMapType.Player] = myInputActions.Player;
         actionMaps[ActionMapType.Dialogue] = myInputActions.Dialogue;
         actionMaps[ActionMapType.UI] = myInputActions.UI;
+        actionMaps[ActionMapType.MapFinishScreen] = myInputActions.MapFinishScreen;
     }
 
     public void SwitchToMap( ActionMapType actionMap ) {

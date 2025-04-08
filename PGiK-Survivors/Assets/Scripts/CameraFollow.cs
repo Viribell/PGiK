@@ -6,7 +6,9 @@ public class CameraFollow : MonoBehaviour {
     public Transform followAfter;
 
     private void LateUpdate() {
-        if( followAfter != null ) Follow();
+        if ( PauseControl.IsGamePaused ) { return; }
+
+        if ( followAfter != null ) Follow();
     }
 
     private void Follow() {
