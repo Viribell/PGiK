@@ -10,11 +10,6 @@ public class PlayerController : EntityController {
 
     [HideInInspector] public ClassSO PlayerData { get { return ( ClassSO )EntityData; } }
 
-    private void Awake() {
-        BaseUploadControllerToComponents();
-        UploadControllerToComponents();
-    }
-
     protected override void UploadControllerToComponents() {
         Player.LoadEntityController( this );
         PlayerPickup.LoadEntityController( this );

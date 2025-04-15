@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : EntityController {
     [field: Header( "Enemy Entity Info" )]
-    [field: SerializeField] private Transform attackTarget;
+    [field: SerializeField] private GameObject attackTarget;
 
     [field: Header( "Enemy Entity Config" )]
     [field: SerializeField] public Enemy Enemy { get; private set; }
@@ -14,9 +14,8 @@ public class EnemyController : EntityController {
 
     [HideInInspector] public EnemySO EnemyData { get { return ( EnemySO )EntityData; } }
 
-    private void Awake() {
-        BaseUploadControllerToComponents();
-        UploadControllerToComponents();
+    private void Start() {
+        attackTarget = RefCacheControl.Instance.Player;
     }
 
     protected override void UploadControllerToComponents() {
@@ -24,9 +23,8 @@ public class EnemyController : EntityController {
     }
 
     public override Vector2 GetMoveVector() {
-        if ( !canWalk ) return Vector2.zero;
+        if ( attackTarget == null || !canWalk ) return Vector2.zero;
 
-        if ( attackTarget == null ) return Vector2.zero;
-        else return ( attackTarget.position - transform.position ).normalized;
+        return ( attackTarget.transform.position - transform.position ).normalized;
     }
 }

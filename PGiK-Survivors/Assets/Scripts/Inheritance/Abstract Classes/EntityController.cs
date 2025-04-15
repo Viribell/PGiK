@@ -14,15 +14,17 @@ public abstract class EntityController : MonoBehaviour {
     [field: SerializeField] public EntityHealth EntityHealth { get; private set; }
     [field: SerializeField] public EntityMove EntityMove { get; private set; }
 
-    protected void BaseUploadControllerToComponents() {
+    private void Awake() {
+        BaseUploadControllerToComponents();
+        UploadControllerToComponents();
+    }
+
+    private void BaseUploadControllerToComponents() {
         EntityStats.LoadEntityController( this );
         EntityStatuses.LoadEntityController( this );
         EntityHealth.LoadEntityController( this );
         EntityMove.LoadEntityController( this );
     }
-
-    //public virtual EntityHealth Health() { } 
-    //public virtual EntityMove Move() { } 
 
     protected abstract void UploadControllerToComponents();
     public abstract Vector2 GetMoveVector();
