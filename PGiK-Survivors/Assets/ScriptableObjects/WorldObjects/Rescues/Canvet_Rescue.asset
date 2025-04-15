@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Canvet_Rescue
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: c5a737bf957be474abc1686c10ce3f1d, type: 2}
-  defaultSprite: {fileID: 0}
-  depletedSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 8be99a357fb537542bfa0d30fc91170c, type: 3}
+  depletedSprite: {fileID: 21300000, guid: 2dd80b3bc25e6ac499006459fd64d941, type: 3}
   startDialogue: {fileID: 11400000, guid: 14d7986674c39494a9b4eeb64a755fe3, type: 2}
   prefab: {fileID: 6041726093419390711, guid: 241bea85d09f54a4ba852525c353c530, type: 3}

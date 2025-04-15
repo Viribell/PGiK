@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: White Bristles
   itemType: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a8acd4ddc8695e54299d6752188e3548, type: 3}
   prefab: {fileID: 5278838293258593903, guid: f380a53fd930d9e4bb26fd650b8cbcfc, type: 3}
   usesDropChance: 1
   dropChance: 0.2
