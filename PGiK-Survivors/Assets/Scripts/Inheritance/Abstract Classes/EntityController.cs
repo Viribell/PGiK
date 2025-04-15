@@ -7,6 +7,7 @@ public abstract class EntityController : MonoBehaviour {
     [field: SerializeField] public EntityType entityType;
     [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
     [field: SerializeField] public EntitySO EntityData { get; set; }
+    [field: SerializeField] public EntityAudioSetSO EntityAudio { get; set; }
 
     [field: Header( "Basic Entity Config" )]
     [field: SerializeField] public EntityStats EntityStats { get; private set; }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,6 +49,7 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
     private void TestButton_performed( UnityEngine.InputSystem.InputAction.CallbackContext obj ) {
         GainXP( 20 );
+        AudioManager.Instance.PlaySound( playerController.EntityAudio?.GetSoundData( EntitySoundType.Undefined ) ); // TEMP_TEST_TO_ERASE
     }
 
     public void LevelUp() {

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,14 +7,15 @@ public class MainMenuControl : MonoBehaviour {
     [Header("First Selected Button")]
     [SerializeField] private Button firstSelected;
 
-    [Header( "Next Scene Info" )]
-    [SerializeField] private SceneAsset nextScene;
+    //[Header( "Next Scene Info" )]
+    //[SerializeField] private SceneAsset nextScene; //will only work in editor? it seems so
+    
 
     [Header( "Menu Buttons" )]
     [SerializeField] private Button playButton;
     [SerializeField] private Button optionsButton;
     [SerializeField] private Button exitButton;
-
+    
     [Header( "Used Prefabs" )]
     [SerializeField] private UIConfirmationPopup popupPrefab;
 
@@ -33,7 +31,7 @@ public class MainMenuControl : MonoBehaviour {
 
         SaveControl.Instance.SaveGame();
 
-        SceneManager.LoadSceneAsync( nextScene.name );
+        SceneManager.LoadSceneAsync( "TestingScene" ); //FOR CHANGE!!!!!!!!!!!!!
     }
 
     public void OnOptionsClicked() {

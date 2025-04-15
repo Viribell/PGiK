@@ -462,6 +462,7 @@ MonoBehaviour:
   entityType: 0
   <SpriteRenderer>k__BackingField: {fileID: 3253461024524401337}
   <EntityData>k__BackingField: {fileID: 11400000, guid: ac30804ef25bec84c97efdc5b4a179d0, type: 2}
+  <EntityAudio>k__BackingField: {fileID: 11400000, guid: 314d3e011f6e0e746bb78f0870defd20, type: 2}
   <EntityStats>k__BackingField: {fileID: 4924217607710363613}
   <EntityStatuses>k__BackingField: {fileID: 6624532341770309845}
   <EntityHealth>k__BackingField: {fileID: 6846098833280091328}
