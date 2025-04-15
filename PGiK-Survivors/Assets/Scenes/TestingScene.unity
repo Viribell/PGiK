@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000fb103adab5bd7bf3
+  m_ApplyToSortingLayers: 00000000fb103adab5bd7bf39d30eb59
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5112,10 +5112,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4924217607710363613, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
-      propertyPath: showStats
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5241567357679796219, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5156,12 +5152,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7640604067738084326, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
-      propertyPath: m_Name
-      value: Player
+    - target: {fileID: 5898065383854760295, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: lockChangeInUpdate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7640604067738084326, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
-      propertyPath: m_TagString
+      propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

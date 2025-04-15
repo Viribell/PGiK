@@ -60,6 +60,9 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
 
         lastTimeDamaged = Time.time;
 
+        dmgValue = Mathf.Max(1, dmgValue - entityController.EntityStats.GetStatTotal( StatType.Defense ) ); //dunno if have defense as flat or percentage based
+        //tho with percentage its trickier to get damaged more with minus defense
+
         currHealth = ( float )System.Math.Round( Mathf.Max(0, currHealth - dmgValue), 4 );
 
         //Stop regen after dmg

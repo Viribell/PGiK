@@ -72,4 +72,10 @@ public class GameInput : MonoBehaviour {
 
         return inputVector;
     }
+
+    public Vector2 GetPointerPosition() {
+        Vector2 mouseVector = myInputActions.Player.MousePosition.ReadValue<Vector2>();
+
+        return Camera.main.ScreenToWorldPoint( mouseVector );
+    }
 }
