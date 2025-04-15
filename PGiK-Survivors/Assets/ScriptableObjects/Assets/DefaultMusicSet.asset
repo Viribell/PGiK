@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44517ad36482d764a9481d139b48c5b2, type: 3}
+  m_Name: DefaultMusicSet
+  m_EditorClassIdentifier: 
+  soundsList:
+  - soundType: 0
+    clip: {fileID: 8300000, guid: ebe9ad253ab5a0449a2d1f129b721612, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 1
+    pitch: 1
+    hasDelay: 1
+    useLengthAsDelay: 0
+    playDelay: 0.6
+    lastPlayed: 0
+  musicList:
+  - musicType: 0
+    clip: {fileID: 8300000, guid: 240a62554adb8794184e310b29b9c6d8, type: 3}

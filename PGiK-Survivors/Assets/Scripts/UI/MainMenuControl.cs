@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,13 +8,14 @@ public class MainMenuControl : MonoBehaviour {
     [SerializeField] private Button firstSelected;
 
     [Header( "Next Scene Info" )]
-    [SerializeField] private SceneAsset nextScene;
+    [SerializeField] private SceneLoader.Scene nextScene;
+
 
     [Header( "Menu Buttons" )]
     [SerializeField] private Button playButton;
     [SerializeField] private Button optionsButton;
     [SerializeField] private Button exitButton;
-
+    
     [Header( "Used Prefabs" )]
     [SerializeField] private UIConfirmationPopup popupPrefab;
 
@@ -33,7 +31,7 @@ public class MainMenuControl : MonoBehaviour {
 
         SaveControl.Instance.SaveGame();
 
-        SceneManager.LoadSceneAsync( nextScene.name );
+        SceneLoader.Load( nextScene );
     }
 
     public void OnOptionsClicked() {
@@ -48,8 +46,13 @@ public class MainMenuControl : MonoBehaviour {
     }
 
     public void OnExitClicked() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
 
+        Application.Quit();
     }
+
 
     private void LockPlayButton() {
         playButton.interactable = false;

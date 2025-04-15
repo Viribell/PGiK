@@ -9,14 +9,14 @@ public class MagneticBehaviour : MonoBehaviour {
         if ( GravitySpeed == default ) GravitySpeed = 10.0f;
     }
 
-    public void Gravitate() {
-        Vector2 dir = ( PlayerControl.Instance.Player.transform.position - transform.position ).normalized;
+    public void Gravitate( Transform moveTarget ) {
+        Vector2 dir = ( moveTarget.position - transform.position ).normalized;
 
         transform.Translate( dir * GravitySpeed * Time.fixedDeltaTime );
     }
 
-    public void Gravitate( float gravitySpeed ) {
-        Vector2 dir = ( PlayerControl.Instance.Player.transform.position - transform.position ).normalized;
+    public void Gravitate( Transform moveTarget, float gravitySpeed ) {
+        Vector2 dir = ( moveTarget.position - transform.position ).normalized;
 
         transform.Translate( dir * gravitySpeed * Time.fixedDeltaTime );
     }

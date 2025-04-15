@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,17 +15,15 @@ public class GameInput : MonoBehaviour {
 
     private Dictionary<ActionMapType, InputActionMap> actionMaps;
 
-    public static void TestFunc() {
-        Debug.Log("Test function text.");
-    }
-
     private void Awake() {
         if ( Instance == null ) { Instance = this; }
 
         myInputActions = new MyInputActions();
         InitActionMaps();
         SwitchToMap( ActionMapType.Player );
+    }
 
+    private void OnEnable() {
         myInputActions.Player.Menu.performed += Player_Menu_performed;
         myInputActions.UI.Exit.performed += UI_Exit_performed;
         myInputActions.Dialogue.Exit.performed += Dialogue_Exit_performed; //mo¿liwe ¿e do zmiany póŸniej
@@ -74,5 +71,11 @@ public class GameInput : MonoBehaviour {
         inputVector = inputVector.normalized;
 
         return inputVector;
+    }
+
+    public Vector2 GetPointerPosition() {
+        Vector2 mouseVector = myInputActions.Player.MousePosition.ReadValue<Vector2>();
+
+        return Camera.main.ScreenToWorldPoint( mouseVector );
     }
 }

@@ -50,6 +50,14 @@ public class Stat {
     private float totalValue = -1;
     private float lastBaseValue;
 
+#if UNITY_EDITOR
+    public float Editor_Total { get {
+            if ( totalValue == -1 ) return baseValue;
+            else return totalValue; 
+        } 
+    }
+#endif
+
     private List<StatModifier> statModifiers;
 
     public Stat() {
@@ -76,9 +84,27 @@ public class Stat {
         return false;
     }
 
-    private bool IsModPresent( StatModifier mod ) {
+    public bool HasMod( StatModifier mod ) {
         if ( statModifiers.IndexOf( mod ) < 0 ) return false;
         else return true;
+    }
+
+    public bool ModifyModAdd( StatModifier mod, float value ) {
+        if ( !HasMod( mod ) ) return false;
+
+        mod.value += value;
+        HasModChanged = true;
+
+        return true;
+    }
+
+    public bool ModifyModMult( StatModifier mod, float value ) {
+        if ( !HasMod( mod ) ) return false;
+
+        mod.value *= value;
+        HasModChanged = true;
+
+        return true;
     }
 
     private int CompareMods(StatModifier a, StatModifier b) {
@@ -116,4 +142,7 @@ public class Stat {
 
         return (float)Math.Round( localTotal, 4);
     }
+
+
+    public int ModsCount() { return statModifiers.Count; }
 }
