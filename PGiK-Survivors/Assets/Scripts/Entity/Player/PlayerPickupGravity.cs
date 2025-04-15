@@ -24,7 +24,7 @@ public class PlayerPickupGravity : MonoBehaviour, IEntityComponent {
         if ( PauseControl.IsGamePaused ) { return; }
 
         foreach ( MagneticBehaviour pickup in pickupables ) {
-            pickup.Gravitate( GravitySpeed );
+            pickup.Gravitate( playerController.transform, GravitySpeed );
         }
     }
 

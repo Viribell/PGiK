@@ -10,10 +10,6 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
 
     private Dictionary<StatType, Stat> entityStats;
 
-    private void Start() {
-        entityStats = entityController.EntityData?.GetStats();
-    }
-
     public Stat GetStat( StatType type ) {
         if ( entityStats.TryGetValue( type, out Stat stat ) ) return stat;
         else return null;
@@ -47,5 +43,7 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
 
     public void LoadEntityController( EntityController controller ) {
         entityController = controller;
+
+        entityStats = entityController.EntityData?.GetStats();
     }
 }

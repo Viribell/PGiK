@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\scriptableobjects\\entities\\entityso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\entities\\entityso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\entity\\player\\playerpickupgravity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\player\\playerpickupgravity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\scriptableobjects\\entities\\classso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\entities\\classso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\scriptableobjects\\general\\statsconfigso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\general\\statsconfigso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\behaviours\\magneticbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behaviours\\magneticbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\inheritance\\implementations\\entity controller\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inheritance\\implementations\\entity controller\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\inheritance\\abstract classes\\entitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inheritance\\abstract classes\\entitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\entity\\entityhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\entityhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\inheritance\\implementations\\entity controller\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inheritance\\implementations\\entity controller\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\entity\\entitystats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\entitystats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\entity\\entityhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\entityhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\entity\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\entity\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\scriptableobjects\\general\\statsconfigso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobjects\\general\\statsconfigso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\inheritance\\abstract classes\\entitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inheritance\\abstract classes\\entitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +50,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerPickupGravity.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Player\\PlayerPickupGravity.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\Player\\PlayerPickupGravity.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Player\\PlayerPickupGravity.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Entity\\Player\\PlayerPickupGravity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:53:58.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MagneticBehaviour.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Behaviours\\MagneticBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Behaviours\\MagneticBehaviour.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Behaviours\\MagneticBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Behaviours\\MagneticBehaviour.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:51:11.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\Player\\Player.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Entity\\Player\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:38:26.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\Enemy.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Entity\\Enemy.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:30:25.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyController.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\EnemyController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\EnemyController.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\EnemyController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\EnemyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T19:26:40.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:57:26.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EntityController.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:57:22.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "StatsConfigSO.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\General\\StatsConfigSO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\General\\StatsConfigSO.cs",
@@ -59,89 +158,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EntitySO.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\Entities\\EntitySO.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\Entities\\EntitySO.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\Entities\\EntitySO.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\Entities\\EntitySO.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T17:04:11.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClassSO.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\Entities\\ClassSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObjects\\Entities\\ClassSO.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\ScriptableObjects\\Entities\\ClassSO.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScriptableObjects\\Entities\\ClassSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T17:04:55.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inheritance\\Implementations\\Entity Controller\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T16:57:26.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EntityController.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inheritance\\Abstract Classes\\EntityController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T16:57:22.457Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "EntityHealth.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\EntityHealth.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityHealth.cs",
               "RelativeToolTip": "Assets\\Scripts\\Entity\\EntityHealth.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T16:34:12.744Z"
+              "WhenOpened": "2025-04-08T16:34:12.744Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "EntityStats.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityStats.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\EntityStats.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityStats.cs",
               "RelativeToolTip": "Assets\\Scripts\\Entity\\EntityStats.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T15:55:16.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
-              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:43:08.822Z"
+              "WhenOpened": "2025-04-08T15:55:16.653Z",
+              "EditorCaption": ""
             }
           ]
         }

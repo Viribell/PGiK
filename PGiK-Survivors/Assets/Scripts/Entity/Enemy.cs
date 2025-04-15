@@ -2,35 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
-    [SerializeField] public EnemySO enemyData;
-
-    [SerializeField] private Transform moveTarget;
-    [SerializeField] private float speed;
+public class Enemy : MonoBehaviour, IEntityComponent {
     [SerializeField] private List<DropBehaviour> dropBehaviours = new List<DropBehaviour>();
 
-    private Dictionary<StatType, Stat> enemyStats;
-    private Rigidbody2D rb;
+    private EnemyController enemyController;
 
-    private void Awake() {
-        enemyStats = enemyData?.GetStats();
-
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void FixedUpdate() {
-        if ( PauseControl.IsGamePaused ) {
-            rb.velocity = Vector2.zero;
-            return;
-        }
-
-        MoveToTarget();
-    }
-
-    private void MoveToTarget() {
-        Vector2 dir = ( moveTarget.position - transform.position ).normalized;
-
-        rb.velocity = dir * speed;
+    private void Start() {
+        if ( enemyController.EntityData != null ) Init();
     }
 
     public void TestDie() {
@@ -45,5 +23,13 @@ public class Enemy : MonoBehaviour {
         foreach(DropBehaviour dropBehaviour in dropBehaviours ) {
             dropBehaviour?.Drop( transform.position );
         }
+    }
+
+    private void Init() {
+        if ( enemyController.EntityData.sprite != null && enemyController.SpriteRenderer != null ) enemyController.SpriteRenderer.sprite = enemyController.EntityData.sprite;
+    }
+
+    public void LoadEntityController( EntityController controller ) {
+        enemyController = ( EnemyController )controller;
     }
 }
