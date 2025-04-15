@@ -8,7 +8,7 @@ using UnityEngine;
 public class RefCacheControl : MonoBehaviour {
     public static RefCacheControl Instance { get; private set; }
 
-    [field: SerializeField] public GameObject Player { get; private set; }
+    [field: SerializeField] public PlayerController Player { get; private set; }
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; } 
@@ -18,7 +18,7 @@ public class RefCacheControl : MonoBehaviour {
             return;
         }
 
-        Player = GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
 }

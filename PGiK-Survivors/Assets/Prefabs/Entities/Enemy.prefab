@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
-  <SpriteRenderer>k__BackingField: {fileID: 0}
+  <SpriteRenderer>k__BackingField: {fileID: 6896755176239969633}
   <EntityData>k__BackingField: {fileID: 11400000, guid: 6edf61f874680d348a20743cdc0ccdc5, type: 2}
   <EntityStats>k__BackingField: {fileID: 7285488772697139370}
   <EntityStatuses>k__BackingField: {fileID: 1661580863228066039}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 2575890296979019507}
   - component: {fileID: 6896755176239969633}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

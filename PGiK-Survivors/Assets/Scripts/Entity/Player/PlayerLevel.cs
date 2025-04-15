@@ -57,7 +57,7 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
         currXP = currXP - requiredXP; // optionally maybe add some rounding
         requiredXP = CalculateRequiredXP();
 
-        LoadLevelUpStatMods();
+        playerController.EntityStats.AddStatMod( classLvlMods, StatModHandlingOptions.NoDuplicateModAdd );
 
         OnLevelUp?.Raise(); // player level up is part of it for now, maybe it should be just called here individually
     }
@@ -84,25 +84,6 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
         return totalRequiredXP;
     }
-
-
-
-    public void LoadLevelUpStatMods() {
-        foreach ( StatModifier mod in classLvlMods ) {
-            playerController.EntityStats.AddStatMod( mod );
-            UpdateEdgeCaseStat( mod.affectedStat ); //depending on how it will change, it may be useless later
-        }
-        //for memory saving, it prolly would be better to just remove those mods from stat, modify value of them X level and then insert again
-        //otherwise the list prolly will get quite long for them
-    }
-
-    public void UpdateEdgeCaseStat( StatType stat ) {
-        switch ( stat ) {
-            case StatType.PickupRange: { playerController.PlayerPickup.UpdatePickupRange(); } break;
-            case StatType.Health: { playerController.EntityHealth.UpdateMaxHealth(); } break;
-        }
-    }
-
 
     public bool HasEnoughXP() { return currXP >= requiredXP; }
     public float Level() { return level; }

@@ -15,7 +15,7 @@ public class EnemyController : EntityController {
     [HideInInspector] public EnemySO EnemyData { get { return ( EnemySO )EntityData; } }
 
     private void Start() {
-        attackTarget = RefCacheControl.Instance.Player;
+        attackTarget = RefCacheControl.Instance.Player.gameObject;
     }
 
     protected override void UploadControllerToComponents() {

@@ -6,6 +6,7 @@ public enum StatModType {
 
 [System.Serializable]
 public class StatModifier {
+    public float DefaultValue { get; private set; }
     public float value;
     public StatType affectedStat;
     public StatModType type;
@@ -15,6 +16,8 @@ public class StatModifier {
         this.value = value;
         this.type = type;
         this.applyOrder = applyOrder;
+
+        DefaultValue = value;
     }
 
     public StatModifier( float value, StatModType type ) : this( value, type, ( int )type ) { }
