@@ -10,13 +10,13 @@ public class MagneticBehaviour : MonoBehaviour {
     }
 
     public void Gravitate() {
-        Vector2 dir = ( PlayerControl.Instance.Player.transform.position - transform.position ).normalized;
+        Vector2 dir = ( PlayerController.Instance.Player.transform.position - transform.position ).normalized;
 
         transform.Translate( dir * GravitySpeed * Time.fixedDeltaTime );
     }
 
     public void Gravitate( float gravitySpeed ) {
-        Vector2 dir = ( PlayerControl.Instance.Player.transform.position - transform.position ).normalized;
+        Vector2 dir = ( PlayerController.Instance.Player.transform.position - transform.position ).normalized;
 
         transform.Translate( dir * gravitySpeed * Time.fixedDeltaTime );
     }
