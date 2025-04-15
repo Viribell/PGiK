@@ -7,9 +7,9 @@ public class MainMenuControl : MonoBehaviour {
     [Header("First Selected Button")]
     [SerializeField] private Button firstSelected;
 
-    //[Header( "Next Scene Info" )]
-    //[SerializeField] private SceneAsset nextScene; //will only work in editor? it seems so
-    
+    [Header( "Next Scene Info" )]
+    [SerializeField] private SceneLoader.Scene nextScene;
+
 
     [Header( "Menu Buttons" )]
     [SerializeField] private Button playButton;
@@ -31,7 +31,7 @@ public class MainMenuControl : MonoBehaviour {
 
         SaveControl.Instance.SaveGame();
 
-        SceneManager.LoadSceneAsync( "TestingScene" ); //FOR CHANGE!!!!!!!!!!!!!
+        SceneLoader.Load( nextScene );
     }
 
     public void OnOptionsClicked() {
@@ -46,8 +46,13 @@ public class MainMenuControl : MonoBehaviour {
     }
 
     public void OnExitClicked() {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
 
+        Application.Quit();
     }
+
 
     private void LockPlayButton() {
         playButton.interactable = false;

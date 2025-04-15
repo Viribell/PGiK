@@ -13,6 +13,10 @@ public class SpawnControl : MonoBehaviour {
     [SerializeField] public ConsumablePickup consumablePrefab;
     [SerializeField] public BasicDesctructible basicDestructPrefab;
 
+    [Header( "Spawns Hierarchy Target" )]
+    [SerializeField] private Transform itemsParent;
+    [SerializeField] private Transform enemiesParent; 
+
     [Header( "Spawn Force Config" )]
     [SerializeField] public bool useForceOnDrop = false;
     [SerializeField] public float dropForce;
@@ -103,35 +107,43 @@ public class SpawnControl : MonoBehaviour {
     }
 
 
-    public void SpawnPrefab( GameObject prefab, Vector2 pos ) {
-        if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return; }
+    public GameObject SpawnPrefab( GameObject prefab, Vector2 pos ) {
+        if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return null; }
 
-        Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
     }
 
-    public void SpawnPrefab( Transform prefab, Vector2 pos ) {
-        if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return; }
+    public Transform SpawnPrefab( Transform prefab, Vector2 pos ) {
+        if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return null; }
 
-        Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
     }
 
-    private void Propel( GameObject objectToPropel ) {
-        if ( !useForceOnDrop ) return;
+    private GameObject Propel( GameObject objectToPropel ) {
+        if ( !useForceOnDrop ) return null;
 
         Vector2 dropDir = new Vector2( Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f) );
         Rigidbody2D rb = objectToPropel.GetComponent<Rigidbody2D>();
 
         if ( rb != null ) { NormalizeRigidBody( rb ); rb.AddForce( dropDir * dropForce, forceMode ); }
+
+        return objectToPropel;
     }
 
-    private void Propel( Transform objectToPropel ) {
-        if ( !useForceOnDrop ) return;
+    private Transform Propel( Transform objectToPropel ) {
+        if ( !useForceOnDrop ) return null;
 
         Vector2 dropDir = new Vector2( Random.Range( -1.0f, 1.0f ), Random.Range( -1.0f, 1.0f ) );
         Rigidbody2D rb = objectToPropel.GetComponent<Rigidbody2D>();
 
         if ( rb != null ) { NormalizeRigidBody( rb ); rb.AddForce( dropDir * dropForce, forceMode ); }
+
+        return objectToPropel;
     }
+
+
+    private void AttachParent( GameObject child, Transform parent ) { child?.transform.SetParent( parent ); }
+    private void AttachParent( Transform child, Transform parent ) { child?.transform.SetParent( parent ); }
 
     //This may uselessly take up resources
     private void NormalizeRigidBody(Rigidbody2D rb) {
@@ -141,10 +153,10 @@ public class SpawnControl : MonoBehaviour {
     }
 
 
-    public void SpawnReadyResource( ResourceSO resource, Vector2 pos ) { SpawnPrefab( resource.prefab, pos ); }
+    public void SpawnReadyResource( ResourceSO resource, Vector2 pos ) { AttachParent( SpawnPrefab( resource.prefab, pos ), itemsParent ); }
     public void SpawnReadyRescue( NPCRescueSO rescue, Vector2 pos ) { SpawnPrefab( rescue.prefab, pos ); }
-    public void SpawnReadyExpPoint( ExpPointSO expPoint, Vector2 pos ) { SpawnPrefab( expPoint.prefab, pos ); }
-    public void SpawnReadyItem( ItemSO item, Vector2 pos ) { SpawnPrefab( item.prefab, pos ); }
-    public void SpawnReadyConsumable( ConsumableSO consumable, Vector2 pos ) { SpawnPrefab( consumable.prefab, pos ); }
+    public void SpawnReadyExpPoint( ExpPointSO expPoint, Vector2 pos ) { AttachParent( SpawnPrefab( expPoint.prefab, pos ), itemsParent ); }
+    public void SpawnReadyItem( ItemSO item, Vector2 pos ) { AttachParent( SpawnPrefab( item.prefab, pos ), itemsParent ); }
+    public void SpawnReadyConsumable( ConsumableSO consumable, Vector2 pos ) { AttachParent( SpawnPrefab( consumable.prefab, pos ), itemsParent ); }
     public void SpawnReadyBasicDestruct( DestructibleSO destruct, Vector2 pos ) { SpawnPrefab( destruct.prefab, pos ); }
 }

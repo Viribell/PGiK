@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 1616124310}
-  nextScene: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+  nextScene: 9
   playButton: {fileID: 1616124310}
   optionsButton: {fileID: 1521811413}
   exitButton: {fileID: 1708885705}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 66553051}
         m_TargetAssemblyTypeName: MainMenuControl, Assembly-CSharp
-        m_MethodName: OnExitCliked
+        m_MethodName: OnExitClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

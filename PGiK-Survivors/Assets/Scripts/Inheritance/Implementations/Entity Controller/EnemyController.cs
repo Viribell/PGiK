@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : EntityController {
     [field: Header( "Enemy Entity Info" )]
-    [field: SerializeField] private GameObject attackTarget;
+    [field: SerializeField] private PlayerController attackTarget;
 
     [field: Header( "Enemy Entity Config" )]
     [field: SerializeField] public Enemy Enemy { get; private set; }
@@ -15,7 +15,7 @@ public class EnemyController : EntityController {
     [HideInInspector] public EnemySO EnemyData { get { return ( EnemySO )EntityData; } }
 
     private void Start() {
-        attackTarget = RefCacheControl.Instance.Player.gameObject;
+        attackTarget = RefCacheControl.Instance.Player;
     }
 
     protected override void UploadControllerToComponents() {

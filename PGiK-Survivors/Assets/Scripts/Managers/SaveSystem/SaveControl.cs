@@ -30,7 +30,7 @@ public class SaveControl : MonoBehaviour {
     private void Awake() {
         if ( Instance == null ) { Instance = this; } 
         else { 
-            Debug.Log( "There is more than one instance of SaveControl. Destroying the new one." );
+            Debug.LogWarning( "There is more than one instance of SaveControl. Destroying the new one." );
             Destroy( gameObject );
             return;
         }
