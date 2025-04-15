@@ -529,8 +529,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currHealth: 0
   maxHealth: 0
+  lastTimeDamaged: 0
   OnHealthChanged: {fileID: 11400000, guid: baf89d567388b7e418ace656ba374b89, type: 2}
   OnEntityDeath: {fileID: 0}
+  hasInvincibilityTime: 1
+  invincibilityTime: 2
+  regenDelay: 1.5
 --- !u!114 &6624532341770309845
 MonoBehaviour:
   m_ObjectHideFlags: 0
