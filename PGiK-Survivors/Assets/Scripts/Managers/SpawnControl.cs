@@ -120,7 +120,7 @@ public class SpawnControl : MonoBehaviour {
     }
 
     private GameObject Propel( GameObject objectToPropel ) {
-        if ( !useForceOnDrop ) return null;
+        if ( !useForceOnDrop ) return objectToPropel;
 
         Vector2 dropDir = new Vector2( Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f) );
         Rigidbody2D rb = objectToPropel.GetComponent<Rigidbody2D>();
@@ -131,7 +131,7 @@ public class SpawnControl : MonoBehaviour {
     }
 
     private Transform Propel( Transform objectToPropel ) {
-        if ( !useForceOnDrop ) return null;
+        if ( !useForceOnDrop ) return objectToPropel;
 
         Vector2 dropDir = new Vector2( Random.Range( -1.0f, 1.0f ), Random.Range( -1.0f, 1.0f ) );
         Rigidbody2D rb = objectToPropel.GetComponent<Rigidbody2D>();
