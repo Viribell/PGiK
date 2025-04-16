@@ -49,7 +49,7 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
     private void TestButton_performed( UnityEngine.InputSystem.InputAction.CallbackContext obj ) {
         GainXP( 20 );
-        //AudioManager.Instance.PlaySound( playerController.EntityAudio?.GetSoundData( EntitySoundType.Undefined ) ); // TEMP_TEST_TO_ERASE
+        AudioManager.Instance.PlayPoolSound( playerController.EntityAudio?.GetSoundData( EntitySoundType.Undefined ), transform.position ); // TEMP_TEST_TO_ERASE
         playerController.EntityHealth.Damage( 10 );
     }
 
