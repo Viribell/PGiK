@@ -68,6 +68,14 @@ public class Stat {
         lastBaseValue = this.baseValue = baseValue;
     }
 
+    public void Recalculate() {
+        if ( HasModChanged || baseValue != lastBaseValue ) {
+            lastBaseValue = baseValue;
+            totalValue = CalculateTotal();
+            HasModChanged = false;
+        }
+    }
+
     public void AddMod(StatModifier mod) {
         HasModChanged = true;
         statModifiers.Add( mod );

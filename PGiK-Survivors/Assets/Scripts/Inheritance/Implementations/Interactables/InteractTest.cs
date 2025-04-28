@@ -5,7 +5,12 @@ using UnityEngine.Events;
 
 public class InteractTest : Interactable {
     [SerializeField] private UnityEvent OnInteract;
+    [field: SerializeField] private StatusEffectSO effect;
     
+    public void TestApply(GameObject target) {
+        effect.Apply( target );
+    }
+
     protected override void Interact() {
         if ( !CanInteract() ) return;
 

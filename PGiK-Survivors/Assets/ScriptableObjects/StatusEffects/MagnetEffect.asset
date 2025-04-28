@@ -9,11 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb01722e1ed8a949b5e3111917cbfbe, type: 3}
-  m_Name: EffectTest
+  m_Script: {fileID: 11500000, guid: 3076d2f52fc593b4b9edbfec397eb657, type: 3}
+  m_Name: MagnetEffect
   m_EditorClassIdentifier: 
   effectName: 
-  tickValue: 0
-  tickSpeed: 0.6
-  durationSeconds: 60
-  movementPenalty: 0
+  effectType: 4
+  isEffectOverTime: 1
+  tickInterval: 0.2
+  tickCooldown: 0
+  durationSeconds: 5
+  timeLeft: 2
+  isEffectActive: 1
+  wasActivated: 0
+  gravitySpeed: 10
