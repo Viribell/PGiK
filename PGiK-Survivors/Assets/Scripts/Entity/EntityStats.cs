@@ -37,6 +37,12 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
         else return null;
     }
 
+    public void UpdateStat( StatType type ) {
+        if ( entityStats.TryGetValue( type, out Stat stat ) ) {
+            stat.Recalculate();
+        }
+    }
+
     public float GetStatTotal( StatType type ) {
         float total = -1;
 

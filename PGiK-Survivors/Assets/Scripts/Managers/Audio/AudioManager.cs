@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-using UnityEngine.Rendering;
+using UnityEngine.Pool;
 
 #region AudioData
 
@@ -12,6 +12,7 @@ public class AudioSoundData {
     public string name;
     public SoundFXType soundType; //not really needed, but will see
     public AudioClip clip;
+    public AudioMixerGroup mixerGroup;
 
     [Header( "Sound Behaviour Config" )]
     public bool playOnAwake = false;
@@ -21,6 +22,7 @@ public class AudioSoundData {
     [Range( 0.0f, 1.0f )] public float volume = 1.0f;
     [Range( -3.0f, 3.0f )] public float pitch = 1.0f;
 
+    //This has to go outside somehow
     [Header( "Delay Info" )]
     public bool hasDelay = false;
     public bool useLengthAsDelay = false;
@@ -39,7 +41,7 @@ public class AudioSoundData {
         }
     }
 
-
+    //This has to go outside somehow
     public bool CanPlay() {
         if ( !hasDelay ) return true;
 
@@ -92,15 +94,25 @@ public enum AudioPlayType {
 
 public class AudioManager : MonoBehaviour, IPersistentData {
     public static AudioManager Instance { get; private set; }
+    
+    private IObjectPool<SoundEmitter> soundEmitterPool;
+    private List<SoundEmitter> activeSoundEmitters = new List<SoundEmitter>();
 
     [Header("Basic Audio Config")]
-    [field: SerializeField] private AudioMixer audioMixer;
+    [field: SerializeField] private AudioMixer defaultAudioMixer;
     [field: SerializeField] private MusicSetSO audioAssets;
     [Range(0.0f, 1.0f)]
     [field: SerializeField] private float defaultAudioVolume;
 
+    [Header( "Object Pool Config" )]
+    [field: SerializeField] private bool collectionCheck = true;
+    [field: SerializeField] private int defaultCapacity = 10;
+    [field: SerializeField] private int maxPoolSize = 100;
+
+
     [Header( "Audio Objects Prefabs" )]
     [field: SerializeField] private AudioSource soundFXSource;
+    [field: SerializeField] private SoundEmitter emitterPrefab;
 
     [Header( "Audio Objects References" )]
     [field: SerializeField] private AudioSource musicSource;
@@ -116,6 +128,7 @@ public class AudioManager : MonoBehaviour, IPersistentData {
         }
 
         DontDestroyOnLoad( gameObject );
+        InitPool();
     }
 
     private void OnEnable() {
@@ -129,6 +142,7 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     public void OnSceneLoaded( Scene scene, LoadSceneMode mode ) {
         PlayMusicSource( MusicType.Undefined ); //TEMP_TEST
     }
+
     #endregion
 
 
@@ -304,6 +318,68 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     #endregion
 
 
+    #region PlaySoundFromPool
+
+    public void PlayPoolSound( AudioSoundData soundData, Vector2 position ) {
+        if ( soundData == null ) { Debug.Log( $"Sound data not found." ); return; }
+
+        BuildSound( soundData, position );
+    }
+
+    public void PlayPoolSound( AudioSoundData soundData, Vector2 position, bool randomPitch ) {
+        if ( soundData == null ) { Debug.Log( $"Sound data not found." ); return; }
+
+        BuildSound( soundData, position, randomPitch );
+    }
+
+    #endregion
+
+    #region PoolFunctions
+
+    public SoundEmitter GetEmitter() { return soundEmitterPool.Get(); }
+    public void ReturnEmitter(SoundEmitter emitter) { soundEmitterPool.Release( emitter ); }
+
+
+    private void BuildSound(AudioSoundData data, Vector2 pos, bool randomPitch = false) {
+        SoundEmitter emitter = GetEmitter();
+        emitter.Init( data, pos );
+
+        if ( randomPitch ) emitter.RandomizePitch();
+
+        emitter.Play();
+    }
+
+    private void InitPool() {
+        soundEmitterPool = new ObjectPool<SoundEmitter>( CreatePoolObject, OnTakeFromPool, OnReturnToPool, OnDestroyPool, 
+            collectionCheck, defaultCapacity, maxPoolSize );
+    }
+
+    private SoundEmitter CreatePoolObject() {
+        SoundEmitter emitter = Instantiate( emitterPrefab );
+        emitter.gameObject.SetActive( false );
+        emitter.SetAudioManager( this );
+        emitter.SetParent( transform );
+
+        return emitter;
+    }
+
+    private void OnTakeFromPool( SoundEmitter emitter ) {
+        emitter.gameObject.SetActive( true );
+        activeSoundEmitters.Add( emitter );
+    }
+
+    private void OnReturnToPool( SoundEmitter emitter ) {
+        emitter.gameObject.SetActive( false );
+        activeSoundEmitters.Remove( emitter );
+    }
+
+    private void OnDestroyPool( SoundEmitter emitter ) {
+        Destroy( emitter.gameObject );
+    }
+
+    #endregion
+
+
     #region MiscFunctions
 
     private void SimpleStopIfPlaying() {
@@ -320,21 +396,21 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     //to be used with Slider with range (0.00001f, 1.0f)
     //optionally make range (0, 100) but add functions for normalization of Volume To Value and reverse
     public void SetMasterVolume(float level) {
-        audioMixer.SetFloat( "masterVolume", Mathf.Log10( level ) * 20.0f );
+        defaultAudioMixer.SetFloat( "masterVolume", Mathf.Log10( level ) * 20.0f );
     }
 
     public void SetSoundFXVolume( float level ) {
-        audioMixer.SetFloat( "soundFXVolume", Mathf.Log10( level ) * 20.0f );
+        defaultAudioMixer.SetFloat( "soundFXVolume", Mathf.Log10( level ) * 20.0f );
     }
 
     public void SetMusicVolume( float level ) {
-        audioMixer.SetFloat( "musicVolume", Mathf.Log10( level ) * 20.0f );
+        defaultAudioMixer.SetFloat( "musicVolume", Mathf.Log10( level ) * 20.0f );
     }
 
     public float GetMasterVolume() {
         float volume = 1.0f;
 
-        audioMixer.GetFloat( "masterVolume", out volume );
+        defaultAudioMixer.GetFloat( "masterVolume", out volume );
         volume = Mathf.Pow( 10, volume / 20 );
 
         return volume;
@@ -343,7 +419,7 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     public float GetMusicVolume() {
         float volume = 0.0f;
 
-        audioMixer.GetFloat( "musicVolume", out volume );
+        defaultAudioMixer.GetFloat( "musicVolume", out volume );
         volume = Mathf.Pow( 10, volume / 20 );
 
         return volume;
@@ -352,7 +428,7 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     public float GetEffectsVolume() {
         float volume = 1.0f;
 
-        audioMixer.GetFloat( "soundFXVolume", out volume );
+        defaultAudioMixer.GetFloat( "soundFXVolume", out volume );
         volume = Mathf.Pow( 10, volume / 20 );
 
         return volume;

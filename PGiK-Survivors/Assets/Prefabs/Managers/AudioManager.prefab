@@ -46,10 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae493c62b081b0a46bf1543e5bf6ee4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: dff5d0cba047a2f4288e2e2106881106, type: 2}
+  defaultAudioMixer: {fileID: 24100000, guid: dff5d0cba047a2f4288e2e2106881106, type: 2}
   audioAssets: {fileID: 11400000, guid: 1cfc7e97f751b4a49a6e4b7d2b5d8a33, type: 2}
   defaultAudioVolume: 0.9
+  collectionCheck: 1
+  defaultCapacity: 10
+  maxPoolSize: 100
+  maxSoundInstances: 30
   soundFXSource: {fileID: 7397535528905322062, guid: 7d92ef7b6829b324b89904c6b68ccfb1, type: 3}
+  emitterPrefab: {fileID: 6829776038109763080, guid: a6fc48faed8ff19448243038081aefd2, type: 3}
   musicSource: {fileID: 8986874110181556814}
   localOneShot: {fileID: 375847298681578521}
 --- !u!82 &8986874110181556814

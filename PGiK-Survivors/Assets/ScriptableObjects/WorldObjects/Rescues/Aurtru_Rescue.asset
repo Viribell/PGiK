@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Aurtru_Rescue
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 1df50fc341447a842a6f7488b1d16b6f, type: 2}
-  defaultSprite: {fileID: 0}
-  depletedSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 3577649fcca082e49a2c9c2a808f7d47, type: 3}
+  depletedSprite: {fileID: 21300000, guid: 68e208c2bba2cd240bef4cb2cf309c91, type: 3}
   startDialogue: {fileID: 11400000, guid: d330c57426fb1d640addaa71aaa1f9d4, type: 2}
   prefab: {fileID: 8389483514626278615, guid: 06b37e07af087d246a27b841ffe80c0e, type: 3}

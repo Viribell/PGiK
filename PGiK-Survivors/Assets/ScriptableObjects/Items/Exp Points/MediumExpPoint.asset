@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Medium Exp Point
   itemType: 7
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 40d82aff60a5a9b4fa328629b3d9e6c6, type: 3}
   prefab: {fileID: 8418197154599997064, guid: a134b7c36bc077d4db4aaa4edc9a1cd6, type: 3}
   usesDropChance: 1
   dropChance: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Troll Blood
   itemType: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8eccc6104e2ff024fa12e9580f9d7e5d, type: 3}
   prefab: {fileID: 4619955044849332484, guid: efbf3fd232902de459967aea9415117d, type: 3}
   usesDropChance: 1
   dropChance: 0.2

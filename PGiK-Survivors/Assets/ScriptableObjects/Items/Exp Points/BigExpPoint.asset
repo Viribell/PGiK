@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Big Exp Point
   itemType: 7
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ef11e5889248fed4d96707eaab866df3, type: 3}
   prefab: {fileID: 2853437529196285818, guid: d787c556e58029547b58a3a5538a4458, type: 3}
   usesDropChance: 1
   dropChance: 1

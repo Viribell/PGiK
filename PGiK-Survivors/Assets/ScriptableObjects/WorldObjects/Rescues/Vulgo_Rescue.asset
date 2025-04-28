@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vulgo_Rescue
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 4ace7a791718b8948acb04cb2e18693c, type: 2}
-  defaultSprite: {fileID: 0}
-  depletedSprite: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 4c2264320153abf4897bf7a00e315dd3, type: 3}
+  depletedSprite: {fileID: 21300000, guid: 84f8f2956c39f9d4bababc27dbeeed46, type: 3}
   startDialogue: {fileID: 11400000, guid: 7a40400b3b45bab4cb146d9be997c60d, type: 2}
   prefab: {fileID: 9074968951513284173, guid: 53eef3bc8e1741b48869ec3e8d2bcf50, type: 3}

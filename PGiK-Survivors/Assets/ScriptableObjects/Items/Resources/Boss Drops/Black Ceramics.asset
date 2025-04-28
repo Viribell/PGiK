@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Black Ceramics
   itemType: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 6aef6863ea3618e43946832e699ee2eb, type: 3}
   prefab: {fileID: 8931961479437169178, guid: 59f1b967113132c44a39133f16ee319a, type: 3}
   usesDropChance: 1
   dropChance: 0.2

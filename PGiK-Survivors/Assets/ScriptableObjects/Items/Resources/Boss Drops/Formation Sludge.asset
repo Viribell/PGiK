@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Formation Sludge
   itemType: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 7375b01b5322e744fbb082c1fb1e8557, type: 3}
   prefab: {fileID: 7209491614555966563, guid: 96779e8d8e679274eb978ad1d591ceb0, type: 3}
   usesDropChance: 1
   dropChance: 0.2
