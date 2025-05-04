@@ -29,4 +29,9 @@ public abstract class EntityController : MonoBehaviour {
 
     protected abstract void UploadControllerToComponents();
     public abstract Vector2 GetMoveVector();
+
+    public abstract void OnEntityDeath();
+    public abstract void OnDamaged( float value );
+    public abstract void OnHealed( float value );
+    public abstract void OnHealthChanged();
 }

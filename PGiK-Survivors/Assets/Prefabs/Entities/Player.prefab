@@ -662,10 +662,8 @@ MonoBehaviour:
   currHealth: 0
   maxHealth: 0
   lastTimeDamaged: 0
-  OnHealthChanged: {fileID: 11400000, guid: baf89d567388b7e418ace656ba374b89, type: 2}
-  OnEntityDeath: {fileID: 0}
   usesInvincibilityTime: 1
-  invincibilityTime: 2
+  invincibilityTime: 1
   regenDelay: 1.5
 --- !u!114 &6624532341770309845
 MonoBehaviour:
@@ -679,6 +677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d315724a6bf5446b20bf03178f02dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cachedEffects:
+    m_keys: 
+    m_values: []
+  enabledEffects:
+    m_keys: 
+    m_values: []
 --- !u!114 &4924217607710363613
 MonoBehaviour:
   m_ObjectHideFlags: 0

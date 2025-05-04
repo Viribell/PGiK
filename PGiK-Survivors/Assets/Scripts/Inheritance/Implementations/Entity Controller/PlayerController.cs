@@ -19,4 +19,25 @@ public class PlayerController : EntityController {
     public override Vector2 GetMoveVector() {
         return GameInput.Instance.GetMovementVectorNormalized();
     }
+
+    #region Events
+    public override void OnEntityDeath() {
+        Debug.Log( "Player death" );
+        Player.Die();
+    }
+
+    public override void OnHealthChanged() {
+        
+    }
+
+    public override void OnDamaged( float value ) {
+        if ( value < 0 ) return;
+
+        QuestControl.Instance.UpdateValuesQuests( TrackedType.DamageTaken, value );
+    }
+
+    public override void OnHealed( float value ) {
+        if ( value < 0 ) return;
+    }
+    #endregion
 }

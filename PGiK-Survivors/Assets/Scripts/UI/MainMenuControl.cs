@@ -10,6 +10,9 @@ public class MainMenuControl : MonoBehaviour {
     [Header( "Next Scene Info" )]
     [SerializeField] private SceneLoader.Scene nextScene;
 
+    [Header( "Connected with menu" )]
+    [SerializeField] private OptionsControl options;
+
 
     [Header( "Menu Buttons" )]
     [SerializeField] private Button playButton;
@@ -35,14 +38,7 @@ public class MainMenuControl : MonoBehaviour {
     }
 
     public void OnOptionsClicked() {
-        // POPUP TEST CODE
-
-        UIConfirmationPopup popup = Instantiate( popupPrefab, gameObject.transform );
-
-        if ( popup == null ) Debug.Log( "This is not a confirmation popup prefab!" );
-
-        popup.SetDestroyOnChoice( true );
-        popup.Activate( "Text", () => { SelectFirstButton();  }, () => { SelectFirstButton(); } );
+        
     }
 
     public void OnExitClicked() {

@@ -13,6 +13,10 @@ public class Player : MonoBehaviour, IEntityComponent {
         if ( playerController.EntityData.sprite != null && playerController.SpriteRenderer != null ) playerController.SpriteRenderer.sprite = playerController.EntityData.sprite;
     }
 
+    public void Die() {
+        
+    }
+
     public void LoadEntityController( EntityController controller ) {
         playerController = (PlayerController)controller;
     }

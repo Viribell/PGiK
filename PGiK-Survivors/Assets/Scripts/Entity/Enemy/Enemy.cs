@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour, IEntityComponent {
         if ( enemyController.EntityData != null ) Init();
     }
 
-    public void TestDie() {
+    public void Die() {
         Drop();
 
         //Destroy( gameObject );

@@ -7,10 +7,6 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
     [field: SerializeField][Lock] private float maxHealth;
     [field: SerializeField][Lock] private float lastTimeDamaged;
 
-    [Header( "Event Channels" )]
-    [field: SerializeField] private EventChannelSO OnHealthChanged;
-    [field: SerializeField] private EventChannelSO OnEntityDeath;
-
     [Header( "Entity Health Config" )]
     [field: SerializeField] private bool usesInvincibilityTime = false;
     [field: SerializeField] private float invincibilityTime = 2.0f; //seconds
@@ -71,15 +67,15 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
             regenRoutine = null;
         }
 
-        OnHealthChanged?.Raise(); //change
+        entityController.OnDamaged( dmgValue );
 
-        if ( IsDead() ) OnEntityDeath?.Raise(); //somehow to be changed to work generally, eg. entityController.OnDeath() and then from there it will take care of what to do
+        if ( IsDead() ) entityController.OnEntityDeath();
     }
 
     public void Heal( float healValue ) {
         currHealth = ( float )System.Math.Round( Mathf.Min( currHealth + healValue, maxHealth ), 4 );
 
-        OnHealthChanged?.Raise(); //change
+        entityController.OnHealed( healValue );
     }
 
     #endregion
@@ -89,7 +85,7 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
     public void UpdateMaxHealth() {
         maxHealth = entityController.EntityStats.GetStatTotal( StatType.Health );
 
-        OnHealthChanged?.Raise(); //change
+        entityController.OnHealthChanged();
     }
 
     private bool IsInvincible() { return lastTimeDamaged + invincibilityTime >= Time.time; }
