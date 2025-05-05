@@ -27,4 +27,17 @@ public class EnemyController : EntityController {
 
         return ( attackTarget.transform.position - transform.position ).normalized;
     }
+
+    #region Events
+    public override void OnEntityDeath() {
+        QuestControl.Instance.UpdateKillQuests( this );
+        Enemy.Die();
+    }
+
+    public override void OnHealthChanged() {}
+
+    public override void OnDamaged( float value ) {}
+
+    public override void OnHealed( float value ) {}
+    #endregion
 }

@@ -302,6 +302,24 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LMB"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""e3df4d9c-032c-4b0b-981d-954feb136a0a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""8477a558-8372-4338-9810-85c47a253d49"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -392,6 +410,28 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2309fc5c-b46a-4179-a6ce-74e5018afcb9"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LMB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15888cbc-f673-4631-bc53-4ec7cafc7e6c"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -445,6 +485,8 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         m_UI_Continue = m_UI.FindAction("Continue", throwIfNotFound: true);
         m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
+        m_UI_LMB = m_UI.FindAction("LMB", throwIfNotFound: true);
+        m_UI_MousePosition = m_UI.FindAction("MousePosition", throwIfNotFound: true);
         // MapFinishScreen
         m_MapFinishScreen = asset.FindActionMap("MapFinishScreen", throwIfNotFound: true);
         m_MapFinishScreen_Newaction = m_MapFinishScreen.FindAction("New action", throwIfNotFound: true);
@@ -669,6 +711,8 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Continue;
     private readonly InputAction m_UI_Move;
     private readonly InputAction m_UI_Submit;
+    private readonly InputAction m_UI_LMB;
+    private readonly InputAction m_UI_MousePosition;
     public struct UIActions
     {
         private @MyInputActions m_Wrapper;
@@ -677,6 +721,8 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         public InputAction @Continue => m_Wrapper.m_UI_Continue;
         public InputAction @Move => m_Wrapper.m_UI_Move;
         public InputAction @Submit => m_Wrapper.m_UI_Submit;
+        public InputAction @LMB => m_Wrapper.m_UI_LMB;
+        public InputAction @MousePosition => m_Wrapper.m_UI_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -698,6 +744,12 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
             @Submit.started += instance.OnSubmit;
             @Submit.performed += instance.OnSubmit;
             @Submit.canceled += instance.OnSubmit;
+            @LMB.started += instance.OnLMB;
+            @LMB.performed += instance.OnLMB;
+            @LMB.canceled += instance.OnLMB;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -714,6 +766,12 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
             @Submit.started -= instance.OnSubmit;
             @Submit.performed -= instance.OnSubmit;
             @Submit.canceled -= instance.OnSubmit;
+            @LMB.started -= instance.OnLMB;
+            @LMB.performed -= instance.OnLMB;
+            @LMB.canceled -= instance.OnLMB;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -798,6 +856,8 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         void OnContinue(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
+        void OnLMB(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
     public interface IMapFinishScreenActions
     {

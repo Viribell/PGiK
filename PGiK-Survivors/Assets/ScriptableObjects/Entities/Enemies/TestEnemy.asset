@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: TestEnemy
   sprite: {fileID: 21300000, guid: 45e7eeff59ddef24c87f8b4a2135be3f, type: 3}
+  attackPrefab: {fileID: 0}
+  possibleEffects:
+  - {fileID: 11400000, guid: 8f8b46aa37aa8f248ad2e774e7c26141, type: 2}
   statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
     - 30
     - 0
-    - 0
-    - 0
+    - 0.01
+    - 0.1
     - 2
-    - 0
+    - 5
+  enemyType: 0

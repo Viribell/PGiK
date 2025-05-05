@@ -16,6 +16,11 @@ public abstract class EntitySO : ScriptableObject {
     [field: SerializeField] public string entityName;
     [field: SerializeField] public Sprite sprite;
 
+    [Header( "Entity Attack Info" )]
+    [field: SerializeField] public AttackObject attackPrefab;
+    [field: SerializeField] public float spreadAngle = 30.0f;
+    [field: SerializeField] public List<StatusEffectSO> possibleEffects;
+
     [Header( "Entity Stats Info" )]
     [field: SerializeField] public StatsConfigSO statsTemplate;
     [field: SerializeField] public SerializableDictionary<StatType, float> stats = new SerializableDictionary<StatType, float>();
@@ -32,6 +37,18 @@ public abstract class EntitySO : ScriptableObject {
         }
 
         return statsDict;
+    }
+
+    public List<StatusEffectSO> GetPossibleEffects() {
+        if ( possibleEffects.Count == 0 ) return null;
+
+        List<StatusEffectSO> effectsList = new List<StatusEffectSO>();
+
+        foreach ( StatusEffectSO effect in possibleEffects ) {
+            effectsList.Add( effect );
+        }
+
+        return effectsList;
     }
 }
 

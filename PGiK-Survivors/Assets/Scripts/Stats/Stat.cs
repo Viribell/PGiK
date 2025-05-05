@@ -23,7 +23,8 @@ public enum StatType {
     ShockChance,
     FreezeChance,
     EffectHitChance,    // %
-    EffectResistance    // %
+    EffectResistance,    // %
+    Undefined
 }
 
 //currently 22 stats 

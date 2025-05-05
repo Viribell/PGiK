@@ -14,6 +14,7 @@ public abstract class EntityController : MonoBehaviour {
     [field: SerializeField] public EntityStatuses EntityStatuses { get; private set; }
     [field: SerializeField] public EntityHealth EntityHealth { get; private set; }
     [field: SerializeField] public EntityMove EntityMove { get; private set; }
+    [field: SerializeField] public EntityAttack EntityAttack { get; private set; }
 
     private void Awake() {
         BaseUploadControllerToComponents();
@@ -25,8 +26,15 @@ public abstract class EntityController : MonoBehaviour {
         EntityStatuses.LoadEntityController( this );
         EntityHealth.LoadEntityController( this );
         EntityMove.LoadEntityController( this );
+
+        EntityAttack?.LoadEntityController( this );
     }
 
     protected abstract void UploadControllerToComponents();
     public abstract Vector2 GetMoveVector();
+
+    public abstract void OnEntityDeath();
+    public abstract void OnDamaged( float value );
+    public abstract void OnHealed( float value );
+    public abstract void OnHealthChanged();
 }
