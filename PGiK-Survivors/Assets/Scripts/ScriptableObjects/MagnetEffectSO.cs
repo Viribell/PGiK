@@ -12,7 +12,7 @@ public class MagnetEffectSO : StatusEffectSO {
     private EntityController entity;
 
     private void Awake() {
-        isEffectOverTime = false;
+        isEffectOverTime = true;
     }
 
     public override void Apply( GameObject target ) {

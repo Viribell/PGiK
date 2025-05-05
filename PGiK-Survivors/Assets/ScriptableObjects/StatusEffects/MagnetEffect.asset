@@ -15,10 +15,10 @@ MonoBehaviour:
   effectName: 
   effectType: 4
   isEffectOverTime: 1
-  tickInterval: 0.2
+  tickInterval: 0
   tickCooldown: 0
   durationSeconds: 5
-  timeLeft: 2
+  timeLeft: 5
   isEffectActive: 1
   wasActivated: 0
   gravitySpeed: 10

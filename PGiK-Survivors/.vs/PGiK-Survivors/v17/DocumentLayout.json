@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\ui\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\entity\\entitystatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entity\\entitystatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\ui\\optionscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\stats\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stats\\stat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\assets\\scripts\\ui\\optionscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\optionscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\managers\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|d:\\workspaces\\_projects\\pgik\\pgik-survivors\\assets\\scripts\\ui\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC732451-0260-020F-4AE6-6823AB9A171E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\mainmenucontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EntityStatuses.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityStatuses.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Entity\\EntityStatuses.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Entity\\EntityStatuses.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Entity\\EntityStatuses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T09:49:00.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Stat.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Stats\\Stat.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Stats\\Stat.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Stats\\Stat.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Stats\\Stat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T09:44:31.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\Audio\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\Audio\\AudioManager.cs",
+              "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\Managers\\Audio\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\Audio\\AudioManager.cs",
+              "ViewState": "AgIAAJoBAAAAAAAAAAAAAKwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:31:35.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "OptionsControl.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\OptionsControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\OptionsControl.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\OptionsControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\OptionsControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T11:31:04.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainMenuControl.cs",
               "DocumentMoniker": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\MainMenuControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\MainMenuControl.cs",
               "ToolTip": "D:\\WorkSpaces\\_PROJECTS\\PGiK\\PGiK-Survivors\\Assets\\Scripts\\UI\\MainMenuControl.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\MainMenuControl.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T11:30:52.733Z",
               "EditorCaption": ""

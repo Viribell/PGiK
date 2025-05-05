@@ -10,10 +10,6 @@ public class MainMenuControl : MonoBehaviour {
     [Header( "Next Scene Info" )]
     [SerializeField] private SceneLoader.Scene nextScene;
 
-    [Header( "Connected with menu" )]
-    [SerializeField] private OptionsControl options;
-
-
     [Header( "Menu Buttons" )]
     [SerializeField] private Button playButton;
     [SerializeField] private Button optionsButton;
@@ -37,10 +33,6 @@ public class MainMenuControl : MonoBehaviour {
         SceneLoader.Load( nextScene );
     }
 
-    public void OnOptionsClicked() {
-        
-    }
-
     public void OnExitClicked() {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -49,6 +41,8 @@ public class MainMenuControl : MonoBehaviour {
         Application.Quit();
     }
 
+    public void Activate() { SelectFirstButton(); gameObject.SetActive( true ); }
+    public void Deactivate() { gameObject.SetActive( false ); }
 
     private void LockPlayButton() {
         playButton.interactable = false;

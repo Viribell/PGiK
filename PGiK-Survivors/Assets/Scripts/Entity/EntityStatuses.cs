@@ -21,7 +21,7 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
         if ( PauseControl.IsGamePaused ) { return; }
 
         currentInterval += Time.deltaTime;
-        if( currentInterval > lastInterval + 0.2f ) { //0.2 sekundy to tick
+        if( currentInterval > lastInterval + 0.01f ) {
             UpdateEffects();
             lastInterval = currentInterval;
         }
@@ -41,7 +41,7 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
         List<EffectType> toRemove = new List<EffectType>();
 
         foreach(KeyValuePair<EffectType, StatusEffectSO> entry in enabledEffects) {
-            entry.Value.Tick( gameObject, 0.2f ); //tick co 0.2 sekundy
+            entry.Value.Tick( gameObject, 0.01f );
             if ( entry.Value.CanBeRemoved() ) toRemove.Add(entry.Key);
         }
 

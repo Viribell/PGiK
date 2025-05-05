@@ -460,9 +460,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 101f4817518a86b4c9357acb2e63ab53, type: 2}
+    - target: {fileID: 7908171636755081564, guid: 75f643c577d4ec6429ee06bd1535ab89, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8074512137143472419, guid: 75f643c577d4ec6429ee06bd1535ab89, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074512137143472419, guid: 75f643c577d4ec6429ee06bd1535ab89, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246041762386572776, guid: 75f643c577d4ec6429ee06bd1535ab89, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6254,6 +6266,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 421184043875459846, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007741060817747320, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289734019064009984, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386494698569066010, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741829930989796047, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5241567357679796219, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6294,9 +6326,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5362625821533337987, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7640604067738084326, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640604067738084326, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937260367245138015, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
