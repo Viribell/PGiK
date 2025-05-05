@@ -18,6 +18,7 @@ public abstract class StatusEffectSO : ScriptableObject {
     [Header( "General Info" )]
     [field: SerializeField] public string effectName;
     [field: SerializeField] public EffectType effectType;
+    [field: SerializeField] public bool isNegative = false;
     //particle system
 
     [Header("Duration Info")]
@@ -58,7 +59,7 @@ public abstract class StatusEffectSO : ScriptableObject {
         timeLeft = durationSeconds;
     }
 
-    public abstract void Apply( GameObject target );
+    public abstract void Apply( GameObject target, float effectChance = 1.0f );
     public virtual void UpdateEffect( GameObject target ) {}
     public virtual void Remove( GameObject target ) {}
     public virtual bool CanBeRemoved() {

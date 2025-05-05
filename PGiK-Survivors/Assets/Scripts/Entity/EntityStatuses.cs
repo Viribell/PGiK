@@ -10,7 +10,7 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
     private float lastInterval = 0.0f;
 
 
-    private EntityController entityController;
+    private EntityController entity;
 
     private void Awake() {
         cachedEffects = new SerializableDictionary<EffectType, StatusEffectSO>();
@@ -27,14 +27,31 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
         }
     }
 
-    public void AddEffect( StatusEffectSO effect ) {
+    public void AddEffect( StatusEffectSO effect, float effectChance ) {
         EffectType type = effect.effectType;
         
         if( !enabledEffects.ContainsKey( type ) ) {
+
+            if ( ResistEffect( effect, effectChance ) ) return;
+                
             enabledEffects[type] = CreateEffect( type, effect );
+
         } else {
             Debug.Log("Status: " + effect.effectType.ToString() + " already in effect");
         }
+    }
+
+    private bool ResistEffect( StatusEffectSO effect, float effectChance ) {
+        if ( !effect.isNegative ) return false;
+
+        float chanceRoll = Random.Range( 0.0f, 1.0f );
+
+        float resistChance = entity.EntityStats.GetStatTotal( StatType.EffectResistance );
+
+        effectChance -= effectChance * resistChance;
+
+        if ( chanceRoll <= effectChance ) return false;
+        else return true;
     }
 
     public void UpdateEffects() {
@@ -51,7 +68,7 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
     }
 
     public void RemoveEffect(EffectType type) {
-        Debug.Log("Effect" + type.ToString() + " removed");
+        Debug.Log("Effect " + type.ToString() + " removed");
         
         if( enabledEffects.ContainsKey( type ) ) {
             enabledEffects[type].Remove( gameObject );
@@ -70,6 +87,6 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
 
 
     public void LoadEntityController( EntityController controller ) {
-        entityController = controller;
+        entity = controller;
     }
 }

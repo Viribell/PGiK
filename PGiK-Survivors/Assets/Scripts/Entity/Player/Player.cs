@@ -1,23 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IEntityComponent {
-    private PlayerController playerController;
+    private PlayerController player;
 
     private void Start() {
-        if ( playerController.EntityData != null ) Init();
+        if ( player.EntityData != null ) Init();
     }
 
     private void Init() {
-        if ( playerController.EntityData.sprite != null && playerController.SpriteRenderer != null ) playerController.SpriteRenderer.sprite = playerController.EntityData.sprite;
+        if ( player.EntityData.sprite != null && player.SpriteRenderer != null ) player.SpriteRenderer.sprite = player.EntityData.sprite;
     }
 
     public void Die() {
         
     }
 
+    private void OnCollisionEnter2D( Collision2D collision ) {
+        if ( collision.gameObject.TryGetComponent( out EnemyController entity ) ) {
+            TakeCollisionDamage( entity );
+        }
+    }
+
+    private void TakeCollisionDamage( EnemyController entity ) {
+        player.EntityHealth.Damage( EntityAttack.CalculateDamage(entity) );
+
+        StatusEffectSO status = EntityAttack.ChooseEffect( entity );
+
+        status.Apply( gameObject, entity.EntityStats.GetStatTotal( status.effectType ) );
+    }
+
     public void LoadEntityController( EntityController controller ) {
-        playerController = (PlayerController)controller;
+        player = (PlayerController)controller;
     }
 }

@@ -15,29 +15,27 @@ public class MagnetEffectSO : StatusEffectSO {
         isEffectOverTime = true;
     }
 
-    public override void Apply( GameObject target ) {
+    public override void Apply( GameObject target, float effectChance ) {
         if ( target.TryGetComponent( out EntityController entity ) ) {
             timeLeft = durationSeconds;
             isEffectActive = true;
 
-            UpdateEffect( target );
-            entity.EntityStatuses.AddEffect( this );
+            entity.EntityStatuses.AddEffect( this, effectChance );
         }
 
     }
 
     public override void UpdateEffect( GameObject target ) {
-        GetEntity( target );
+        SetEntity( target );
         List<MagneticBehaviour> pickupables = FindMagneticBehaviours();
 
         foreach ( MagneticBehaviour pickup in pickupables ) {
             pickup.Gravitate( entity.transform, gravitySpeed );
         }
-
     }
 
     public override void Remove( GameObject target ) {
-        GetEntity( target );
+        SetEntity( target );
 
         isEffectActive = false;
         wasActivated = false;
@@ -51,11 +49,9 @@ public class MagnetEffectSO : StatusEffectSO {
         return new List<MagneticBehaviour>( peristentObjects );
     }
 
-    private EntityController GetEntity( GameObject target ) {
+    private void SetEntity( GameObject target ) {
         if ( entity == null ) {
             entity = target.GetComponent<EntityController>();
         }
-
-        return entity;
     }
 }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: 
   effectType: 4
+  isNegative: 1
   isEffectOverTime: 1
   tickInterval: 0
   tickCooldown: 0

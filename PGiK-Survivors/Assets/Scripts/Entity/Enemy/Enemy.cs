@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour, IEntityComponent {
     public void Die() {
         Drop();
 
-        //Destroy( gameObject );
+        Destroy( gameObject );
     }
 
     private void Drop() {
