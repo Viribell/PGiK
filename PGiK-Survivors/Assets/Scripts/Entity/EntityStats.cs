@@ -59,14 +59,29 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
             case EffectType.Freeze: { effectChance = StatType.FreezeChance; } break;
             case EffectType.Shock: { effectChance = StatType.ShockChance; } break;
             case EffectType.Poisoned: { effectChance = StatType.PoisonChance; } break;
-
-            case EffectType.Magnet: { total = 1.0f; } break;
         }
 
         if ( entityStats.TryGetValue( effectChance, out Stat stat ) ) {
             total = stat.total;
 
             total += total * GetStatTotal( StatType.EffectHitChance );
+        }
+
+        return total;
+    }
+
+    public float GetEffectDamage( EffectType type ) {
+        float total = 0.0f;
+        StatType effectDamage = StatType.Undefined;
+
+        switch ( type ) {
+            case EffectType.Burn: { effectDamage = StatType.BurnDmg; } break;
+            case EffectType.Shock: { effectDamage = StatType.ShockDmg; } break;
+            case EffectType.Poisoned: { effectDamage = StatType.PoisonDmg; } break;
+        }
+
+        if ( entityStats.TryGetValue( effectDamage, out Stat stat ) ) {
+            total = stat.total;
         }
 
         return total;

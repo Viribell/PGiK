@@ -1,10 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum EnemyType {
     Undefined,
-
+    GreenSlime,
+    BlueSlime,
+    Goblin,
+    Raccoon,
+    Fairy,
+    Skeleton,
+    Wraith,
+    Zombie,
+    ThreeEyedRaven,
+    Gravedigger,
+    Scorpion,
+    LiveCactus,
+    Mummy,
+    FennecFox,
+    FlyingFish,
+    BearMagician,
+    RedBumblebee,
+    Snowman,
+    Medusa,
+    Caveman,
+    SpitterSpider,
+    VenomousBat,
+    
+    Magbitu,
+    Necapues,
+    Dertem,
+    Hierum,
+    Demacr
 }
 
 [CreateAssetMenu( menuName = "Scriptable Objects/Entity/Enemy" )]

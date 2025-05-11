@@ -15,7 +15,7 @@ public class MagnetEffectSO : StatusEffectSO {
         isEffectOverTime = true;
     }
 
-    public override void Apply( GameObject target, float effectChance ) {
+    public override void Apply( GameObject target, float effectChance, float tickValue ) {
         if ( target.TryGetComponent( out EntityController entity ) ) {
             timeLeft = durationSeconds;
             isEffectActive = true;

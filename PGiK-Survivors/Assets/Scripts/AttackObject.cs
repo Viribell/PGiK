@@ -8,6 +8,7 @@ public class AttackObject : MonoBehaviour {
 
     private float dmg;
     private float effectChance;
+    private float effectDamage;
 
     private StatusEffectSO statusEffect;
     private EntityController attackSource;
@@ -34,7 +35,7 @@ public class AttackObject : MonoBehaviour {
 
             if ( attackSource.gameObject.layer != entity.gameObject.layer ) {
                 entity.EntityHealth.Damage( dmg );
-                statusEffect?.Apply( entity.gameObject, effectChance );
+                statusEffect?.Apply( entity.gameObject, effectChance, effectDamage );
                 doDestroy = true;
             }
         }
@@ -48,9 +49,10 @@ public class AttackObject : MonoBehaviour {
         this.origin = origin;
     }
 
-    public void InitEffect( StatusEffectSO statusEffect, float effectChance ) {
+    public void InitEffect( StatusEffectSO statusEffect, float effectChance, float effectDamage ) {
         this.statusEffect = statusEffect;
         this.effectChance = effectChance;
+        this.effectDamage = effectDamage;
     }
 
     public void Launch(Vector2 dir) {

@@ -65,7 +65,9 @@ public class EntityAttack : MonoBehaviour, IEntityComponent {
 
         //Attack Status Effect Choice
         StatusEffectSO chosenEffect = ChooseEffect();
-        attack.InitEffect( chosenEffect, entity.EntityStats.GetStatTotal( chosenEffect.effectType ) );
+        float effectChance = chosenEffect == null ? 0 : entity.EntityStats.GetStatTotal( chosenEffect.effectType );
+        float effectDamage = chosenEffect == null ? 0 : entity.EntityStats.GetEffectDamage( chosenEffect.effectType );
+        attack.InitEffect( chosenEffect, effectChance, effectDamage );
 
         //Launch Attack
         attack.Launch( attackDir );

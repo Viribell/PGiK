@@ -145,6 +145,17 @@ public class Stat {
             } else if ( mod.type == StatModType.PercentMult ) {
                 localTotal *= 1 + mod.value;
 
+            } else if ( mod.type == StatModType.BasePercentAdd ) {
+                percentAddValue += mod.value;
+
+                if ( i + 1 >= statModifiers.Count || statModifiers[i + 1].type != StatModType.BasePercentAdd ) {
+                    localTotal += baseValue * (1 + percentAddValue);
+                    percentAddValue = 0;
+                }
+
+            } else if ( mod.type == StatModType.BasePercentMult ) {
+                localTotal += baseValue * (1 + mod.value);
+
             }
         }
 

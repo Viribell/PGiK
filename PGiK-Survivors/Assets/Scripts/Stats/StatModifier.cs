@@ -1,7 +1,9 @@
 public enum StatModType {
     Flat = 100,
-    PercentAdd = 200,
-    PercentMult = 300
+    BasePercentAdd = 200,
+    BasePercentMult = 300,
+    PercentAdd = 400,
+    PercentMult = 500
 }
 
 [System.Serializable]

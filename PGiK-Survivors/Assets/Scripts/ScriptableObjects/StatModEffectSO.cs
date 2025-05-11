@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 //zmienic nazwe na IncreaseEffectSO i instancje tego beda regenup i attackspeedup 
 [CreateAssetMenu( menuName = "Scriptable Objects/Status Effects/Stat Mod" )]
@@ -15,7 +12,7 @@ public class StatModEffectSO : StatusEffectSO {
         isEffectOverTime = false;
     }
 
-    public override void Apply( GameObject target, float effectChance ) {
+    public override void Apply( GameObject target, float effectChance, float tickValue ) {
         if ( target.TryGetComponent( out EntityController entity ) ) {
             timeLeft = durationSeconds;
             isEffectActive = true;
