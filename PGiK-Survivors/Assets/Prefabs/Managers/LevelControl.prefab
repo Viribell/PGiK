@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5439112160775512255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717812038065925237}
+  - component: {fileID: 5754055349994442310}
+  m_Layer: 0
+  m_Name: LevelControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717812038065925237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439112160775512255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5754055349994442310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439112160775512255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474f3d1791ca22e48b922c9c4746c564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelId: Forest
+  level: 0
+  levelStadium: 1
+  baseGameMinutes: 10
+  currentWave: []
+  stadiumMods:
+  - value: 10
+    affectedStat: 0
+    type: 100
+    applyOrder: 0
+  - value: 2
+    affectedStat: 11
+    type: 100
+    applyOrder: 0
+  modValueIncrease: 0.1
+  materials:
+  - {fileID: 11400000, guid: 30300cdbcc309104c98848642f4514c9, type: 2}
+  - {fileID: 11400000, guid: 8f79f3ec0f656f54a9a2955263e9e156, type: 2}
+  materialSpawnDistance: 1000
+  npcRescuce: {fileID: 11400000, guid: bb5f081afbcb38d488fc5a18fcab42b3, type: 2}
+  rescueSpawnDistance: 1000
+  levelEnemies:
+  - {fileID: 11400000, guid: 7bd742250d71e7642abf8453fba02a3f, type: 2}
+  - {fileID: 11400000, guid: e8e4b418d3f628f4d9866d2cb681218f, type: 2}
+  - {fileID: 11400000, guid: 286d882ae21164a4cb72ffad352f95b5, type: 2}
+  - {fileID: 11400000, guid: 21428d7cf03ee0c41b4604314e855dbd, type: 2}
+  - {fileID: 11400000, guid: 96a86439bccaed348a289422a223103b, type: 2}
+  waveTime: 90
+  spawnMulitpleOnTick: 0
+  spawnChancePerStadium: 0.05
+  maxEnemyTypes: 3
+  baseSpawnChance: 0.5
+  enemySpawnTime: 1.5
+  enemySpawnDistance: 15
+  enemySpawnDistanceMin: 15
+  possibleChampions:
+  - {fileID: 11400000, guid: 4bbdc5583b120d14c98de931c89cde75, type: 2}
+  - {fileID: 11400000, guid: 7403de758fe6a644790cda976001456f, type: 2}
+  - {fileID: 11400000, guid: f2740eb388d52974f8f3d2fddcb1052b, type: 2}
+  - {fileID: 11400000, guid: 1ff00f348fd022541bd92bbae8ed32af, type: 2}
+  - {fileID: 11400000, guid: 542d380dc9e8a1e4a8f7ef2949a349de, type: 2}
+  lastSpawnedChampion: {fileID: 0}
+  championSpawnTime: 120
+  boss: {fileID: 11400000, guid: b2a04e3bdfc512447aaa269d7464eae2, type: 2}
+  spawnedBoss: {fileID: 0}

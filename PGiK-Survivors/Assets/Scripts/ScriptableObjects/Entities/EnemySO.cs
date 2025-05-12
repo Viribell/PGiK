@@ -24,7 +24,30 @@ public enum EnemyType {
     Caveman,
     SpitterSpider,
     VenomousBat,
-    
+
+    GreenSlimeChampion,
+    BlueSlimeChampion,
+    GoblinChampion,
+    RaccoonChampion,
+    FairyChampion,
+    SkeletonChampion,
+    WraithChampion,
+    ZombieChampion,
+    ThreeEyedRavenChampion,
+    GravediggerChampion,
+    ScorpionChampion,
+    LiveCactusChampion,
+    MummyChampion,
+    FennecFoxChampion,
+    FlyingFishChampion,
+    BearMagicianChampion,
+    RedBumblebeeChampion,
+    SnowmanChampion,
+    MedusaChampion,
+    CavemanChampion,
+    SpitterSpiderChampion,
+    VenomousBatChampion,
+
     Magbitu,
     Necapues,
     Dertem,
@@ -36,4 +59,6 @@ public enum EnemyType {
 public class EnemySO : EntitySO {
     [Header( "Enemy Info" )]
     [field: SerializeField] public EnemyType enemyType;
+    [field: SerializeField] public GameObject prefab;
+    [field: SerializeField] public int spawnWeight;
 }

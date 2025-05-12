@@ -10,6 +10,7 @@ public class MagnetEffectSO : StatusEffectSO {
 
 
     private EntityController entity;
+    private List<MagneticBehaviour> pickupables;
 
     private void Awake() {
         isEffectOverTime = true;
@@ -27,10 +28,13 @@ public class MagnetEffectSO : StatusEffectSO {
 
     public override void UpdateEffect( GameObject target ) {
         SetEntity( target );
-        List<MagneticBehaviour> pickupables = FindMagneticBehaviours();
+
+        wasActivated = true;
+
+        pickupables = FindMagneticBehaviours();
 
         foreach ( MagneticBehaviour pickup in pickupables ) {
-            pickup.Gravitate( entity.transform, gravitySpeed );
+            pickup?.TurnOn( entity.transform );
         }
     }
 
@@ -41,6 +45,12 @@ public class MagnetEffectSO : StatusEffectSO {
         wasActivated = false;
         timeLeft = 0.0f;
         tickCooldown = 0.0f;
+
+        pickupables.RemoveAll( magnetic => magnetic == null );
+
+        foreach ( MagneticBehaviour pickup in pickupables ) {
+            pickup.TurnOff();
+        }
     }
 
     private List<MagneticBehaviour> FindMagneticBehaviours() {

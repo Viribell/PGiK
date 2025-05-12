@@ -23,7 +23,7 @@ public class DropBehaviour : MonoBehaviour {
     private List<ItemSO> GetDrops() {
         float chanceRoll = 0;
         List<ItemSO> possibleDrops = new List<ItemSO>();
-        int mapFactor = useMapPhaseFactor ? 1 : 1; //change 1 to the map phase call when ready
+        int mapFactor = useMapPhaseFactor ? LevelControl.Instance.levelStadium : 1;
 
         foreach( ItemSO item in dropList) {
             chanceRoll = Random.Range( 0.0f, 1.0f );

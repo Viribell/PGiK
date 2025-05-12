@@ -134,6 +134,7 @@ public class SaveControl : MonoBehaviour {
         SaveGame();
     }
 
+    public SaveData GetSaveData() { return saveData; }
     public bool HasSaveData() { return saveData != null; }
     public void SetEnableAutoSave(bool value) { enableAutoSave = value; StopAutoSave(); StartAutoSave(); }
     

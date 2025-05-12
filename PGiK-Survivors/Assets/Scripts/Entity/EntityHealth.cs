@@ -89,6 +89,10 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
         entityController.OnHealthChanged();
     }
 
+    public void UpdateCurrentHealth() {
+        currHealth = maxHealth;
+    }
+
     private bool IsInvincible() { return lastTimeDamaged + invincibilityTime >= Time.time; }
     private bool IsDead() { return currHealth <= 0; }
     private bool IsFullHealth() { return currHealth >= maxHealth; }

@@ -45,5 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <availableNPC>k__BackingField:
-    m_keys: []
-    m_values: 
+    m_keys:
+    - {fileID: 11400000, guid: 8d66d117c7c06e848adb5c517418eedd, type: 2}
+    - {fileID: 11400000, guid: 1df50fc341447a842a6f7488b1d16b6f, type: 2}
+    - {fileID: 11400000, guid: c5a737bf957be474abc1686c10ce3f1d, type: 2}
+    - {fileID: 11400000, guid: 4ace7a791718b8948acb04cb2e18693c, type: 2}
+    m_values: 01000000

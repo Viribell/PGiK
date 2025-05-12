@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95400b087f71a514dbbc9bd8ac511366, type: 3}
+  m_Name: Goblin_Champion
+  m_EditorClassIdentifier: 
+  entityName: Goblin
+  sprite: {fileID: 21300000, guid: 8fbd7771be3a97f4eaa84cf074de3347, type: 3}
+  attackPrefab: {fileID: 0}
+  spreadAngle: 30
+  possibleEffects: []
+  statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
+  stats:
+    m_keys: 00000000020000000300000004000000050000000b000000
+    m_values:
+    - 30
+    - 0
+    - 0.01
+    - 0.1
+    - 1
+    - 5
+  enemyType: 25
+  prefab: {fileID: 5997179927613486670, guid: 059a514be2ab4e447a019a21f7be2e60, type: 3}
+  spawnWeight: 2

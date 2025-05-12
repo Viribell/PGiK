@@ -43,7 +43,7 @@ public class EntityAttack : MonoBehaviour, IEntityComponent {
 
         if ( ( strikes - 1 ) >= 1 ) angleStep = entity.EntityData.spreadAngle / ( strikes - 1 );
 
-        for (int i = 0; i < strikes; i++ ) {
+        for (int i = 0; i < Mathf.Round(strikes); i++ ) {
             float rotationAngle = startAngle + angleStep * i;
             Quaternion angleQuaternion = Quaternion.Euler( 0, 0, rotationAngle );
             Quaternion prefabRotation = Quaternion.Euler( 0, 0, prefabAngle + rotationAngle );

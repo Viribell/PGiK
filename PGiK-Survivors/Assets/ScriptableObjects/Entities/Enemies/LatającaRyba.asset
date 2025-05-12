@@ -28,3 +28,4 @@ MonoBehaviour:
     - 1
     - 5
   enemyType: 15
+  prefab: {fileID: 4921578646021092170, guid: 1ad909a6c099af747bcc00277329bde5, type: 3}

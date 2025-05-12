@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyController : EntityController {
     [field: Header( "Enemy Entity Info" )]
@@ -14,8 +15,26 @@ public class EnemyController : EntityController {
 
     [HideInInspector] public EnemySO EnemyData { get { return ( EnemySO )EntityData; } }
 
+    private UnityAction DeathAction;
+
     private void Start() {
         attackTarget = RefCacheControl.Instance.Player;
+        LoadStadiumMods();
+    }
+
+    private void LoadStadiumMods() {
+        List<StatModifier> mods = LevelControl.Instance.stadiumMods;
+
+        if ( mods == null ) return;
+
+        EntityStats.AddStatMod( mods, StatModHandlingOptions.NoDuplicateModAdd );
+
+        foreach(StatModifier mod in mods) {
+            EntityStats.UpdateStat( mod.affectedStat );
+        }
+
+        EntityHealth.UpdateMaxHealth();
+        EntityHealth.UpdateCurrentHealth();
     }
 
     protected override void UploadControllerToComponents() {
@@ -28,9 +47,14 @@ public class EnemyController : EntityController {
         return ( attackTarget.transform.position - transform.position ).normalized;
     }
 
+    public void SetDeathAction(UnityAction action) {
+        DeathAction = action;
+    }
+
     #region Events
     public override void OnEntityDeath() {
         QuestControl.Instance.UpdateKillQuests( this );
+        DeathAction?.Invoke();
         Enemy.Die();
     }
 

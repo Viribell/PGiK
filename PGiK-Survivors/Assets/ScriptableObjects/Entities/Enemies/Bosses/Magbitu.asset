@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Magbitu
   m_EditorClassIdentifier: 
   entityName: Magbitu
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: dc22c699c0fb7254c80185a01ca5f579, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -28,3 +28,5 @@ MonoBehaviour:
     - 1
     - 5
   enemyType: 23
+  prefab: {fileID: 6409770919170303727, guid: 1d63bd00d2cc37b4b9d7f69297662fba, type: 3}
+  spawnWeight: 1
