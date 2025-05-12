@@ -8,13 +8,13 @@ public class PlayerPickupGravity : MonoBehaviour, IEntityComponent {
 
     private PlayerController playerController;
 
-    private List<MagneticBehaviour> pickupables;
+    //private List<MagneticBehaviour> pickupables;
     private float pickupRadius;
     
 
-    private void Awake() {
-        pickupables = new List<MagneticBehaviour>();
-    }
+    //private void Awake() {
+    //    pickupables = new List<MagneticBehaviour>();
+    //}
 
     private void Start() {
         UpdatePickupRange();
@@ -23,20 +23,22 @@ public class PlayerPickupGravity : MonoBehaviour, IEntityComponent {
     private void FixedUpdate() {
         if ( PauseControl.IsGamePaused ) { return; }
 
-        foreach ( MagneticBehaviour pickup in pickupables ) {
-            pickup.Gravitate( playerController.transform, GravitySpeed );
-        }
+        //foreach ( MagneticBehaviour pickup in pickupables ) {
+        //    pickup.Gravitate( playerController.transform, GravitySpeed );
+        //}
     }
 
     private void OnTriggerEnter2D( Collider2D collision ) {
         if ( collision.TryGetComponent( out MagneticBehaviour mag ) ) {
-            pickupables.Add( mag );
+            //pickupables.Add( mag );
+            mag.TurnOn( playerController.transform );
         }
     }
 
     private void OnTriggerExit2D( Collider2D collision ) {
         if ( collision.TryGetComponent( out MagneticBehaviour mag ) ) {
-            pickupables.Remove( mag );
+            //pickupables.Remove( mag );
+            mag.TurnOff();
         }
     }
 

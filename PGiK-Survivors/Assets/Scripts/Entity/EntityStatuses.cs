@@ -27,7 +27,7 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
         }
     }
 
-    public void AddEffect( StatusEffectSO effect, float effectChance ) {
+    public void AddEffect( StatusEffectSO effect, float effectChance, float tickValue = 0.0f ) {
         EffectType type = effect.effectType;
         
         if( !enabledEffects.ContainsKey( type ) ) {
@@ -35,9 +35,12 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
             if ( ResistEffect( effect, effectChance ) ) return;
                 
             enabledEffects[type] = CreateEffect( type, effect );
+            enabledEffects[type].SetTickValue( tickValue );
 
         } else {
-            Debug.Log("Status: " + effect.effectType.ToString() + " already in effect");
+            Debug.Log("Status: " + effect.effectType.ToString() + " already in effect.");
+
+            if ( !enabledEffects[type].isEffectOverTime ) enabledEffects[type].Activate();
         }
     }
 

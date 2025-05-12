@@ -11,6 +11,7 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
     [field: SerializeField] private bool usesInvincibilityTime = false;
     [field: SerializeField] private float invincibilityTime = 2.0f; //seconds
     [field: SerializeField] private float regenDelay = 1.5f; //seconds, maybe to be moved as parts of Stats
+    [field: SerializeField] public bool isInvincible = false;
 
     private EntityController entityController;
 
@@ -52,7 +53,7 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
     #region HealthLogic
 
     public void Damage( float dmgValue ) {
-        if ( usesInvincibilityTime && IsInvincible() ) return;
+        if ( ( usesInvincibilityTime && IsInvincible() ) || isInvincible ) return;
 
         lastTimeDamaged = Time.time;
 
@@ -86,6 +87,10 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
         maxHealth = entityController.EntityStats.GetStatTotal( StatType.Health );
 
         entityController.OnHealthChanged();
+    }
+
+    public void UpdateCurrentHealth() {
+        currHealth = maxHealth;
     }
 
     private bool IsInvincible() { return lastTimeDamaged + invincibilityTime >= Time.time; }

@@ -43,7 +43,7 @@ public class EntityAttack : MonoBehaviour, IEntityComponent {
 
         if ( ( strikes - 1 ) >= 1 ) angleStep = entity.EntityData.spreadAngle / ( strikes - 1 );
 
-        for (int i = 0; i < strikes; i++ ) {
+        for (int i = 0; i < Mathf.Round(strikes); i++ ) {
             float rotationAngle = startAngle + angleStep * i;
             Quaternion angleQuaternion = Quaternion.Euler( 0, 0, rotationAngle );
             Quaternion prefabRotation = Quaternion.Euler( 0, 0, prefabAngle + rotationAngle );
@@ -65,7 +65,9 @@ public class EntityAttack : MonoBehaviour, IEntityComponent {
 
         //Attack Status Effect Choice
         StatusEffectSO chosenEffect = ChooseEffect();
-        attack.InitEffect( chosenEffect, entity.EntityStats.GetStatTotal( chosenEffect.effectType ) );
+        float effectChance = chosenEffect == null ? 0 : entity.EntityStats.GetStatTotal( chosenEffect.effectType );
+        float effectDamage = chosenEffect == null ? 0 : entity.EntityStats.GetEffectDamage( chosenEffect.effectType );
+        attack.InitEffect( chosenEffect, effectChance, effectDamage );
 
         //Launch Attack
         attack.Launch( attackDir );

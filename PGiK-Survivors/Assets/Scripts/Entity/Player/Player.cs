@@ -15,7 +15,7 @@ public class Player : MonoBehaviour, IEntityComponent {
         
     }
 
-    private void OnCollisionEnter2D( Collision2D collision ) {
+    private void OnCollisionStay2D( Collision2D collision ) {
         if ( collision.gameObject.TryGetComponent( out EnemyController entity ) ) {
             TakeCollisionDamage( entity );
         }
@@ -25,8 +25,10 @@ public class Player : MonoBehaviour, IEntityComponent {
         player.EntityHealth.Damage( EntityAttack.CalculateDamage(entity) );
 
         StatusEffectSO status = EntityAttack.ChooseEffect( entity );
+        float statusChance = status == null ? 0 : entity.EntityStats.GetStatTotal( status.effectType );
+        float effectDamage = status == null ? 0 : entity.EntityStats.GetEffectDamage( status.effectType );
 
-        status.Apply( gameObject, entity.EntityStats.GetStatTotal( status.effectType ) );
+        status?.Apply( gameObject, statusChance, effectDamage );
     }
 
     public void LoadEntityController( EntityController controller ) {

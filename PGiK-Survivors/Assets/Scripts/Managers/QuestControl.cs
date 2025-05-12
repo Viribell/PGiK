@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class QuestControl : MonoBehaviour, IPersistentData {
     public static QuestControl Instance { get; private set; }

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using UnityEngine;
 
 public class GameState : MonoBehaviour, IPersistentData {
@@ -8,8 +6,17 @@ public class GameState : MonoBehaviour, IPersistentData {
 
     [field: SerializeField] public SerializableDictionary<NPCSO, bool> availableNPC { get; private set; }
 
+    [field: SerializeField] public int chosenLevelStadium;
+    [field: SerializeField] public ClassSO chosenPlayerClass;
+
     private void Awake() {
-        if ( Instance == null ) { Instance = this; }
+        if ( Instance == null ) { Instance = this; } else {
+            Debug.Log( "There is more than one instance of GameState. Destroying the new one." );
+            Destroy( gameObject );
+            return;
+        }
+
+        DontDestroyOnLoad( gameObject );
     }
 
     public bool IsAvailable( NPCSO npcData ) {

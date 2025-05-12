@@ -107,16 +107,18 @@ public class SpawnControl : MonoBehaviour {
     }
 
 
-    public GameObject SpawnPrefab( GameObject prefab, Vector2 pos ) {
+    public GameObject SpawnPrefab( GameObject prefab, Vector2 pos, bool usePropel = true ) {
         if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return null; }
 
-        return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        if ( usePropel ) return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        else return Instantiate( prefab, pos, Quaternion.identity );
     }
 
-    public Transform SpawnPrefab( Transform prefab, Vector2 pos ) {
+    public Transform SpawnPrefab( Transform prefab, Vector2 pos, bool usePropel = true ) {
         if ( prefab == null ) { Debug.Log( "Given prefab is null!" ); return null; }
 
-        return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        if ( usePropel ) return Propel( Instantiate( prefab, pos, Quaternion.identity ) );
+        else return Instantiate( prefab, pos, Quaternion.identity );
     }
 
     private GameObject Propel( GameObject objectToPropel ) {
@@ -142,8 +144,8 @@ public class SpawnControl : MonoBehaviour {
     }
 
 
-    private void AttachParent( GameObject child, Transform parent ) { child?.transform.SetParent( parent ); }
-    private void AttachParent( Transform child, Transform parent ) { child?.transform.SetParent( parent ); }
+    private GameObject AttachParent( GameObject child, Transform parent ) { child?.transform.SetParent( parent ); return child; }
+    private Transform AttachParent( Transform child, Transform parent ) { child?.transform.SetParent( parent ); return child; }
 
     //This may uselessly take up resources
     private void NormalizeRigidBody(Rigidbody2D rb) {
@@ -159,4 +161,10 @@ public class SpawnControl : MonoBehaviour {
     public void SpawnReadyItem( ItemSO item, Vector2 pos ) { AttachParent( SpawnPrefab( item.prefab, pos ), itemsParent ); }
     public void SpawnReadyConsumable( ConsumableSO consumable, Vector2 pos ) { AttachParent( SpawnPrefab( consumable.prefab, pos ), itemsParent ); }
     public void SpawnReadyBasicDestruct( DestructibleSO destruct, Vector2 pos ) { SpawnPrefab( destruct.prefab, pos ); }
+
+    public GameObject SpawnReadyEnemy( EnemySO enemy, Vector2 pos ) { return AttachParent( SpawnPrefab( enemy.prefab, pos, false ), enemiesParent ); }
+
+    public void TestEnemy(EnemySO enemy) {
+        SpawnReadyEnemy( enemy, new Vector2( 10, 0 ) );
+    }
 }

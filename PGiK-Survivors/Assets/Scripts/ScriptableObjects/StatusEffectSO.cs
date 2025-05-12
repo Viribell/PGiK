@@ -33,6 +33,8 @@ public abstract class StatusEffectSO : ScriptableObject {
     [HideInInspector] public bool isEffectActive = false;
     [HideInInspector] public bool wasActivated = false;
 
+    private float tickValue;
+
     public void Tick( GameObject target, float tickAmount ) {
         if ( isEffectActive ) {
             timeLeft -= tickAmount;
@@ -59,10 +61,16 @@ public abstract class StatusEffectSO : ScriptableObject {
         timeLeft = durationSeconds;
     }
 
-    public abstract void Apply( GameObject target, float effectChance = 1.0f );
+    public abstract void Apply( GameObject target, float effectChance = 1.0f, float tickValue = 0.0f );
     public virtual void UpdateEffect( GameObject target ) {}
     public virtual void Remove( GameObject target ) {}
     public virtual bool CanBeRemoved() {
         return !isEffectActive;
     }
+
+    public void SetTickValue( float tickValue ) {
+        this.tickValue = tickValue;
+    }
+
+    public float GetTickValue() { return tickValue; }
 }
