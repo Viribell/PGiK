@@ -34,4 +34,8 @@ public class Player : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         player = (PlayerController)controller;
     }
+
+    public void ReloadEntityData() {
+        Init();
+    }
 }

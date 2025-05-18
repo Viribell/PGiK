@@ -41,6 +41,10 @@ public class EnemyController : EntityController {
         Enemy.LoadEntityController( this );
     }
 
+    protected override void ReloadData() {
+        Enemy.ReloadEntityData();
+    }
+
     public override Vector2 GetMoveVector() {
         if ( attackTarget == null || !canWalk ) return Vector2.zero;
 

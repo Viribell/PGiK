@@ -32,4 +32,8 @@ public class Enemy : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         enemyController = ( EnemyController )controller;
     }
+
+    public void ReloadEntityData() {
+        Init();
+    }
 }

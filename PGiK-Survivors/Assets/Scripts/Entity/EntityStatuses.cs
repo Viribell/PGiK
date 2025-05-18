@@ -92,4 +92,9 @@ public class EntityStatuses : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         entity = controller;
     }
+
+    public void ReloadEntityData() {
+        cachedEffects.Clear();
+        enabledEffects.Clear();
+    }
 }

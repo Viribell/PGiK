@@ -462,6 +462,34 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dummy"",
+            ""id"": ""4ac5efc7-7a3c-4c93-94e3-a564b2dc36ad"",
+            ""actions"": [
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""e644e127-df8c-4cc3-829c-0bf9ed75b1a6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5adc651f-f7e5-44da-b5c4-f6761fe0057d"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -490,6 +518,9 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         // MapFinishScreen
         m_MapFinishScreen = asset.FindActionMap("MapFinishScreen", throwIfNotFound: true);
         m_MapFinishScreen_Newaction = m_MapFinishScreen.FindAction("New action", throwIfNotFound: true);
+        // Dummy
+        m_Dummy = asset.FindActionMap("Dummy", throwIfNotFound: true);
+        m_Dummy_Exit = m_Dummy.FindAction("Exit", throwIfNotFound: true);
     }
 
     ~@MyInputActions()
@@ -498,6 +529,7 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_Dialogue.enabled, "This will cause a leak and performance issues, MyInputActions.Dialogue.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, MyInputActions.UI.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_MapFinishScreen.enabled, "This will cause a leak and performance issues, MyInputActions.MapFinishScreen.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Dummy.enabled, "This will cause a leak and performance issues, MyInputActions.Dummy.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -835,6 +867,52 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         }
     }
     public MapFinishScreenActions @MapFinishScreen => new MapFinishScreenActions(this);
+
+    // Dummy
+    private readonly InputActionMap m_Dummy;
+    private List<IDummyActions> m_DummyActionsCallbackInterfaces = new List<IDummyActions>();
+    private readonly InputAction m_Dummy_Exit;
+    public struct DummyActions
+    {
+        private @MyInputActions m_Wrapper;
+        public DummyActions(@MyInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Exit => m_Wrapper.m_Dummy_Exit;
+        public InputActionMap Get() { return m_Wrapper.m_Dummy; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DummyActions set) { return set.Get(); }
+        public void AddCallbacks(IDummyActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DummyActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DummyActionsCallbackInterfaces.Add(instance);
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
+        }
+
+        private void UnregisterCallbacks(IDummyActions instance)
+        {
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
+        }
+
+        public void RemoveCallbacks(IDummyActions instance)
+        {
+            if (m_Wrapper.m_DummyActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IDummyActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DummyActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DummyActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public DummyActions @Dummy => new DummyActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -862,5 +940,9 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
     public interface IMapFinishScreenActions
     {
         void OnNewaction(InputAction.CallbackContext context);
+    }
+    public interface IDummyActions
+    {
+        void OnExit(InputAction.CallbackContext context);
     }
 }

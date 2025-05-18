@@ -440,6 +440,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dummy",
+            "id": "4ac5efc7-7a3c-4c93-94e3-a564b2dc36ad",
+            "actions": [
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "e644e127-df8c-4cc3-829c-0bf9ed75b1a6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5adc651f-f7e5-44da-b5c4-f6761fe0057d",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

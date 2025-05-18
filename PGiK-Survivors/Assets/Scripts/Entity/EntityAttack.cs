@@ -110,6 +110,10 @@ public class EntityAttack : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         entity = controller;
 
+        if( entity.EntityData != null ) possibleEffects = entity.EntityData.GetPossibleEffects();
+    }
+
+    public void ReloadEntityData() {
         possibleEffects = entity.EntityData.GetPossibleEffects();
     }
 }

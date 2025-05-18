@@ -7,6 +7,7 @@ public abstract class EntityController : MonoBehaviour {
     [field: SerializeField] public EntityType entityType;
     [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
     [field: SerializeField] public EntitySO EntityData { get; set; }
+    [field: SerializeField] public EntitySO DefaultEntityData { get; set; }
     [field: SerializeField] public EntityAudioSetSO EntityAudio { get; set; }
 
     [field: Header( "Basic Entity Config" )]
@@ -21,6 +22,24 @@ public abstract class EntityController : MonoBehaviour {
         UploadControllerToComponents();
     }
 
+    public void UploadEntityData(EntitySO data) {
+        EntityData = data;
+        ReloadEntityData();
+    }
+
+    public void ReloadEntityData() {
+        BaseReloadData();
+        ReloadData();
+    }
+    
+    private void BaseReloadData() {
+        EntityStats.ReloadEntityData();
+        EntityStatuses.ReloadEntityData();
+        EntityHealth.ReloadEntityData();
+        EntityMove.ReloadEntityData();
+        EntityAttack.ReloadEntityData();
+    }
+
     private void BaseUploadControllerToComponents() {
         EntityStats.LoadEntityController( this );
         EntityStatuses.LoadEntityController( this );
@@ -31,6 +50,7 @@ public abstract class EntityController : MonoBehaviour {
     }
 
     protected abstract void UploadControllerToComponents();
+    protected abstract void ReloadData();
     public abstract Vector2 GetMoveVector();
 
     public abstract void OnEntityDeath();

@@ -4,4 +4,5 @@ using UnityEngine;
 
 public interface IEntityComponent {
     public void LoadEntityController( EntityController controller );
+    public void ReloadEntityData();
 }

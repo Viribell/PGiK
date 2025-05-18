@@ -3934,7 +3934,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1825726623}
-  - {fileID: 1647160528}
   - {fileID: 1271651656}
   - {fileID: 2117980652}
   m_Father: {fileID: 0}
@@ -5374,11 +5373,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1647160528 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
-  m_PrefabInstance: {fileID: 8616947476077838653}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1665769320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5241567357679796219, guid: da76699eb828f744db5dfcbbc4037acc, type: 3}
@@ -7379,7 +7373,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1254046617}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7399,15 +7393,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5101540028223841837, guid: 1dce49de5bc844d49bc1b70faf8e13c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7563,6 +7557,7 @@ SceneRoots:
   - {fileID: 2403907053064202200}
   - {fileID: 2609425325721020517}
   - {fileID: 657444330}
+  - {fileID: 8616947476077838653}
   - {fileID: 6900932638613917632}
   - {fileID: 3701638578757013418}
   - {fileID: 1484817127}

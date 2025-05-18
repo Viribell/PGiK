@@ -126,7 +126,12 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         entityController = controller;
 
-        entityStats = entityController.EntityData?.GetStats();
+        if ( entityController.EntityData != null ) entityStats = entityController.EntityData.GetStats();
+        else entityStats = entityController.DefaultEntityData.GetStats();
+    }
+
+    public void ReloadEntityData() {
+        entityStats = entityController.EntityData.GetStats();
     }
 }
 

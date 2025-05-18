@@ -12,33 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48cf09d004af13c40a6b4aa9c4354806, type: 3}
   m_Name: Elementalist
   m_EditorClassIdentifier: 
-  className: Elementalist
+  entityName: Elementalista
   sprite: {fileID: 21300000, guid: 3561028d53813914db75604753146e1d, type: 3}
-  <stats>k__BackingField:
+  attackPrefab: {fileID: 3026408821484555709, guid: 044225e51373ea042b1af3ea636ec55e, type: 3}
+  spreadAngle: 30
+  possibleEffects: []
+  statsTemplate: {fileID: 11400000, guid: 4e2b498869f230547ae1a56ac338d211, type: 2}
+  stats:
     m_keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000
     m_values:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 250
+    - 0.2
+    - 2
+    - 0.05
+    - 0.5
+    - 10
     - 1.5
+    - 1
+    - 1
+    - 1
+    - 5
+    - 10
     - 0
     - 0
+    - 1
+    - 1
     - 0
     - 0
+    - 1
     - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 0.05
+    - 0.05
   <levelUpMods>k__BackingField:
   - value: 10
     affectedStat: 0

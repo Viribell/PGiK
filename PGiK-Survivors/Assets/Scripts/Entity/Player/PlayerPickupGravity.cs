@@ -56,4 +56,8 @@ public class PlayerPickupGravity : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         playerController = (PlayerController)controller;
     }
+
+    public void ReloadEntityData() {
+        UpdatePickupRange();
+    }
 }
