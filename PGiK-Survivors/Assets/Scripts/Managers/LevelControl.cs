@@ -106,10 +106,11 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [field: SerializeField] private EnemySO boss;
     [field: SerializeField] private EnemyController spawnedBoss;
 
-    [field: Header( "Bonuses Info" )]
+    [field: Header( "Misc Info" )]
     [field: SerializeField] private int timeBonusBase = 15;
     [field: SerializeField] private int gameBonusBase = 250;
     [field: SerializeField] private ResourceSO gold;
+    [field: SerializeField] private GameObject portalPrefab;
 
     private Timer enemySpawnTimer;
     private Timer championSpawnTimer;
@@ -199,7 +200,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         if ( gameTimer.HasFinished() ) {
             SpawnBoss();
             finalStage = true;
-            gameTimer.Restart();
+            //gameTimer.Restart();
         }
     }
 
@@ -267,12 +268,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     #region LevelEnd
 
     private void EndLevel() {
-        Debug.Log( "Level Ended" );
-
-        //to delete
         StopTimers();
-        CalculateBonuses( EndScreenType.WinScreen );
-        GiveBonuses();
 
         MarkLevelBeaten();
 
@@ -280,7 +276,10 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     }
 
     private void SpawnPortal() {
-        EndScreenControl.Instance.Activate( EndScreenType.WinScreen, GetElapsedGameTime() );
+        Transform player = RefCacheControl.Instance.Player.transform;
+        Vector2 pos = new Vector2( player.position.x + 8, player.position.y + 8 );
+
+        Instantiate( portalPrefab, pos, Quaternion.identity );
     }
 
     public void CalculateBonuses( EndScreenType screen ) {
@@ -304,7 +303,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         EndScreenControl.Instance.Activate( screen, GetElapsedGameTime() );
     }
 
-    public void StopTimers() {
+    private void StopTimers() {
         enemySpawnTimer.StopCountdown();
         championSpawnTimer.StopCountdown();
         waveTimer.StopCountdown();

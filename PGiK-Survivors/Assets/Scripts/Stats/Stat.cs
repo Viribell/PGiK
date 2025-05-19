@@ -149,12 +149,12 @@ public class Stat {
                 percentAddValue += mod.value;
 
                 if ( i + 1 >= statModifiers.Count || statModifiers[i + 1].type != StatModType.BasePercentAdd ) {
-                    localTotal += baseValue * (1 + percentAddValue);
+                    localTotal += baseValue * percentAddValue;
                     percentAddValue = 0;
                 }
 
             } else if ( mod.type == StatModType.BasePercentMult ) {
-                localTotal += baseValue * (1 + mod.value);
+                localTotal += baseValue * mod.value;
 
             }
         }

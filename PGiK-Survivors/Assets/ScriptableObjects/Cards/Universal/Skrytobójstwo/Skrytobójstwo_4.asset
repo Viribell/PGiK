@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: "Skrytob\xF3jstwo_4"
+  m_EditorClassIdentifier: 
+  cardName: "Skrytob\xF3jstwo_4"
+  cardContent: + 15% szansy krytycznej
+  cardType: 1
+  cardLevel: 4
+  cardMaxLevel: 5
+  unlockLevel: 25
+  nextCards:
+  - {fileID: 11400000, guid: 67b29d09744465540aca2c992fb53f42, type: 2}
+  cardsToLock: []
+  <Mods>k__BackingField:
+  - value: 0.15
+    affectedStat: 3
+    type: 300
+    applyOrder: 0

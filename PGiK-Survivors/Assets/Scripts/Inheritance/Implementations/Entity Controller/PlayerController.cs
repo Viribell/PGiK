@@ -61,5 +61,9 @@ public class PlayerController : EntityController {
     public override void OnHealed( float value ) {
         if ( value < 0 ) return;
     }
+
+    public override void OnStatEdgeCase( StatType type ) {
+        if ( type == StatType.PickupRange ) PlayerPickup.UpdatePickupRange();
+    }
     #endregion
 }

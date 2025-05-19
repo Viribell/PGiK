@@ -40,6 +40,11 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
         }
     }
 
+    public void UpdateEdgeCase( StatType type ) {
+        if ( type == StatType.Health ) entityController.EntityHealth.UpdateMaxHealth();
+        else entityController.OnStatEdgeCase( type );
+    }
+
     public float GetStatTotal( StatType type ) {
         float total = 0.0f;
 

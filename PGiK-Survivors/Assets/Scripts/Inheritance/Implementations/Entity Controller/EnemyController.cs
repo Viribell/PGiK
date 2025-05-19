@@ -67,5 +67,9 @@ public class EnemyController : EntityController {
     public override void OnDamaged( float value ) {}
 
     public override void OnHealed( float value ) {}
+
+    public override void OnStatEdgeCase( StatType type ) {
+        
+    }
     #endregion
 }
