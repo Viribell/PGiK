@@ -25,6 +25,10 @@ public class WorldScroll : MonoBehaviour {
     }
 
     private void Update() {
+        if ( PauseControl.IsGamePaused ) return;
+
+        if ( playerTransform == null ) return;
+
         CheckForUpdate();
     }
 

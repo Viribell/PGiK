@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 1616124310}
-  nextScene: 9
+  nextScene: 3
   playButton: {fileID: 1616124310}
   optionsButton: {fileID: 1521811413}
   exitButton: {fileID: 1708885705}

@@ -42,6 +42,9 @@ public class PlayerController : EntityController {
     #region Events
     public override void OnEntityDeath() {
         Debug.Log( "Player death" );
+ 
+        LevelControl.Instance.EndScreen( EndScreenType.DeathScreen );
+
         Player.Die();
     }
 
