@@ -51,3 +51,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c5a737bf957be474abc1686c10ce3f1d, type: 2}
     - {fileID: 11400000, guid: 4ace7a791718b8948acb04cb2e18693c, type: 2}
     m_values: 01000000
+  chosenLevelStadium: 1
+  chosenPlayerClass: {fileID: 11400000, guid: 2a45666ccc4e8314ca5f696a5746d4e3, type: 2}

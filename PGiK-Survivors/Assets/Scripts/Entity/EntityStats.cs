@@ -40,6 +40,11 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
         }
     }
 
+    public void UpdateEdgeCase( StatType type ) {
+        if ( type == StatType.Health ) entityController.EntityHealth.UpdateMaxHealth();
+        else entityController.OnStatEdgeCase( type );
+    }
+
     public float GetStatTotal( StatType type ) {
         float total = 0.0f;
 
@@ -126,7 +131,12 @@ public class EntityStats : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         entityController = controller;
 
-        entityStats = entityController.EntityData?.GetStats();
+        if ( entityController.EntityData != null ) entityStats = entityController.EntityData.GetStats();
+        else entityStats = entityController.DefaultEntityData.GetStats();
+    }
+
+    public void ReloadEntityData() {
+        entityStats = entityController.EntityData.GetStats();
     }
 }
 

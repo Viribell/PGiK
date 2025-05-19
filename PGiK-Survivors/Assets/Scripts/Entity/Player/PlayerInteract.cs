@@ -25,7 +25,7 @@ public class PlayerInteract : MonoBehaviour, IEntityComponent {
         if ( GameInput.Instance.myInputActions.Player.Interact.triggered ) {
             interactableInRange.BaseInteract();
 
-            if ( !interactableInRange.BaseCanInteract() ) interactIcon.SetActive( false );
+            if ( interactableInRange != null && !interactableInRange.BaseCanInteract() ) interactIcon.SetActive( false );
         }
     }
 
@@ -45,5 +45,9 @@ public class PlayerInteract : MonoBehaviour, IEntityComponent {
 
     public void LoadEntityController( EntityController controller ) {
         playerController = (PlayerController)controller;
+    }
+
+    public void ReloadEntityData() {
+        
     }
 }

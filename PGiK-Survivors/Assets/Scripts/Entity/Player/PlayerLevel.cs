@@ -60,6 +60,8 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
         playerController.EntityStats.AddStatMod( classLvlMods, StatModHandlingOptions.NoDuplicateModAdd );
 
+        CardControl.Instance.Activate( level );
+
         OnLevelUp?.Raise(); // player level up is part of it for now, maybe it should be just called here individually
     }
 
@@ -93,5 +95,11 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
     public void LoadEntityController( EntityController controller ) {
         playerController = (PlayerController)controller;
+    }
+
+    public void ReloadEntityData() {
+        requiredXP = CalculateRequiredXP();
+
+        classLvlMods = playerController.PlayerData?.GetLevelUpMods();
     }
 }

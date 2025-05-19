@@ -101,5 +101,10 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
         entityController = controller;
     }
 
+    public void ReloadEntityData() {
+        UpdateMaxHealth();
+        UpdateCurrentHealth();
+    }
+
     #endregion
 }

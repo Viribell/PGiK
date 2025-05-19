@@ -7,13 +7,32 @@ public class PlayerController : EntityController {
     [field: SerializeField] public Player Player { get; private set; }
     [field: SerializeField] public PlayerPickupGravity PlayerPickup { get; private set; }
     [field: SerializeField] public PlayerLevel PlayerLevel { get; private set; }
+    [field: SerializeField] public PlayerInteract PlayerInteract { get; private set; }
 
     [HideInInspector] public ClassSO PlayerData { get { return ( ClassSO )EntityData; } }
+    [HideInInspector] public ClassSO DefaultPlayerData { get { return ( ClassSO )DefaultEntityData; } }
+
+    [field: SerializeField] private EventChannelSO classChange;
+
+    private void Start() {
+        if( GameState.Instance.chosenPlayerClass != null ) {
+            UploadEntityData( GameState.Instance.chosenPlayerClass );
+            classChange?.Raise();
+        }
+    }
 
     protected override void UploadControllerToComponents() {
         Player.LoadEntityController( this );
         PlayerPickup.LoadEntityController( this );
         PlayerLevel.LoadEntityController( this );
+        PlayerInteract.LoadEntityController( this );
+    }
+
+    protected override void ReloadData() {
+        Player.ReloadEntityData();
+        PlayerPickup.ReloadEntityData();
+        PlayerLevel.ReloadEntityData();
+        PlayerInteract.ReloadEntityData();
     }
 
     public override Vector2 GetMoveVector() {
@@ -23,6 +42,9 @@ public class PlayerController : EntityController {
     #region Events
     public override void OnEntityDeath() {
         Debug.Log( "Player death" );
+ 
+        LevelControl.Instance.EndScreen( EndScreenType.DeathScreen );
+
         Player.Die();
     }
 
@@ -38,6 +60,10 @@ public class PlayerController : EntityController {
 
     public override void OnHealed( float value ) {
         if ( value < 0 ) return;
+    }
+
+    public override void OnStatEdgeCase( StatType type ) {
+        if ( type == StatType.PickupRange ) PlayerPickup.UpdatePickupRange();
     }
     #endregion
 }

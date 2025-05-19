@@ -50,6 +50,9 @@ public class Timer {
     public bool IsStarted() { return isStarted; }
     public bool HasFinished() { return hasFinished; }
 
+    public float GetCurrentTime() { return currentTime; }
+    public float GetElapsedTime() { return remainingTime - currentTime; }
+
     private void Countdown() {
         if ( currentTime > 0 ) { currentTime -= Time.deltaTime; } 
         else { currentTime = 0; hasFinished = true; isStarted = false; }
@@ -103,12 +106,21 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [field: SerializeField] private EnemySO boss;
     [field: SerializeField] private EnemyController spawnedBoss;
 
+    [field: Header( "Misc Info" )]
+    [field: SerializeField] private int timeBonusBase = 15;
+    [field: SerializeField] private int gameBonusBase = 250;
+    [field: SerializeField] private ResourceSO gold;
+    [field: SerializeField] private GameObject portalPrefab;
+
     private Timer enemySpawnTimer;
     private Timer championSpawnTimer;
     private Timer waveTimer;
     private Timer gameTimer;
 
     private bool finalStage = false;
+
+    private float timeBonus;
+    private float gameBonus;
 
     private void Awake() {
         if( Instance == null ) { Instance = this; }
@@ -188,7 +200,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         if ( gameTimer.HasFinished() ) {
             SpawnBoss();
             finalStage = true;
-            gameTimer.Restart();
+            //gameTimer.Restart();
         }
     }
 
@@ -256,8 +268,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     #region LevelEnd
 
     private void EndLevel() {
-        //.......
-        Debug.Log( "Level Ended" );
+        StopTimers();
 
         MarkLevelBeaten();
 
@@ -265,8 +276,42 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     }
 
     private void SpawnPortal() {
+        Transform player = RefCacheControl.Instance.Player.transform;
+        Vector2 pos = new Vector2( player.position.x + 8, player.position.y + 8 );
+
+        Instantiate( portalPrefab, pos, Quaternion.identity );
+    }
+
+    public void CalculateBonuses( EndScreenType screen ) {
+        float minutes = Mathf.Floor( GetElapsedGameTime() / 60 );
+
+        timeBonus = minutes * ( timeBonusBase * levelStadium );
+        gameBonus = screen == EndScreenType.WinScreen ? ( gameBonusBase * levelStadium ) : 0;
 
     }
+
+    private void GiveBonuses() {
+        GameResources.Instance.AddToResource( gold, (int)timeBonus );
+        GameResources.Instance.AddToResource( gold, (int)gameBonus );
+    }
+
+    public void EndScreen( EndScreenType screen ) {
+        StopTimers();
+        CalculateBonuses( screen );
+        GiveBonuses();
+        EndScreenControl.Instance.InitBonuses( timeBonus, gameBonus );
+        EndScreenControl.Instance.Activate( screen, GetElapsedGameTime() );
+    }
+
+    private void StopTimers() {
+        enemySpawnTimer.StopCountdown();
+        championSpawnTimer.StopCountdown();
+        waveTimer.StopCountdown();
+        gameTimer.StopCountdown();
+    }
+
+    public float GetGameTime() { return gameTimer.GetCurrentTime(); }
+    public float GetElapsedGameTime() { return gameTimer.GetElapsedTime(); }
 
     #endregion
 

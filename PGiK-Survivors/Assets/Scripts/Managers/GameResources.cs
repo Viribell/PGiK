@@ -8,7 +8,13 @@ public class GameResources : MonoBehaviour, IPersistentData {
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; }
+        else {
+            Debug.LogWarning( "There is more than one instance of GameResources. Destroying the new one." );
+            Destroy( gameObject );
+            return;
+        }
 
+        DontDestroyOnLoad( gameObject );
     }
 
     public int GetCount( ResourceSO resource ) {

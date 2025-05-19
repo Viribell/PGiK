@@ -12,7 +12,7 @@ public class Player : MonoBehaviour, IEntityComponent {
     }
 
     public void Die() {
-        
+        Destroy( gameObject, 1 );
     }
 
     private void OnCollisionStay2D( Collision2D collision ) {
@@ -33,5 +33,9 @@ public class Player : MonoBehaviour, IEntityComponent {
 
     public void LoadEntityController( EntityController controller ) {
         player = (PlayerController)controller;
+    }
+
+    public void ReloadEntityData() {
+        Init();
     }
 }

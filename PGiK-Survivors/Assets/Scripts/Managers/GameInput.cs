@@ -6,7 +6,8 @@ public enum ActionMapType {
     Player,
     Dialogue,
     UI,
-    MapFinishScreen
+    MapFinishScreen,
+    Dummy
 }
 
 public class GameInput : MonoBehaviour {
@@ -25,23 +26,16 @@ public class GameInput : MonoBehaviour {
 
     private void OnEnable() {
         myInputActions.Player.Menu.performed += Player_Menu_performed;
-        myInputActions.UI.Exit.performed += UI_Exit_performed;
         myInputActions.Dialogue.Exit.performed += Dialogue_Exit_performed; //mo¿liwe ¿e do zmiany póŸniej
     }
 
     private void OnDisable() {
         myInputActions.Player.Menu.performed -= Player_Menu_performed;
-        myInputActions.UI.Exit.performed -= UI_Exit_performed;
         myInputActions.Dialogue.Exit.performed -= Dialogue_Exit_performed;
     }
 
     private void Dialogue_Exit_performed( InputAction.CallbackContext obj ) {
         DialogueControl.Instance.EndDialogue();
-    }
-
-    private void UI_Exit_performed( InputAction.CallbackContext obj ) {
-        SwitchToMap( ActionMapType.Player );
-        PauseControl.SetPause( false );
     }
 
     private void Player_Menu_performed( InputAction.CallbackContext obj ) {
@@ -56,12 +50,19 @@ public class GameInput : MonoBehaviour {
         actionMaps[ActionMapType.Dialogue] = myInputActions.Dialogue;
         actionMaps[ActionMapType.UI] = myInputActions.UI;
         actionMaps[ActionMapType.MapFinishScreen] = myInputActions.MapFinishScreen;
+        actionMaps[ActionMapType.Dummy] = myInputActions.Dummy;
     }
 
     public void SwitchToMap( ActionMapType actionMap ) {
         foreach(KeyValuePair<ActionMapType, InputActionMap> entry in actionMaps) {
             if ( entry.Key == actionMap ) entry.Value.Enable();
             else entry.Value.Disable();
+        }
+    }
+
+    public void DisableMaps() {
+        foreach ( KeyValuePair<ActionMapType, InputActionMap> entry in actionMaps ) {
+            entry.Value.Disable();
         }
     }
 

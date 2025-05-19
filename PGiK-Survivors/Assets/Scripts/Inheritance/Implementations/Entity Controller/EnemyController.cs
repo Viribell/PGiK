@@ -41,6 +41,10 @@ public class EnemyController : EntityController {
         Enemy.LoadEntityController( this );
     }
 
+    protected override void ReloadData() {
+        Enemy.ReloadEntityData();
+    }
+
     public override Vector2 GetMoveVector() {
         if ( attackTarget == null || !canWalk ) return Vector2.zero;
 
@@ -63,5 +67,9 @@ public class EnemyController : EntityController {
     public override void OnDamaged( float value ) {}
 
     public override void OnHealed( float value ) {}
+
+    public override void OnStatEdgeCase( StatType type ) {
+        
+    }
     #endregion
 }

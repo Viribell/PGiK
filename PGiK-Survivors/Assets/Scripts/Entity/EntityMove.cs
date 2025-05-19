@@ -31,4 +31,8 @@ public class EntityMove : MonoBehaviour, IEntityComponent {
     public void LoadEntityController( EntityController controller ) {
         entityController = controller;
     }
+
+    public void ReloadEntityData() {
+        
+    }
 }

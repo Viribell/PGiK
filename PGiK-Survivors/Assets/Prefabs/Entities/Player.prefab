@@ -594,7 +594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityType: 0
   <SpriteRenderer>k__BackingField: {fileID: 3253461024524401337}
-  <EntityData>k__BackingField: {fileID: 11400000, guid: ac30804ef25bec84c97efdc5b4a179d0, type: 2}
+  <EntityData>k__BackingField: {fileID: 0}
+  <DefaultEntityData>k__BackingField: {fileID: 11400000, guid: 336b170215968124899d49c246a84d67, type: 2}
   <EntityAudio>k__BackingField: {fileID: 11400000, guid: 314d3e011f6e0e746bb78f0870defd20, type: 2}
   <EntityStats>k__BackingField: {fileID: 4924217607710363613}
   <EntityStatuses>k__BackingField: {fileID: 6624532341770309845}
@@ -604,6 +605,8 @@ MonoBehaviour:
   <Player>k__BackingField: {fileID: 1065960015998905340}
   <PlayerPickup>k__BackingField: {fileID: 8611589948104814206}
   <PlayerLevel>k__BackingField: {fileID: 3698321475478117947}
+  <PlayerInteract>k__BackingField: {fileID: 3961173339132746835}
+  classChange: {fileID: 11400000, guid: 374839f88c4e4d1479a40b6706be56a8, type: 2}
 --- !u!114 &1065960015998905340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +670,7 @@ MonoBehaviour:
   usesInvincibilityTime: 1
   invincibilityTime: 0.6
   regenDelay: 1.5
+  isInvincible: 0
 --- !u!114 &6624532341770309845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,10 +714,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b69296a89aca149bddcec9f46de72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 3026408821484555709, guid: 044225e51373ea042b1af3ea636ec55e, type: 3}
   attackPivot: {fileID: 8869165208840865488}
   attackSpawn: {fileID: 1821346487809715461}
   usesAttackObject: 1
+  possibleEffects: []
 --- !u!1 &8937260367245138015
 GameObject:
   m_ObjectHideFlags: 0
