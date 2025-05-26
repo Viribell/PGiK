@@ -6,18 +6,17 @@ using UnityEngine.UIElements;
 
 public class WorldScroll : MonoBehaviour {
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private float tileSize = 20.0f;
+    [SerializeField] public float tileSize = 20.0f;
 
     [SerializeField] private Vector2 lastPlayerPos;
     [SerializeField] private Vector2 lastTilePos;
     [SerializeField] private float tileUpdateDistance;
 
-    private List<GameObject> tiles;
+    [field: SerializeField] private List<GameObject> tiles;
+
+    public List<GameObject> GetTiles() { return tiles; }
 
     private void Awake() {
-        tiles = new List<GameObject>();
-
-
         lastPlayerPos = playerTransform.position;
         lastTilePos = GetTileCoords( playerTransform.position );
 

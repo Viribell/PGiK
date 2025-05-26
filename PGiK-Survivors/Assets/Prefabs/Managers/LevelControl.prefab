@@ -48,6 +48,7 @@ MonoBehaviour:
   level: 0
   levelStadium: 1
   baseGameMinutes: 10
+  worldScroll: {fileID: 0}
   currentWave: []
   stadiumMods:
   - value: 10
@@ -65,6 +66,12 @@ MonoBehaviour:
   materialSpawnDistance: 1000
   npcRescuce: {fileID: 11400000, guid: bb5f081afbcb38d488fc5a18fcab42b3, type: 2}
   rescueSpawnDistance: 1000
+  destruciblesData:
+  - {fileID: 11400000, guid: a05133036b2dd7145bdb7e495c0ff08e, type: 2}
+  - {fileID: 11400000, guid: 4becabf596a5e5b4ab67a71872ccf7a9, type: 2}
+  destructResetTime: 2
+  destructibleAmount: 16
+  spawnerPrefab: {fileID: 849785529074105196, guid: 947702ad5265e334086084787f7732f2, type: 3}
   levelEnemies:
   - {fileID: 11400000, guid: 7bd742250d71e7642abf8453fba02a3f, type: 2}
   - {fileID: 11400000, guid: e8e4b418d3f628f4d9866d2cb681218f, type: 2}

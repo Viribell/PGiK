@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -68,6 +69,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [field: SerializeField] public LevelType level;
     [field: SerializeField] public int levelStadium;
     [field: SerializeField] public int baseGameMinutes;
+    [field: SerializeField] private WorldScroll worldScroll;
 
     [Header( "Level State" )]
     [field: SerializeField] private List<EnemySO> currentWave;
@@ -83,6 +85,12 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [Header( "NPC Rescuce Info" )]
     [field: SerializeField] private NPCRescueSO npcRescuce;
     [field: SerializeField] private float rescueSpawnDistance;
+
+    [Header( "Destrucibles Info" )]
+    [field: SerializeField] private DestructibleSO[] destruciblesData;
+    [field: SerializeField] private float destructResetTime = 2;
+    [field: SerializeField] private int destructibleAmount = 15;
+    [field: SerializeField] private WorldSpawner spawnerPrefab;
 
     [Header( "Wave Info" )]
     [field: SerializeField] private EnemySO[] levelEnemies;
@@ -116,11 +124,14 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     private Timer championSpawnTimer;
     private Timer waveTimer;
     private Timer gameTimer;
+    private Timer resetDestrucibles;
 
     private bool finalStage = false;
 
     private float timeBonus;
     private float gameBonus;
+
+    private List<WorldSpawner> destructSpawners;
 
     private void Awake() {
         if( Instance == null ) { Instance = this; }
@@ -132,8 +143,10 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         championSpawnTimer = new Timer();
         waveTimer = new Timer();
         gameTimer = new Timer();
+        resetDestrucibles = new Timer();
 
         currentWave = new List<EnemySO>();
+        destructSpawners = new List<WorldSpawner>();
         lastSpawnedChampion = null;
 
         levelStadium = GameState.Instance.chosenLevelStadium;
@@ -146,14 +159,17 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         championSpawnTimer.UpdateTime( championSpawnTime );
         waveTimer.UpdateTime( waveTime );
         gameTimer.UpdateTime( ( baseGameMinutes * 60 ) + ( ( levelStadium - 1 ) * ( 5 * 60 ) ) ); //10 minut + stadium * 5 minut
+        resetDestrucibles.UpdateTime( destructResetTime * 60 );
 
         enemySpawnTimer.StartCountdown();
         championSpawnTimer.StartCountdown();
         waveTimer.StartCountdown();
         gameTimer.StartCountdown();
+        resetDestrucibles.StartCountdown();
 
         SpawnMaterials();
         SpawnRescue();
+        InitDestrucibles();
 
         UpdateWave();
     }
@@ -162,7 +178,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         if( PauseControl.IsGamePaused ) { return; }
 
         if ( !finalStage ) {
-            HandleSpawnLogic();
+            HandleLevelLogic();
 
         } 
 
@@ -176,15 +192,21 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         }
     }
 
-    private void HandleSpawnLogic() {
+    private void HandleLevelLogic() {
         enemySpawnTimer.Update();
         championSpawnTimer.Update();
         waveTimer.Update();
         gameTimer.Update();
+        resetDestrucibles.Update();
 
         if ( enemySpawnTimer.HasFinished() && !gameTimer.HasFinished() ) {
             SpawnEnemies();
             enemySpawnTimer.Restart( true );
+        }
+
+        if ( resetDestrucibles.HasFinished() && !gameTimer.HasFinished() ) {
+            SpawnDestrucibles();
+            resetDestrucibles.Restart( true );
         }
 
         if ( championSpawnTimer.HasFinished() && !gameTimer.HasFinished() ) {
@@ -204,20 +226,59 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         }
     }
 
-    #region Materials
+    #region SpawnObjects
     private void SpawnMaterials() {
         foreach(ResourceSO material in materials) {
             SpawnControl.Instance.SpawnReadyResource( material, GeneratePosition( materialSpawnDistance ) );
         }
     }
-    #endregion
 
-    #region Rescue
+    private void SpawnDestrucibles() {
+        foreach(WorldSpawner spawner in destructSpawners) {
+            spawner.UpdateSelf();
+        }
+    }
+
     private void SpawnRescue() {
         if ( npcRescuce == null || GameState.Instance.IsAvailable( npcRescuce.npc ) ) return;
 
-        SpawnControl.Instance.SpawnReadyRescue( npcRescuce,  GeneratePosition( rescueSpawnDistance ) );
+        SpawnControl.Instance.SpawnReadyRescue( npcRescuce, GeneratePosition( rescueSpawnDistance ) );
     }
+
+    private void InitDestrucibles() {
+        List<GameObject> tiles = worldScroll.GetTiles();
+        int counter = destructibleAmount;
+        int destructPerTile = (int)Mathf.Ceil((float)destructibleAmount / (float)tiles.Count);
+
+        foreach(GameObject tile in tiles) {
+            if ( counter < destructPerTile ) destructPerTile = counter;
+            if ( counter <= 0 ) break;
+
+            CreateWorldSpawners( destructPerTile, tile );
+
+            counter -= destructPerTile;
+        }
+
+        SpawnDestrucibles();
+    }
+
+    private void CreateWorldSpawners(int iterations, GameObject tile) {
+        float size = worldScroll.tileSize;
+        
+        for(int i = 0; i < iterations; i++ ) {
+            float newX = Random.Range( tile.transform.position.x, tile.transform.position.x + size );
+            float newY = Random.Range( tile.transform.position.y, tile.transform.position.y + size );
+
+            Vector2 newPos = new Vector2( newX, newY );
+
+            WorldSpawner newSpawner = Instantiate( spawnerPrefab, newPos, Quaternion.identity );
+            newSpawner.LoadData( destruciblesData );
+            newSpawner.transform.SetParent( tile.transform );
+
+            destructSpawners.Add( newSpawner );
+        }
+    }
+
     #endregion
 
     #region Enemies
@@ -308,6 +369,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         championSpawnTimer.StopCountdown();
         waveTimer.StopCountdown();
         gameTimer.StopCountdown();
+        resetDestrucibles.StopCountdown();
     }
 
     public float GetGameTime() { return gameTimer.GetCurrentTime(); }
