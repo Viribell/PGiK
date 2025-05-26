@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aedf68ddac03e2640a40b288d49a7636, type: 3}
-  m_Name: Aurtru_Dialogue_1
+  m_Script: {fileID: 11500000, guid: c7600c8d926a7024bb6df6e27badf785, type: 3}
+  m_Name: OnCurrencyShop
   m_EditorClassIdentifier: 
-  firstNode: {fileID: 11400000, guid: eca1cbf5638559b45b0d5d434305b06c, type: 2}
-  typingSpeed: 0.04
-  voiceSound: {fileID: 0}
-  voicePitch: 1

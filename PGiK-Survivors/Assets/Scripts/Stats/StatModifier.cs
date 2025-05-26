@@ -9,6 +9,7 @@ public enum StatModType {
 [System.Serializable]
 public class StatModifier {
     public float DefaultValue { get; private set; }
+    public float basicValue;
     public float value;
     public StatType affectedStat;
     public StatModType type;
@@ -20,9 +21,18 @@ public class StatModifier {
         this.applyOrder = applyOrder;
 
         DefaultValue = value;
+        basicValue = value;
     }
 
     public StatModifier( float value, StatModType type ) : this( value, type, ( int )type ) { }
 
     public StatModifier( float value, StatModType type, StatType affectedStat ) : this( value, type, ( int )type ) { this.affectedStat = affectedStat; }
+
+    public void UpdateBasicValue() {
+        basicValue = value;
+    }
+
+    public void UpdateDefaultValue() {
+        DefaultValue = basicValue;
+    }
 }
