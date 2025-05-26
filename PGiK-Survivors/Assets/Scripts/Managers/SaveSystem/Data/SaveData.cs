@@ -7,11 +7,13 @@ public class SaveData {
     public List<QuestSaveData> quests;
     public List<LevelSaveData> levels;
     public AudioSaveData audioData;
+    public List<UpgradeSaveData> upgrades;
 
     public SaveData() {
         resources = new List<ResourceSaveData>();
         availableNPC = new List<NPCSaveData>();
         quests = new List<QuestSaveData>();
+        upgrades = new List<UpgradeSaveData>();
 
         CreateLevels();
 

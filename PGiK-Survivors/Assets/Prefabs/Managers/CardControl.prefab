@@ -54,4 +54,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 065a3d9748491244388d2247370cb75f, type: 2}
   - {fileID: 11400000, guid: 11a2292e60319b14baf5eea542951c92, type: 2}
   - {fileID: 11400000, guid: 4e1e1604a5ad4674eaeec821e76a8511, type: 2}
+  - {fileID: 11400000, guid: 319f957704710d34a8d75354a9a0801b, type: 2}
+  - {fileID: 11400000, guid: aef0e4c24c59e6b40ae10a2e19b47e07, type: 2}
+  - {fileID: 11400000, guid: 571a42a34d7aa6041b591a49f1f09ec3, type: 2}
+  - {fileID: 11400000, guid: a7dda9ce667e0e74794cd36a44057aed, type: 2}
+  - {fileID: 11400000, guid: c031120481b35504abdbc80d643a24cf, type: 2}
+  - {fileID: 11400000, guid: c2ac8e6a73fe4a44abaa110ff6e40770, type: 2}
+  - {fileID: 11400000, guid: 170179bdfaac185448ad6989eb32ce00, type: 2}
+  - {fileID: 11400000, guid: ba859210abb9fbb4ba9f07a6bf38dd36, type: 2}
+  - {fileID: 11400000, guid: 39902669dc4a1f04091dd7b73febc73f, type: 2}
+  - {fileID: 11400000, guid: f27742f09fd70b242b733f8f86e1ead2, type: 2}
+  - {fileID: 11400000, guid: dadf7c2f80ebc6d42a6878ff2372cd27, type: 2}
+  - {fileID: 11400000, guid: 833fe97efa3383243849ab8bb57c0883, type: 2}
   currentCards: []

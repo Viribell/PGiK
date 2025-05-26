@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: "Stalowa Sk\xF3ra_2"
+  m_EditorClassIdentifier: 
+  cardName: "Stalowa Sk\xF3ra_2"
+  cardContent: + 2 obrony
+  cardType: 1
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 5
+  nextCards:
+  - {fileID: 11400000, guid: 669168af11d63914785ef0e8f56ce422, type: 2}
+  cardsToLock: []
+  <Mods>k__BackingField:
+  - value: 2
+    affectedStat: 2
+    type: 100
+    applyOrder: 0

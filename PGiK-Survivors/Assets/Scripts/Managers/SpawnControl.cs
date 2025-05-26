@@ -160,7 +160,7 @@ public class SpawnControl : MonoBehaviour {
     public void SpawnReadyExpPoint( ExpPointSO expPoint, Vector2 pos ) { AttachParent( SpawnPrefab( expPoint.prefab, pos ), itemsParent ); }
     public void SpawnReadyItem( ItemSO item, Vector2 pos ) { AttachParent( SpawnPrefab( item.prefab, pos ), itemsParent ); }
     public void SpawnReadyConsumable( ConsumableSO consumable, Vector2 pos ) { AttachParent( SpawnPrefab( consumable.prefab, pos ), itemsParent ); }
-    public void SpawnReadyBasicDestruct( DestructibleSO destruct, Vector2 pos ) { SpawnPrefab( destruct.prefab, pos ); }
+    public GameObject SpawnReadyBasicDestruct( DestructibleSO destruct, Vector2 pos ) { return SpawnPrefab( destruct.prefab, pos ); }
 
     public GameObject SpawnReadyEnemy( EnemySO enemy, Vector2 pos ) { return AttachParent( SpawnPrefab( enemy.prefab, pos, false ), enemiesParent ); }
 

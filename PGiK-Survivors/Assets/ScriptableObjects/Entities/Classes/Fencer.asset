@@ -48,3 +48,10 @@ MonoBehaviour:
     affectedStat: 0
     type: 100
     applyOrder: 0
+  <classCards>k__BackingField:
+  - {fileID: 11400000, guid: 148f4b8a863d8c243b922e12a66e6626, type: 2}
+  - {fileID: 11400000, guid: 35df9847618e1c949942701de11eae8a, type: 2}
+  - {fileID: 11400000, guid: 40f1361852e26e34198db335a88db77f, type: 2}
+  - {fileID: 11400000, guid: 47eea748e3bf70145843d6f8eb99b9fd, type: 2}
+  - {fileID: 11400000, guid: 77b8f598cfd8445428ddd98fd974d554, type: 2}
+  - {fileID: 11400000, guid: 625db35c7763b0042bf2b4c108410d47, type: 2}

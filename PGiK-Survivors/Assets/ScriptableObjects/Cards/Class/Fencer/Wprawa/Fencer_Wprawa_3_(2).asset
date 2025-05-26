@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: Fencer_Wprawa_3_(2)
+  m_EditorClassIdentifier: 
+  cardName: Wprawa_3 (2)
+  cardContent: "+ 15% szybko\u015Bci ataku"
+  cardType: 2
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 25
+  nextCards:
+  - {fileID: 11400000, guid: ac01a99d36690864aa98291f7e1f5608, type: 2}
+  - {fileID: 11400000, guid: db70c01b1c2426447a8e579ea1a82653, type: 2}
+  cardsToLock:
+  - {fileID: 11400000, guid: 9a1be6bfd121fe748aff6cdda2ed419b, type: 2}
+  <Mods>k__BackingField:
+  - value: 0.15
+    affectedStat: 7
+    type: 300
+    applyOrder: 0
