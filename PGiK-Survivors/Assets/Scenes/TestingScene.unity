@@ -7028,6 +7028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelControl
       objectReference: {fileID: 0}
+    - target: {fileID: 5754055349994442310, guid: 51f24ec0b0d6fbb4681572a5148c18a3, type: 3}
+      propertyPath: baseGameMinutes
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

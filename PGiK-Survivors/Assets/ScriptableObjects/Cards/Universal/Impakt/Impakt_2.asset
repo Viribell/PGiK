@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: Impakt_2
+  m_EditorClassIdentifier: 
+  cardName: Impakt_2
+  cardContent: + 5% rozmiaru ataku
+  cardType: 1
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 5
+  nextCards:
+  - {fileID: 11400000, guid: 3289bd13d65b94e43b3daa18d22adf95, type: 2}
+  cardsToLock: []
+  <Mods>k__BackingField:
+  - value: 0.05
+    affectedStat: 9
+    type: 300
+    applyOrder: 0
