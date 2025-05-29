@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8389483514626278615}
   - component: {fileID: 1438894735268617663}
   - component: {fileID: 4853072750686427764}
+  - component: {fileID: 4537298572621309599}
   m_Layer: 0
   m_Name: Aurtru_Rescue
   m_TagString: Untagged
@@ -264,6 +265,24 @@ MonoBehaviour:
   rescueData: {fileID: 11400000, guid: bb5f081afbcb38d488fc5a18fcab42b3, type: 2}
   visual: {fileID: 1245262945555339262}
   depletedVisual: {fileID: 6083293856143699067}
+--- !u!114 &4537298572621309599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853080223588948451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d219439f4bca84b8a8e69d1f2ec16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerColor: {r: 0, g: 0, b: 0, a: 1}
+  pointerPrefab: {fileID: 2386614556175119245, guid: 1839e666412d03843881675240f9e45d, type: 3}
+  pointerObject: {fileID: 0}
+  distanceText: {fileID: 0}
+  shadow: {fileID: 0}
+  pointerRect: {fileID: 0}
 --- !u!1 &9028489444128545091
 GameObject:
   m_ObjectHideFlags: 0

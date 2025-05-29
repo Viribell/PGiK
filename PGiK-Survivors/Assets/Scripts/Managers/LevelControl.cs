@@ -70,6 +70,8 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [field: SerializeField] public int levelStadium;
     [field: SerializeField] public int baseGameMinutes;
     [field: SerializeField] private WorldScroll worldScroll;
+    [field: SerializeField] private GameObject compassUI;
+    [field: SerializeField] private SkillBookInteractable skillBookPrefab;
 
     [Header( "Level State" )]
     [field: SerializeField] private List<EnemySO> currentWave;
@@ -139,6 +141,8 @@ public class LevelControl : MonoBehaviour, IPersistentData {
             Debug.Log( "Instance of LevelControl already exists!" );
         }
 
+        if ( compassUI.activeSelf ) compassUI.SetActive( false );
+
         enemySpawnTimer = new Timer();
         championSpawnTimer = new Timer();
         waveTimer = new Timer();
@@ -167,6 +171,9 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         gameTimer.StartCountdown();
         resetDestrucibles.StartCountdown();
 
+        ActivateCompass();
+        SpawnSkillBook();
+
         SpawnMaterials();
         SpawnRescue();
         InitDestrucibles();
@@ -182,6 +189,16 @@ public class LevelControl : MonoBehaviour, IPersistentData {
 
         } 
 
+    }
+
+    private void ActivateCompass() {
+        if ( UpgradesControl.Instance.HasUpgrade( UpgradeType.Compass ) ) compassUI.SetActive( true );
+    }
+
+    private void SpawnSkillBook() {
+        if( UpgradesControl.Instance.HasUpgrade( UpgradeType.SkillBook ) ) {
+            Instantiate( skillBookPrefab, new Vector2( 0.0f, -5.0f ), Quaternion.identity );
+        }
     }
 
     private void UpdateStadiumMods() {

@@ -49,13 +49,17 @@ MonoBehaviour:
   levelStadium: 1
   baseGameMinutes: 10
   worldScroll: {fileID: 0}
+  compassUI: {fileID: 0}
+  skillBookPrefab: {fileID: 4398166875561781046, guid: e7560744781da2f4584f454de8a0cd6e, type: 3}
   currentWave: []
   stadiumMods:
-  - value: 10
+  - basicValue: 0
+    value: 10
     affectedStat: 0
     type: 100
     applyOrder: 0
-  - value: 2
+  - basicValue: 0
+    value: 2
     affectedStat: 11
     type: 100
     applyOrder: 0
@@ -79,7 +83,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 21428d7cf03ee0c41b4604314e855dbd, type: 2}
   - {fileID: 11400000, guid: 96a86439bccaed348a289422a223103b, type: 2}
   waveTime: 90
-  spawnMulitpleOnTick: 0
+  spawnMulitpleOnTick: 1
   spawnChancePerStadium: 0.05
   maxEnemyTypes: 3
   baseSpawnChance: 0.5

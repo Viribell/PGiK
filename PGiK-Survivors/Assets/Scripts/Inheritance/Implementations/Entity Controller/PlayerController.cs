@@ -14,11 +14,17 @@ public class PlayerController : EntityController {
 
     [field: SerializeField] private EventChannelSO classChange;
 
+    private bool wasRevived = false;
+
     private void Start() {
         if( GameState.Instance.chosenPlayerClass != null ) {
             UploadEntityData( GameState.Instance.chosenPlayerClass );
             classChange?.Raise();
         }
+
+        wasRevived = false;
+
+        EntityStats.AddStatMod( UpgradesControl.Instance.GetStatMods(), StatModHandlingOptions.NoDuplicateModAdd );
     }
 
     protected override void UploadControllerToComponents() {
@@ -42,6 +48,13 @@ public class PlayerController : EntityController {
     #region Events
     public override void OnEntityDeath() {
         Debug.Log( "Player death" );
+
+        if( UpgradesControl.Instance.HasUpgrade( UpgradeType.PlusLife ) && !wasRevived ) {
+            Debug.Log( "Extra life usage... Player Revived!" );
+            Player.Revive();
+            wasRevived = true;
+            return;
+        }
  
         LevelControl.Instance.EndScreen( EndScreenType.DeathScreen );
 

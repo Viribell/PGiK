@@ -15,6 +15,10 @@ public class Player : MonoBehaviour, IEntityComponent {
         Destroy( gameObject, 1 );
     }
 
+    public void Revive() {
+        player.EntityHealth.UpdateCurrentHealth();
+    }
+
     private void OnCollisionStay2D( Collision2D collision ) {
         if ( collision.gameObject.TryGetComponent( out EnemyController entity ) ) {
             TakeCollisionDamage( entity );

@@ -320,6 +320,15 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MouseScroll"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5b84b6f4-3594-4f6e-83f8-9315453ff8b0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -432,6 +441,17 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7969189-ff57-4744-a0f0-66f6febf8ae7"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -515,6 +535,7 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
         m_UI_LMB = m_UI.FindAction("LMB", throwIfNotFound: true);
         m_UI_MousePosition = m_UI.FindAction("MousePosition", throwIfNotFound: true);
+        m_UI_MouseScroll = m_UI.FindAction("MouseScroll", throwIfNotFound: true);
         // MapFinishScreen
         m_MapFinishScreen = asset.FindActionMap("MapFinishScreen", throwIfNotFound: true);
         m_MapFinishScreen_Newaction = m_MapFinishScreen.FindAction("New action", throwIfNotFound: true);
@@ -745,6 +766,7 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_Submit;
     private readonly InputAction m_UI_LMB;
     private readonly InputAction m_UI_MousePosition;
+    private readonly InputAction m_UI_MouseScroll;
     public struct UIActions
     {
         private @MyInputActions m_Wrapper;
@@ -755,6 +777,7 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         public InputAction @Submit => m_Wrapper.m_UI_Submit;
         public InputAction @LMB => m_Wrapper.m_UI_LMB;
         public InputAction @MousePosition => m_Wrapper.m_UI_MousePosition;
+        public InputAction @MouseScroll => m_Wrapper.m_UI_MouseScroll;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -782,6 +805,9 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @MouseScroll.started += instance.OnMouseScroll;
+            @MouseScroll.performed += instance.OnMouseScroll;
+            @MouseScroll.canceled += instance.OnMouseScroll;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -804,6 +830,9 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @MouseScroll.started -= instance.OnMouseScroll;
+            @MouseScroll.performed -= instance.OnMouseScroll;
+            @MouseScroll.canceled -= instance.OnMouseScroll;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -936,6 +965,7 @@ public partial class @MyInputActions: IInputActionCollection2, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnLMB(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnMouseScroll(InputAction.CallbackContext context);
     }
     public interface IMapFinishScreenActions
     {

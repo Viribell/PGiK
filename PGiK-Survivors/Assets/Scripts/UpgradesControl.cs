@@ -19,9 +19,33 @@ public class UpgradesControl : MonoBehaviour, IPersistentData {
         DontDestroyOnLoad( gameObject );
     }
 
+    public bool HasUpgrade( UpgradeType upgrade ) {
+        if ( upgradesData.TryGetValue( upgrade.ToString(), out UpgradeSaveData data ) ) {
+            return data.currentLevel > 0;
+        }
+
+        return false;
+    }
+
     public UpgradeSaveData GetCurrencyUpgrade( string id ) {
         if ( upgradesData.TryGetValue( id, out UpgradeSaveData upgrade ) ) return upgrade;
         else return null;
+    }
+
+    public List<StatModifier> GetStatMods() {
+        List<StatModifier> mods = new List<StatModifier>();
+        
+        foreach(KeyValuePair<string, UpgradeSaveData> entry in upgradesData) {
+            UpgradeSaveData value = entry.Value;
+
+            if ( value.currentLevel == 0 || value.upgradeMod == null || value.upgradeMod.affectedStat == StatType.Undefined ) continue;
+
+            value.UpdateMod();
+
+            mods.Add( value.upgradeMod );
+        }
+
+        return mods;
     }
 
     public void AddLevel( string id ) {
@@ -53,6 +77,8 @@ public class UpgradesControl : MonoBehaviour, IPersistentData {
 
     public void LoadData( SaveData data ) {
         if( data.upgrades == null  || data.upgrades.Count <= 0 ) { InitUpgrades( data ); return; }
+
+        upgradesData.Clear();
 
         List<UpgradeSaveData> upgrades = data.upgrades;
 
