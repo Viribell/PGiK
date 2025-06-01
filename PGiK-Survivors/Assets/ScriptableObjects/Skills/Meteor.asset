@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Meteor
   skillType: 0
-  <SkillCards>k__BackingField: {fileID: 0}
-  attackPrefab: {fileID: 0}
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: dc86e2f21e76da8408defbca65880e77, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: b7a03509792200140b42f4deb1d7d891, type: 3}
   spreadAngle: 30
-  statusEffect: {fileID: 0}
+  statusEffect: {fileID: 11400000, guid: ed2b09a2c652b2b4d9f711092c963bb7, type: 2}
   stats:
-    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000180000000c00000010000000
     m_values:
-    - 0
-    - 0
-    - 0
+    - 0.05
+    - 0.1
     - 5
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 1
+    - 1
+    - 1
+    - 6
+    - 10
+    - 3.5
+    - 8
+    - 5
+    - 0.3

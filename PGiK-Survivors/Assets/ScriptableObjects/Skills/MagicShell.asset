@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
   m_Name: MagicShell
   m_EditorClassIdentifier: 
-  skillName: Meteor
-  skillType: 0
-  <SkillCards>k__BackingField: []
-  attackPrefab: {fileID: 0}
+  skillName: Magic Shell
+  skillType: 3
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: f79cf7a399d91cb41961bf9ee5c24620, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: 52d450083de1ef54f8291da9e3f5513f, type: 3}
   spreadAngle: 30
-  possibleEffects: []
+  statusEffect: {fileID: 0}
   stats:
-    m_keys: 0300000004000000050000000700000008000000090000000a0000000b000000
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b0000001700000018000000
     m_values:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 0.05
+    - 0.1
+    - 5
+    - 1
+    - 1
+    - 1
+    - 6
+    - 2
+    - 3
+    - 10

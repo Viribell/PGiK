@@ -12,20 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
   m_Name: PoisonousNeedles
   m_EditorClassIdentifier: 
-  skillName: Meteor
-  skillType: 0
-  <SkillCards>k__BackingField: []
-  attackPrefab: {fileID: 0}
+  skillName: Poisonous Needles
+  skillType: 7
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: 0f7a3c25c59dcc1489e5576d446e08e4, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: 412ae3261741afe4fbcdd6341c46a37e, type: 3}
   spreadAngle: 30
-  possibleEffects: []
+  statusEffect: {fileID: 11400000, guid: 4b67fc8a504e2ff4db1dc68087a9d5ab, type: 2}
   stats:
-    m_keys: 0300000004000000050000000700000008000000090000000a0000000b000000
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000180000000d00000011000000
     m_values:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 0.05
+    - 0.1
+    - 5
+    - 1
+    - 8
+    - 1
+    - 6
+    - 5
+    - 1.2
+    - 5
+    - 2
+    - 0.2

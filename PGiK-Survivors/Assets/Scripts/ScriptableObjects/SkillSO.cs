@@ -11,7 +11,6 @@ public enum SkillType {
     Plague,
     CatsPaw,
     IceChasm,
-    Tornado,
     PoisonousNeedles,
     IceBall,
     Flamethrower
@@ -25,7 +24,7 @@ public class SkillSO : ScriptableObject{
     [field: SerializeField] public CardSetSO SkillCards { get; private set; }
 
     [Header( "Skill Attack Info" )]
-    [field: SerializeField] public SkillObject attackPrefab;
+    [field: SerializeField] public SkillObject skillObjectPrefab;
     [field: SerializeField] public float spreadAngle = 30.0f;
     [field: SerializeField] public StatusEffectSO statusEffect;
 
@@ -58,15 +57,20 @@ public class SkillSO : ScriptableObject{
 
     public void Activate() {
         isEffectActive = true;
-        timeLeft = GetStatTotal( StatType.AttackSpeed );
+        timeLeft = GetStatTotal( StatType.Cooldown );
     }
 
     public void Restart() {
-        timeLeft = GetStatTotal( StatType.AttackSpeed );
+        timeLeft = GetStatTotal( StatType.Cooldown );
     }
 
     public void UpdateEffect( EntityController source ) {
         Debug.Log( "Skill " + skillType.ToString() + " was used." );
+
+        SkillObject skillObject = Instantiate( skillObjectPrefab, source.transform );
+
+        skillObject.Init( source, source.transform.position , this );
+
     }
     #endregion
 

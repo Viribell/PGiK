@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EntitySkills : MonoBehaviour, IEntityComponent {
-    private PlayerController playerController;
+    private EntityController entity;
 
     [field: SerializeField] private SerializableDictionary<SkillType, SkillSO> cachedSkills;
 
@@ -20,7 +20,7 @@ public class EntitySkills : MonoBehaviour, IEntityComponent {
 
     private void UpdateSkills() {
         foreach ( KeyValuePair<SkillType, SkillSO> entry in cachedSkills ) {
-            entry.Value.Tick( (EntityController)playerController, Time.deltaTime );
+            entry.Value.Tick( entity, Time.deltaTime );
         }
     }
 
@@ -45,7 +45,7 @@ public class EntitySkills : MonoBehaviour, IEntityComponent {
 
     #region EntityFunc
     public void LoadEntityController( EntityController controller ) {
-        playerController = ( PlayerController )controller;
+        entity = controller;
     }
 
     public void ReloadEntityData() {}

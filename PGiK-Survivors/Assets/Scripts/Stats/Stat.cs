@@ -25,7 +25,8 @@ public enum StatType {
     EffectHitChance,    // %
     EffectResistance,    // %
     Undefined,
-    Lifetime
+    Lifetime,
+    Cooldown
 }
 
 //currently 22 stats 

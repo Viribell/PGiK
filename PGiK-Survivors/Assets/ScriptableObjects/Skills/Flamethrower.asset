@@ -12,20 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
   m_Name: Flamethrower
   m_EditorClassIdentifier: 
-  skillName: Meteor
-  skillType: 0
-  <SkillCards>k__BackingField: []
-  attackPrefab: {fileID: 0}
+  skillName: Flamethrower
+  skillType: 9
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: eb0b166fba4546a40a3c923c23bd21be, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: 5e03f25600e4d434190864075aa1830a, type: 3}
   spreadAngle: 30
-  possibleEffects: []
+  statusEffect: {fileID: 11400000, guid: ed2b09a2c652b2b4d9f711092c963bb7, type: 2}
   stats:
-    m_keys: 0300000004000000050000000700000008000000090000000a0000000b000000
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000180000000c00000010000000
     m_values:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
+    - 0.05
+    - 0.1
+    - 5
+    - 1
+    - 1
+    - 1
+    - 6
+    - 5
+    - 3
+    - 6
+    - 4
+    - 0.08
