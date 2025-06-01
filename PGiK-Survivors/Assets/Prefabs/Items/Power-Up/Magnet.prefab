@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4870235814393412276}
   - component: {fileID: 3363113260435212251}
   - component: {fileID: 7829977245714707882}
+  - component: {fileID: 3053111330280400454}
   m_Layer: 0
   m_Name: Magnet
   m_TagString: Untagged
@@ -204,3 +205,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectToApply: {fileID: 11400000, guid: 8f8b46aa37aa8f248ad2e774e7c26141, type: 2}
+--- !u!114 &3053111330280400454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174341135901562595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d219439f4bca84b8a8e69d1f2ec16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerColor: {r: 0.59607846, g: 0.1607843, b: 0.5219138, a: 1}
+  pointerPrefab: {fileID: 2386614556175119245, guid: 1839e666412d03843881675240f9e45d, type: 3}
+  pointerObject: {fileID: 0}
+  distanceText: {fileID: 0}
+  shadow: {fileID: 0}
+  pointerRect: {fileID: 0}

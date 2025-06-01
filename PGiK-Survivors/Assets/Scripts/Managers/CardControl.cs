@@ -40,6 +40,14 @@ public class CardControl : MonoBehaviour {
         AddClassCards();
 
         Shuffle( 1 );
+
+        UpdateNumberOfCards();
+    }
+
+    private void UpdateNumberOfCards() {
+        if( UpgradesControl.Instance.HasUpgrade( UpgradeType.PlusCard ) ) {
+            maxCards = 4;
+        }
     }
 
     private void AddClassCards() {

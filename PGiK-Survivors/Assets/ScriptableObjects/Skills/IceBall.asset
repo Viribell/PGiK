@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
+  m_Name: IceBall
+  m_EditorClassIdentifier: 
+  skillName: Ice Ball
+  skillType: 8
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: d243b71167fe04e4ebf46e98fd6a87ed, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: 35d778ca7d656bd40aea6317a31cb6fc, type: 3}
+  spreadAngle: 30
+  statusEffect: {fileID: 11400000, guid: 7e191fb46894657428e3dfc490792d17, type: 2}
+  stats:
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b000000170000001800000013000000
+    m_values:
+    - 0.05
+    - 0.1
+    - 2
+    - 0.7
+    - 1
+    - 1
+    - 8
+    - 3
+    - 5
+    - 10
+    - 0.1

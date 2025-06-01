@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
+  m_Name: Thunderstorm
+  m_EditorClassIdentifier: 
+  skillName: Thunderstorm
+  skillType: 2
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: 266ec851f2ffa2741a54b4be8f31fe19, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: b06d6a10c61bb544c84c7737c7c3b42a, type: 3}
+  spreadAngle: 30
+  statusEffect: {fileID: 11400000, guid: c5cbeedcac0281d46b916f9202b215cb, type: 2}
+  stats:
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000180000000e00000012000000
+    m_values:
+    - 0.05
+    - 0.1
+    - 5
+    - 1
+    - 2
+    - 1
+    - 6
+    - 2.5
+    - 4
+    - 11
+    - 2
+    - 0.05

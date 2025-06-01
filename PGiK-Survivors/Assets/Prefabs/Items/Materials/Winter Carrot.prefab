@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6909354849802749784}
   - component: {fileID: 3933438929912177413}
   - component: {fileID: 1953439858613481551}
+  - component: {fileID: -4375836422547420182}
   m_Layer: 0
   m_Name: Winter Carrot
   m_TagString: Untagged
@@ -180,6 +181,24 @@ MonoBehaviour:
   amount: 1
   visual: {fileID: 1991702418578897206}
   depletedVisual: {fileID: 911166598619628671}
+--- !u!114 &-4375836422547420182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794939098130914470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d219439f4bca84b8a8e69d1f2ec16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerColor: {r: 0.5943396, g: 0.15979885, b: 0.15979885, a: 1}
+  pointerPrefab: {fileID: 2386614556175119245, guid: 1839e666412d03843881675240f9e45d, type: 3}
+  pointerObject: {fileID: 0}
+  distanceText: {fileID: 0}
+  shadow: {fileID: 0}
+  pointerRect: {fileID: 0}
 --- !u!1 &1991702418578897206
 GameObject:
   m_ObjectHideFlags: 0

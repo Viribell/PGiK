@@ -81,6 +81,7 @@ public class CurrencyUpgradesControl : MonoBehaviour {
         Invoke( "ActivateDelayed", 0.5f );
         upgradesUI.SetActive( true );
         isUiActive = true;
+        UpdateGoldState();
     }
 
     public void Deactivate() {

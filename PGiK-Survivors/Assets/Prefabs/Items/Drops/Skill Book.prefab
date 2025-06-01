@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7239644904313082478}
   - component: {fileID: 5878482086315077102}
   - component: {fileID: 4398166875561781046}
+  - component: {fileID: 8926103545623537273}
   m_Layer: 0
   m_Name: Skill Book
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6807591021045133657}
@@ -203,3 +204,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30c89864ba2eb540a554b00e53513a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8926103545623537273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556961502794184966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d219439f4bca84b8a8e69d1f2ec16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerColor: {r: 0.59607846, g: 0.58876157, b: 0.1607843, a: 1}
+  pointerPrefab: {fileID: 2386614556175119245, guid: 1839e666412d03843881675240f9e45d, type: 3}
+  pointerObject: {fileID: 0}
+  distanceText: {fileID: 0}
+  shadow: {fileID: 0}
+  pointerRect: {fileID: 0}

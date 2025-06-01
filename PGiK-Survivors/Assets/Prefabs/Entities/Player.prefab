@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 6624532341770309845}
   - component: {fileID: 4924217607710363613}
   - component: {fileID: 3173480600219594032}
+  - component: {fileID: 3309676517162384386}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -602,6 +603,7 @@ MonoBehaviour:
   <EntityHealth>k__BackingField: {fileID: 6846098833280091328}
   <EntityMove>k__BackingField: {fileID: 5001260897975710355}
   <EntityAttack>k__BackingField: {fileID: 3173480600219594032}
+  <EntitySkills>k__BackingField: {fileID: 3309676517162384386}
   <Player>k__BackingField: {fileID: 1065960015998905340}
   <PlayerPickup>k__BackingField: {fileID: 8611589948104814206}
   <PlayerLevel>k__BackingField: {fileID: 3698321475478117947}
@@ -718,6 +720,21 @@ MonoBehaviour:
   attackSpawn: {fileID: 1821346487809715461}
   usesAttackObject: 1
   possibleEffects: []
+--- !u!114 &3309676517162384386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640604067738084326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcdac6f83151f545a5abefdcb2c24e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedSkills:
+    m_keys: 
+    m_values: []
 --- !u!1 &8937260367245138015
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e26511eed43354ea1f3e1bba4526c0, type: 3}
+  m_Name: FlameArrows
+  m_EditorClassIdentifier: 
+  skillName: Flame Arrows
+  skillType: 1
+  <SkillCards>k__BackingField: {fileID: 11400000, guid: a7db0d89381eac049a484711232918b5, type: 2}
+  skillObjectPrefab: {fileID: 8596555081448438903, guid: 2cd0fcbf47661384888e1f9d00ed0fe3, type: 3}
+  spreadAngle: 30
+  statusEffect: {fileID: 11400000, guid: ed2b09a2c652b2b4d9f711092c963bb7, type: 2}
+  stats:
+    m_keys: 0300000004000000050000000700000008000000090000000a0000000b00000017000000180000000c00000010000000
+    m_values:
+    - 0.05
+    - 0.1
+    - 5
+    - 1
+    - 4
+    - 1
+    - 6
+    - 6
+    - 1.5
+    - 7
+    - 5
+    - 0.1
