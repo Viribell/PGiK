@@ -18,6 +18,7 @@ public class FoodSO : ScriptableObject {
     [field: SerializeField] public int maxLevels;
     [TextArea( 2, 10 )][field: SerializeField] public string description;
     [field: SerializeField] public Sprite image;
+    [field: SerializeField] public bool isImmediate = false;
 
     [Header( "Price" )]
     [field: SerializeField] public SerializableDictionary<ResourceSO, int> price = new SerializableDictionary<ResourceSO, int>();

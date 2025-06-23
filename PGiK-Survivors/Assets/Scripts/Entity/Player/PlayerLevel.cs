@@ -53,6 +53,10 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
         playerController.EntityHealth.Damage( 10 );
     }
 
+    public void InstantLevelUp() {
+        GainXP( requiredXP - currXP );
+    }
+
     public void LevelUp() {
         level++;
         currXP = currXP - requiredXP; // optionally maybe add some rounding

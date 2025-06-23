@@ -19,6 +19,16 @@ public class MaterialsSaveControl : MonoBehaviour, IPersistentData {
         DontDestroyOnLoad( gameObject );
     }
 
+    public SerializableDictionary<FoodSO, int> GetFoodAmount() {
+        SerializableDictionary<FoodSO, int> foods = new SerializableDictionary<FoodSO, int>();
+
+        foreach( KeyValuePair<string, MaterialSaveData> entry in upgradesData ) {
+            foods.Add( GetFood( entry.Value.name ), entry.Value.currentLevel );
+        }
+
+        return foods;
+    }
+
     public bool HasUpgrade( UpgradeType upgrade ) {
         if ( upgradesData.TryGetValue( upgrade.ToString(), out MaterialSaveData data ) ) {
             return data.currentLevel > 0;

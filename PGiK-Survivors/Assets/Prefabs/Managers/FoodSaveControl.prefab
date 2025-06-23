@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultFoods:
-  - {fileID: 11400000, guid: c3ecfe7baba388a4b94e7393f881fc3c, type: 2}
   - {fileID: 11400000, guid: 2a45aadeece34674a9ebbb215db53279, type: 2}
   - {fileID: 11400000, guid: 205f132a8cea3a14583660bcfd26efcb, type: 2}
   - {fileID: 11400000, guid: ec1a2b0ed3b2ff346a18d8035f0840f8, type: 2}

@@ -7,6 +7,7 @@ public class MaterialUpgradeBox : MonoBehaviour {
     [field: SerializeField] private TextMeshProUGUI upgradeNameText;
     [field: SerializeField] private TextMeshProUGUI currentLevelText;
     [field: SerializeField] private TextMeshProUGUI maxLevelText;
+    [field: SerializeField] private Image foodImage;
 
     [field: SerializeField] private Button buyButton;
     [field: SerializeField] private MaterialSaveData upgradeData;
@@ -26,6 +27,7 @@ public class MaterialUpgradeBox : MonoBehaviour {
         this.food = food;
         UpdateState();
         UpdateIfMaxLevel();
+        foodImage.sprite = food.image;
     }
 
     public void OnBuyClicked() {
