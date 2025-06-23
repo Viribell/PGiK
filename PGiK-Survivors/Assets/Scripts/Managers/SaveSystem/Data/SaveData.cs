@@ -8,12 +8,16 @@ public class SaveData {
     public List<LevelSaveData> levels;
     public AudioSaveData audioData;
     public List<UpgradeSaveData> upgrades;
+    public List<SkillSaveData> skills;
+    public List<MaterialSaveData> cooking;
 
     public SaveData() {
         resources = new List<ResourceSaveData>();
         availableNPC = new List<NPCSaveData>();
         quests = new List<QuestSaveData>();
         upgrades = new List<UpgradeSaveData>();
+        skills = new List<SkillSaveData>();
+        cooking = new List<MaterialSaveData>();
 
         CreateLevels();
 

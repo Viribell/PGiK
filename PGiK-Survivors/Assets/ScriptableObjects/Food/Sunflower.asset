@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc7fdcaf0d064a44a63ae46f1c83592, type: 3}
+  m_Name: Sunflower
+  m_EditorClassIdentifier: 
+  foodName: "Kora z pra\u017Conym s\u0142onecznikiem"
+  foodType: 0
+  maxLevels: 15
+  description: Pozwala na reroll kart
+  image: {fileID: 21300000, guid: 36d2e6d51c836344e86b22d59e01912b, type: 3}
+  price:
+    m_keys:
+    - {fileID: 11400000, guid: 30300cdbcc309104c98848642f4514c9, type: 2}
+    m_values: 03000000

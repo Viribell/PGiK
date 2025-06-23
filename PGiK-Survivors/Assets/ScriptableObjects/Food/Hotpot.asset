@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc7fdcaf0d064a44a63ae46f1c83592, type: 3}
+  m_Name: Hotpot
+  m_EditorClassIdentifier: 
+  foodName: Hotpot
+  foodType: 4
+  maxLevels: 1
+  description: "Pozwala na uzyskanie od razu kolejnego poziomu po zako\u0144czeniu
+    wyboru karty"
+  image: {fileID: 21300000, guid: 72f58c7b9cafde043a0a84ca4764893e, type: 3}
+  price:
+    m_keys:
+    - {fileID: 11400000, guid: 1b157c56b180b0544bab65a22165b658, type: 2}
+    - {fileID: 11400000, guid: e7da9ccec2a785a428206bc2d5c23fc1, type: 2}
+    - {fileID: 11400000, guid: 758390ec6089b7643964a608d815b89e, type: 2}
+    - {fileID: 11400000, guid: 30300cdbcc309104c98848642f4514c9, type: 2}
+    m_values: 06000000060000000600000006000000

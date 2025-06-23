@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc7fdcaf0d064a44a63ae46f1c83592, type: 3}
+  m_Name: Syrup
+  m_EditorClassIdentifier: 
+  foodName: "\u017Bywy syrop mleczny"
+  foodType: 2
+  maxLevels: 3
+  description: "Pozwala na zaaplikowanie w danym wyborze karty jej efekt\xF3w dwukrotnie"
+  image: {fileID: 21300000, guid: e167a041df6e2ac46beebee8ce15280d, type: 3}
+  price:
+    m_keys:
+    - {fileID: 11400000, guid: 758390ec6089b7643964a608d815b89e, type: 2}
+    - {fileID: 11400000, guid: 1b157c56b180b0544bab65a22165b658, type: 2}
+    - {fileID: 11400000, guid: 8f79f3ec0f656f54a9a2955263e9e156, type: 2}
+    m_values: 040000000200000005000000

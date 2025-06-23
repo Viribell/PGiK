@@ -6,6 +6,8 @@ public class GameResources : MonoBehaviour, IPersistentData {
 
     [field: SerializeField] public SerializableDictionary<ResourceSO, int> Resources { get; private set; }
 
+    [field: SerializeField] private ResourceSO gold;
+
     private void Awake() {
         if ( Instance == null ) { Instance = this; }
         else {
@@ -15,6 +17,10 @@ public class GameResources : MonoBehaviour, IPersistentData {
         }
 
         DontDestroyOnLoad( gameObject );
+    }
+
+    public void AddGold(int amount) {
+        AddToResource( gold, amount );
     }
 
     public int GetCount( ResourceSO resource ) {

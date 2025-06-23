@@ -31,6 +31,8 @@ public class SkillSO : ScriptableObject{
     [Header( "Skill Stats Info" )]
     [field: SerializeField] public SerializableDictionary<StatType, float> stats = new SerializableDictionary<StatType, float>();
 
+    [Header( "Skill Price" )]
+    [field: SerializeField] public SerializableDictionary<ResourceSO, int> price = new SerializableDictionary<ResourceSO, int>();
 
     private bool isEffectActive = false;
     private float timeLeft;

@@ -20,6 +20,24 @@ public class SkillControl : MonoBehaviour {
 
     }
 
+    private void Start() {
+        LoadUnlockedSkills();
+    }
+
+    private void LoadUnlockedSkills() {
+        List<SkillSO> unlockedSkills = SkillsSaveControl.Instance.GetUnlockedSkills();
+
+        if ( unlockedSkills == null || unlockedSkills.Count <= 0 ) return;
+
+        foreach(SkillSO skill in unlockedSkills) {
+            AddSkill( skill );
+        }
+    }
+
+    private void AddSkill( SkillSO skill ) {
+        availableSkills.Add( skill );
+    }
+
     private void InitAvailableSkills() {
         availableSkills = new List<SkillSO>();
 

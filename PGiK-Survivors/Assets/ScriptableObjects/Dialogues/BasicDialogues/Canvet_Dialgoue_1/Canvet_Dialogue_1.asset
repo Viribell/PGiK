@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedf68ddac03e2640a40b288d49a7636, type: 3}
   m_Name: Canvet_Dialogue_1
   m_EditorClassIdentifier: 
-  firstNode: {fileID: 0}
+  firstNode: {fileID: 11400000, guid: aec5221f8b62b4e4fbac87916aa63bc3, type: 2}
   typingSpeed: 0.04
   voiceSound: {fileID: 0}
   voicePitch: 1
