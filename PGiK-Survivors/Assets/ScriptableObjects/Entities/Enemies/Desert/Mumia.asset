@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mumia
   m_EditorClassIdentifier: 
   entityName: Mumia
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f21679b1a754d0645b521ccc2c0cb6c0, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,11 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
+    - 40
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 2
+    - 11
   enemyType: 13
   prefab: {fileID: 2170986007917083316, guid: 49dba382a8a33554ba70094dbcd4a7e1, type: 3}
+  spawnWeight: 2

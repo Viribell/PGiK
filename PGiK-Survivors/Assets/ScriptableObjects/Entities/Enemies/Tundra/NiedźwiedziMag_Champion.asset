@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Nied\u017AwiedziMag_Champion"
   m_EditorClassIdentifier: 
   entityName: "Nied\u017Awiedzi Mag"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d3d5210c4a95e9f4d85bc57ae24b883c, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
+    - 70
+    - 1
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 3
+    - 29
   enemyType: 38
   prefab: {fileID: 821440793115257786, guid: 2042c306cabd2814f86996cae008876d, type: 3}
-  spawnWeight: 0
+  spawnWeight: 2

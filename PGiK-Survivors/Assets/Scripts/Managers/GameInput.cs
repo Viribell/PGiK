@@ -39,8 +39,7 @@ public class GameInput : MonoBehaviour {
     }
 
     private void Player_Menu_performed( InputAction.CallbackContext obj ) {
-        SwitchToMap( ActionMapType.UI );
-        PauseControl.SetPause( true );
+        if ( FastMenuControl.Instance != null ) FastMenuControl.Instance.Activate();
     }
 
     private void InitActionMaps() {

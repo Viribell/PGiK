@@ -5,8 +5,12 @@ using UnityEngine;
 public class SkillBookInteractable : Interactable {
     protected override void Interact() {
         if ( !CanInteract() ) return;
-
-        SkillBookUI.Instance.Activate( RefCacheControl.Instance.Player );
+        
+        if( SkillControl.Instance.availableSkills.Count <= 0 ) {
+            GameResources.Instance.AddGold( 15 * LevelControl.Instance.levelStadium );
+        } else {
+            SkillBookUI.Instance.Activate( RefCacheControl.Instance.Player );
+        }
 
         Destroy( gameObject );
     }

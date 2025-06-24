@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedf68ddac03e2640a40b288d49a7636, type: 3}
   m_Name: Vulgo_Dialogue_1
   m_EditorClassIdentifier: 
-  firstNode: {fileID: 0}
+  firstNode: {fileID: 11400000, guid: 716b25e04dae3f247829adf9b8d23159, type: 2}
   typingSpeed: 0.04
   voiceSound: {fileID: 0}
   voicePitch: 1

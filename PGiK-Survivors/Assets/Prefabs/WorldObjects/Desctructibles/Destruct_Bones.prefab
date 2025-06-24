@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8570014910018603317}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.95522577, y: 0.9443709, z: 0.86838704}
   m_ConstrainProportionsScale: 0
@@ -195,6 +195,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 187d636dbf75f764b9380af595a4046a, type: 2}
   - {fileID: 11400000, guid: bfd9f70f516d75d4a86e723e3bd228f1, type: 2}
   - {fileID: 11400000, guid: 5b2f4aa9054d0d64f83c340c0835e342, type: 2}
+  - {fileID: 11400000, guid: 762b04471064d354090e843ecc5fd1a3, type: 2}
+  - {fileID: 11400000, guid: 24fffe35b27e31544a5410a92989f513, type: 2}
+  - {fileID: 11400000, guid: 1bf2343ad0386a0408094b14680c164a, type: 2}
   dropGoldFromRange: 0
   goldRangeMin: 0
   goldRangeMax: 0

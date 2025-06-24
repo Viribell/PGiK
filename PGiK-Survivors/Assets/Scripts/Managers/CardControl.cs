@@ -13,13 +13,19 @@ public class CardControl : MonoBehaviour {
 
     [field: SerializeField] private int maxCards = 3;
 
+    [Header( "Cards" )]
     [field: SerializeField] private List<CardSO> allCards;
     [field: SerializeField] private List<CardSO> currentCards;
+    [field: SerializeField] private List<CardSO> specialCards;
 
-
+    [Header("Food")]
+    [field: SerializeField] private SerializableDictionary<FoodSO, int> foodAmount;
+    [field: SerializeField] private List<FoodBox> foodBoxes;
 
     private List<CardBox> cardBoxes;
     private List<CardSO> rolledCards;
+
+    public FoodBox selectedFood;
 
     private void Awake() {
         if ( Instance == null ) { Instance = this; } 
@@ -36,7 +42,38 @@ public class CardControl : MonoBehaviour {
         currentCards = new List<CardSO>();
     }
 
+    private void DecreaseFood(FoodSO food) {
+        foodAmount[food] -= 1;
+    }
+
+    public bool IsFoodAvailable(FoodSO food) {
+        return foodAmount[food] > 0;
+    }
+
+    public int GetFoodLevel(FoodSO food) {
+        return foodAmount[food];
+    }
+
+    public bool UseFood(FoodSO food) {
+        if( IsFoodAvailable(food) ) {
+            DecreaseFood( food );
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void InitFoodBoxes() {
+        foreach(FoodBox box in foodBoxes) {
+            box.Init();
+        }
+    }
+
     private void Start() {
+        foodAmount = MaterialsSaveControl.Instance.GetFoodAmount();
+
+        InitFoodBoxes();
+
         AddClassCards();
 
         Shuffle( 1 );
@@ -78,6 +115,27 @@ public class CardControl : MonoBehaviour {
         }
     }
 
+    private void LockCard( CardSO card ) {
+        CardBox deletedBox = null;
+
+        foreach (CardBox box in cardBoxes) {
+            if ( box.card == card ) { deletedBox = box; break; }
+        }
+
+        DeleteCardBox( deletedBox );
+        rolledCards.Remove( card );
+        currentCards.Remove( card );
+
+        if ( cardBoxes.Count <= 0 ) Reroll();
+    }
+
+    private void DeleteCardBox(CardBox box) {
+        if ( box == null ) return;
+
+        cardBoxes.Remove( box );
+        Destroy( box.gameObject );
+    }
+
     private void ApplyCard( CardSO card ) {
         List<StatModifier> mods = card.GetMods();
 
@@ -93,14 +151,94 @@ public class CardControl : MonoBehaviour {
 
     public void OnCardClicked( CardSO card ) {
 
-        AddNextCards( card );
-        PurgeCards( card );
-        ApplyCard( card );
-        currentCards.Remove( card );
+        if ( card.cardType == CardType.Special ) { HandleSpecial( card ); return; }
+
+        if( selectedFood == null ) {
+            AddNextCards( card );
+            PurgeCards( card );
+            ApplyCard( card );
+            currentCards.Remove( card );
+
+            Deactivate();
+        } else {
+            HandleFoodEffects( selectedFood.food.foodType, card );
+        }
+    }
+
+    private void HandleSpecial(CardSO card) {
+        const string GOLD = "Z³oto";
+        const string HP = "¯ycie";
+
+        if( card.cardName == GOLD ) {
+            GameResources.Instance.AddGold( 10 );
+
+        } else if( card.cardName == HP ) {
+            RefCacheControl.Instance.Player.EntityHealth.Heal( 10 );
+        }
 
         Deactivate();
     }
 
+    public void HandleFoodEffects(FoodType type, CardSO card) {
+        switch ( type ) {
+            case FoodType.Stew: { UseStew( card ); } break;
+            case FoodType.Syrup: { UseSyrup( card );  } break;
+            case FoodType.Sunflower: { UseSunflower(); } break;
+            case FoodType.Cake: { UseCake(); } break;
+            case FoodType.Hotpot: { UseHotpot( card ); } break;
+        }
+    }
+
+    private void UseStew(CardSO card) {
+        LockCard( card );
+
+        ConsumeFood();
+    }
+    
+    private void UseSyrup(CardSO card) {
+        AddNextCards( card );
+        PurgeCards( card );
+        ApplyCard( card );
+        ApplyCard( card );
+        currentCards.Remove( card );
+
+        ConsumeFood();
+
+        Deactivate();
+    }
+
+    private void UseSunflower() {
+        Reroll();
+
+        ConsumeFood();
+    }
+
+    private void UseCake() { }
+
+    private void UseHotpot(CardSO card) {
+        AddNextCards( card );
+        PurgeCards( card );
+        ApplyCard( card );
+        currentCards.Remove( card );
+        ConsumeFood();
+        Deactivate();
+
+        RefCacheControl.Instance.Player.PlayerLevel.InstantLevelUp();
+    }
+
+    private void Reroll() {
+        ClearCards();
+        rolledCards.Clear();
+
+        RollCards();
+        ShowCards();
+    }
+
+    private void ConsumeFood() {
+        selectedFood.Unselect();
+        selectedFood.UseSuccess();
+        selectedFood = null;
+    }
     #endregion
 
     #region Shuffle
@@ -205,6 +343,8 @@ public class CardControl : MonoBehaviour {
 
         int stop = maxCards;
 
+        if ( currentCards.Count <= 0 ) { AddSpecial(); return; }
+
         if ( currentCards.Count < maxCards ) stop = currentCards.Count;
 
         while ( cardNumbers.Count < stop ) {
@@ -213,6 +353,12 @@ public class CardControl : MonoBehaviour {
 
         foreach(int number in cardNumbers) {
             rolledCards.Add( currentCards[number] );
+        }
+    }
+
+    private void AddSpecial() {
+        foreach ( CardSO card in specialCards ) {
+            rolledCards.Add( card );
         }
     }
 

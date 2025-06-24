@@ -25,8 +25,8 @@ MonoBehaviour:
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 4
+    - 9
   enemyType: 3
   prefab: {fileID: 5997179927613486670, guid: 5385c4212b819d244ba45d7d0782b5ef, type: 3}
   spawnWeight: 2

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cat crisps
   itemType: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9df9fa1fdb52bcd4ab2bd3c86445853c, type: 3}
   prefab: {fileID: 4055946743167568315, guid: 8312596481826d349a6838185ee95c3e, type: 3}
   usesDropChance: 1
-  dropChance: 0.18
+  dropChance: 0.08
   useAmount: 10

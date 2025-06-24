@@ -609,6 +609,8 @@ MonoBehaviour:
   <PlayerLevel>k__BackingField: {fileID: 3698321475478117947}
   <PlayerInteract>k__BackingField: {fileID: 3961173339132746835}
   classChange: {fileID: 11400000, guid: 374839f88c4e4d1479a40b6706be56a8, type: 2}
+  onHealthChanged: {fileID: 11400000, guid: baf89d567388b7e418ace656ba374b89, type: 2}
+  onMaxHealthChanged: {fileID: 0}
 --- !u!114 &1065960015998905340
 MonoBehaviour:
   m_ObjectHideFlags: 0

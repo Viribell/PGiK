@@ -16,5 +16,5 @@ MonoBehaviour:
   description: 
   isCompleted: 0
   currAmount: 0
-  requiredAmount: 100
+  requiredAmount: 2000
   <TrackedValue>k__BackingField: 0

@@ -28,13 +28,13 @@ public class SaveControl : MonoBehaviour {
     private Coroutine autoSaveCoroutine;
 
     private void Awake() {
-        if ( Instance == null ) { Instance = this; } 
-        else { 
+        if ( Instance != null && Instance != this ) { 
             Debug.LogWarning( "There is more than one instance of SaveControl. Destroying the new one." );
             Destroy( gameObject );
             return;
         }
 
+        Instance = this;
         DontDestroyOnLoad( gameObject );
 
         dataSaveHandler = new SaveToFile( saveName );
@@ -105,6 +105,7 @@ public class SaveControl : MonoBehaviour {
 
 
         foreach ( IPersistentData persistentData in persistentDataObjects ) {
+            //Debug.Log( $"Saving: {persistentData.GetType()} ({( persistentData as MonoBehaviour )?.GetInstanceID()})" );
             persistentData.SaveData( saveData );
         }
 

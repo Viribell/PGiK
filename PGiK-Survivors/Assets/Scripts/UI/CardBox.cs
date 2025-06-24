@@ -7,7 +7,7 @@ public class CardBox : MonoBehaviour {
     [field: SerializeField] private TextMeshProUGUI nameText;
     [field: SerializeField] private TextMeshProUGUI contentText;
 
-    private CardSO card;
+    public CardSO card;
     private CardControl cardControlRef;
 
     public void Init( CardSO card, CardControl control ) {

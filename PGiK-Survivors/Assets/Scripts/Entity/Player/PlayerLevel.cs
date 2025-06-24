@@ -25,6 +25,9 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
     private List<StatModifier> classLvlMods;
 
+    public float GetCurrXP() { return currXP; }
+    public float GetRequiredXP() { return requiredXP; }
+
     private void Start() {
         if ( level <= 0 ) level = 1;
 
@@ -51,6 +54,10 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
         GainXP( 20 );
         AudioManager.Instance.PlayPoolSound( playerController.EntityAudio?.GetSoundData( EntitySoundType.Undefined ), transform.position ); // TEMP_TEST_TO_ERASE
         playerController.EntityHealth.Damage( 10 );
+    }
+
+    public void InstantLevelUp() {
+        GainXP( requiredXP - currXP );
     }
 
     public void LevelUp() {

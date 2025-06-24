@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jaskiniowiec_Champion
   m_EditorClassIdentifier: 
   entityName: Jaskiniowiec
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 4e4cac10a9dac9649aecf6c2086ecf46, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
+    - 100
+    - 2
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 3
+    - 15
   enemyType: 42
   prefab: {fileID: 5631578290788030266, guid: 0cd7942adbf482f43b8d02c6d0abdca5, type: 3}
-  spawnWeight: 0
+  spawnWeight: 1

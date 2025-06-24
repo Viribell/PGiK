@@ -449,6 +449,12 @@ public class AudioManager : MonoBehaviour, IPersistentData {
     }
 
     public void SaveData( SaveData data ) {
+        if ( this != AudioManager.Instance ) {
+            Debug.Log( "Wrong instance saving!" );
+            return;
+        }
+
+
         data.audioData.masterVolume = GetMasterVolume();
         data.audioData.musicVolume = GetMusicVolume();
         data.audioData.effectsVolume = GetEffectsVolume();

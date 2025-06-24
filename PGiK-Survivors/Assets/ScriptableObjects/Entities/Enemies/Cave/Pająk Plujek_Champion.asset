@@ -13,20 +13,23 @@ MonoBehaviour:
   m_Name: "Paj\u0105k Plujek_Champion"
   m_EditorClassIdentifier: 
   entityName: "Paj\u0105k Plujek"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d3b9769cde52d794b99b9d944f5774e8, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
-  possibleEffects: []
+  possibleEffects:
+  - {fileID: 11400000, guid: 4b67fc8a504e2ff4db1dc68087a9d5ab, type: 2}
   statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
   stats:
-    m_keys: 00000000020000000300000004000000050000000b000000
+    m_keys: 00000000020000000300000004000000050000000b0000000d00000011000000
     m_values:
-    - 30
-    - 0
+    - 100
+    - 2
     - 0.01
     - 0.1
-    - 1
     - 5
+    - 14
+    - 0.4
+    - 0.07
   enemyType: 43
   prefab: {fileID: 5767906019356314030, guid: ab2be5eacc7be0247ad6d24c5595109b, type: 3}
-  spawnWeight: 0
+  spawnWeight: 2

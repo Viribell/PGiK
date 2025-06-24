@@ -33,3 +33,8 @@ MonoBehaviour:
     - 6
     - 4
     - 0.08
+  price:
+    m_keys:
+    - {fileID: 11400000, guid: 24f665f24fdba4b499f5db476ebe7500, type: 2}
+    - {fileID: 11400000, guid: 227b68208580549478804e6707b7a890, type: 2}
+    m_values: 0400000002000000

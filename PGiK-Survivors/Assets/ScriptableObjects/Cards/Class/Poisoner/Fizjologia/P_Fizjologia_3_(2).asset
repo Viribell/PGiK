@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: P_Fizjologia_3_(2)
+  m_EditorClassIdentifier: 
+  cardName: Fizjologia_3 (2)
+  cardContent: "+ 3 jednostek poruszania si\u0119"
+  cardType: 2
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 25
+  nextCards:
+  - {fileID: 11400000, guid: 022acaf6464ab15459b9ccbaa273d3c8, type: 2}
+  - {fileID: 11400000, guid: 5766b235ceaaea544bc39fa4b3581992, type: 2}
+  cardsToLock:
+  - {fileID: 11400000, guid: f0cf97ab0f9e3b746afdd006349861a6, type: 2}
+  <Mods>k__BackingField:
+  - basicValue: 0
+    value: 3
+    affectedStat: 5
+    type: 100
+    applyOrder: 0

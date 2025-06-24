@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <availableQuests>k__BackingField:
+  - {fileID: 11400000, guid: 1c0a2c6e6dbe1a0479cd14e07a9e83f5, type: 2}
+  - {fileID: 11400000, guid: f055142545c9aec4ebd21de0e8d0387d, type: 2}
   - {fileID: 11400000, guid: f5cdb24ad85e9754e8d72f9fa72c1e1c, type: 2}
-  - {fileID: 11400000, guid: aa9ac5f95eb96e0478a4f3d35011b922, type: 2}
   - {fileID: 11400000, guid: a66620cc01974b54f89b057a92535670, type: 2}
   quests:
     m_keys: []

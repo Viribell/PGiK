@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: "Archer_W\u0142adanie Broni\u0105_1_(1)"
+  m_EditorClassIdentifier: 
+  cardName: "W\u0142adanie Broni\u0105_1 (1)"
+  cardContent: "+ 15% obra\u017Ce\u0144"
+  cardType: 2
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 5
+  nextCards:
+  - {fileID: 11400000, guid: 873fb76f870d13a4080a6c19a96227ae, type: 2}
+  - {fileID: 11400000, guid: 31e5385dbcf582b4c962a21e5e836c86, type: 2}
+  cardsToLock:
+  - {fileID: 11400000, guid: c9a428620c12e7047bf657b5cd5ee200, type: 2}
+  <Mods>k__BackingField:
+  - basicValue: 0
+    value: 0.15
+    affectedStat: 11
+    type: 300
+    applyOrder: 0

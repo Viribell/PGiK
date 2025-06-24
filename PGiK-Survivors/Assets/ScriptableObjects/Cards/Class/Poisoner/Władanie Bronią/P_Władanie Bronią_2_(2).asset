@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1a32f73480a247a581aa4ce915963, type: 3}
+  m_Name: "P_W\u0142adanie Broni\u0105_2_(2)"
+  m_EditorClassIdentifier: 
+  cardName: "W\u0142adanie Broni\u0105_2 (2)"
+  cardContent: + 25% ilosci ataku
+  cardType: 2
+  cardLevel: 1
+  cardMaxLevel: 5
+  unlockLevel: 15
+  nextCards:
+  - {fileID: 11400000, guid: 5c7a290a97247924eb36ba5ddc1822b2, type: 2}
+  - {fileID: 11400000, guid: 230a8f7578a180c41b7b597cd7b64ae8, type: 2}
+  cardsToLock:
+  - {fileID: 11400000, guid: 0527fb94bcdba144b987ff0a4922f2e5, type: 2}
+  <Mods>k__BackingField:
+  - basicValue: 0
+    value: 0.25
+    affectedStat: 8
+    type: 300
+    applyOrder: 0

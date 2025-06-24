@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669495571734286985}
   - component: {fileID: 5358439571956378443}
-  - component: {fileID: 6447363127636904998}
+  - component: {fileID: 6750052740342252031}
   m_Layer: 0
   m_Name: DropBehaviours
   m_TagString: Untagged
@@ -48,15 +48,19 @@ MonoBehaviour:
   dropList:
   - {fileID: 11400000, guid: df83350a89119cf47bad9f3bea3417d7, type: 2}
   - {fileID: 11400000, guid: 76ce40ee88f0d2d4ca43ec2938815f3c, type: 2}
-  - {fileID: 11400000, guid: 76ce40ee88f0d2d4ca43ec2938815f3c, type: 2}
+  - {fileID: 11400000, guid: 032391a80a9de7842924aa663ceba263, type: 2}
+  - {fileID: 11400000, guid: 032391a80a9de7842924aa663ceba263, type: 2}
+  - {fileID: 11400000, guid: 032391a80a9de7842924aa663ceba263, type: 2}
+  - {fileID: 11400000, guid: 032391a80a9de7842924aa663ceba263, type: 2}
+  - {fileID: 11400000, guid: a2d6cf21f74d04847bdcdc5f7582ed82, type: 2}
   dropGoldFromRange: 1
-  goldRangeMin: 1
-  goldRangeMax: 9
+  goldRangeMin: 30
+  goldRangeMax: 50
   bulkGoldAmount: 0
   useMapPhaseFactor: 0
   limitNumberOfDrops: 0
   maxNumberOfDrops: 2
---- !u!114 &6447363127636904998
+--- !u!114 &6750052740342252031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,12 +73,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropList:
-  - {fileID: 11400000, guid: bd26a6f18a07de14fb04b02bde22fd79, type: 2}
+  - {fileID: 11400000, guid: 6b48d42d4d8daee43bc98334240761ec, type: 2}
   dropGoldFromRange: 0
   goldRangeMin: 0
   goldRangeMax: 0
   bulkGoldAmount: 0
-  useMapPhaseFactor: 1
+  useMapPhaseFactor: 0
   limitNumberOfDrops: 0
   maxNumberOfDrops: 2
 --- !u!1 &5044344317739261095
@@ -129,7 +133,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 101f4817518a86b4c9357acb2e63ab53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,12 +293,14 @@ MonoBehaviour:
   entityType: 1
   <SpriteRenderer>k__BackingField: {fileID: 2581829480271781378}
   <EntityData>k__BackingField: {fileID: 11400000, guid: f2740eb388d52974f8f3d2fddcb1052b, type: 2}
+  <DefaultEntityData>k__BackingField: {fileID: 0}
   <EntityAudio>k__BackingField: {fileID: 0}
   <EntityStats>k__BackingField: {fileID: 7987319441138575503}
   <EntityStatuses>k__BackingField: {fileID: 1798504886329700275}
   <EntityHealth>k__BackingField: {fileID: 7479040351646751092}
   <EntityMove>k__BackingField: {fileID: 5216052972438281154}
   <EntityAttack>k__BackingField: {fileID: 0}
+  <EntitySkills>k__BackingField: {fileID: 0}
   attackTarget: {fileID: 0}
   <Enemy>k__BackingField: {fileID: 6281222796275563890}
   canWalk: 1
@@ -374,4 +380,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropBehaviours:
   - {fileID: 5358439571956378443}
-  - {fileID: 6447363127636904998}
+  - {fileID: 6750052740342252031}

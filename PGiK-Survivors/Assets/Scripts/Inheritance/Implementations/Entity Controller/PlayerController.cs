@@ -13,6 +13,8 @@ public class PlayerController : EntityController {
     [HideInInspector] public ClassSO DefaultPlayerData { get { return ( ClassSO )DefaultEntityData; } }
 
     [field: SerializeField] private EventChannelSO classChange;
+    [field: SerializeField] private EventChannelSO onHealthChanged;
+    [field: SerializeField] private EventChannelSO onMaxHealthChanged;
 
     private bool wasRevived = false;
 
@@ -25,6 +27,7 @@ public class PlayerController : EntityController {
         wasRevived = false;
 
         EntityStats.AddStatMod( UpgradesControl.Instance.GetStatMods(), StatModHandlingOptions.NoDuplicateModAdd );
+        if ( BasicUiControl.Instance != null ) BasicUiControl.Instance.Init();
     }
 
     protected override void UploadControllerToComponents() {
@@ -39,6 +42,7 @@ public class PlayerController : EntityController {
         PlayerPickup.ReloadEntityData();
         PlayerLevel.ReloadEntityData();
         PlayerInteract.ReloadEntityData();
+        if( BasicUiControl.Instance != null ) BasicUiControl.Instance.Init();
     }
 
     public override Vector2 GetMoveVector() {
@@ -62,17 +66,20 @@ public class PlayerController : EntityController {
     }
 
     public override void OnHealthChanged() {
-        
+        onMaxHealthChanged?.Raise();
     }
 
     public override void OnDamaged( float value ) {
         if ( value < 0 ) return;
 
         QuestControl.Instance.UpdateValuesQuests( TrackedType.DamageTaken, value );
+        onHealthChanged?.Raise();
     }
 
     public override void OnHealed( float value ) {
         if ( value < 0 ) return;
+
+        onHealthChanged?.Raise();
     }
 
     public override void OnStatEdgeCase( StatType type ) {

@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
+    - 15
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 8
+    - 8
   enemyType: 4
   prefab: {fileID: 3127866700819567263, guid: 46d0c98304c011d4ab6dd65417777d39, type: 3}
   spawnWeight: 1

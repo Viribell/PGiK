@@ -14,37 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: "\u0141ucznik"
   sprite: {fileID: 21300000, guid: 8031f814df267af4abe69951ad06d17c, type: 3}
-  attackPrefab: {fileID: 3026408821484555709, guid: 044225e51373ea042b1af3ea636ec55e, type: 3}
+  attackPrefab: {fileID: 5956341826649419458, guid: a4fb46d2c376ec643989ffc0c26e1d3b, type: 3}
   spreadAngle: 30
   possibleEffects: []
   statsTemplate: {fileID: 11400000, guid: 4e2b498869f230547ae1a56ac338d211, type: 2}
   stats:
     m_keys: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000
     m_values:
-    - 250
-    - 0.2
+    - 200
+    - 0.3
     - 2
-    - 0.05
-    - 0.5
-    - 10
-    - 1.5
+    - 0.1
+    - 0.6
+    - 8
+    - 2
+    - 1.2
+    - 3
     - 1
-    - 1
-    - 1
+    - 7
     - 5
-    - 10
-    - 0
-    - 0
+    - 1
+    - 1
     - 1
     - 1
     - 0
     - 0
-    - 1
+    - 0
     - 0
     - 0.05
     - 0.05
   <levelUpMods>k__BackingField:
-  - value: 10
-    affectedStat: 0
-    type: 100
+  - basicValue: 0
+    value: 0.05
+    affectedStat: 4
+    type: 300
     applyOrder: 0
+  <classCards>k__BackingField:
+  - {fileID: 11400000, guid: 793dc98b6bf96604ba8dd62e6798f735, type: 2}
+  - {fileID: 11400000, guid: 6933e5b3edda01e4397018d4263d614b, type: 2}
+  - {fileID: 11400000, guid: 22b0b510e775fb747aa99dccf10a0d13, type: 2}
+  - {fileID: 11400000, guid: c24708ec183c5ab40bb822df49cb45ab, type: 2}
+  - {fileID: 11400000, guid: 3a350f5104b0c0f428b67f52e97049a5, type: 2}
+  - {fileID: 11400000, guid: c9a428620c12e7047bf657b5cd5ee200, type: 2}

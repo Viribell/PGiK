@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Szkielet
   m_EditorClassIdentifier: 
   entityName: Szkielet
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 434f01f3bc9b20a43b551c231e77eeea, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -25,8 +25,8 @@ MonoBehaviour:
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 3
+    - 7
   enemyType: 6
   prefab: {fileID: 3765885653953370757, guid: 7698af2ac7144254da3c51b19ec4fa7e, type: 3}
-  spawnWeight: 0
+  spawnWeight: 1

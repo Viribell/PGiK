@@ -128,12 +128,14 @@ MonoBehaviour:
   entityType: 1
   <SpriteRenderer>k__BackingField: {fileID: 2508719522653077570}
   <EntityData>k__BackingField: {fileID: 11400000, guid: 4e67383c4cbb08f42920372800504582, type: 2}
+  <DefaultEntityData>k__BackingField: {fileID: 0}
   <EntityAudio>k__BackingField: {fileID: 0}
   <EntityStats>k__BackingField: {fileID: 5688151578464189681}
   <EntityStatuses>k__BackingField: {fileID: 5369638753546069615}
   <EntityHealth>k__BackingField: {fileID: 7028282733726833116}
   <EntityMove>k__BackingField: {fileID: 4677962978047990631}
   <EntityAttack>k__BackingField: {fileID: 0}
+  <EntitySkills>k__BackingField: {fileID: 0}
   attackTarget: {fileID: 0}
   <Enemy>k__BackingField: {fileID: 6440841553676878}
   canWalk: 1
@@ -213,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropBehaviours:
   - {fileID: 8837195500543767804}
-  - {fileID: 4150430789853345824}
+  - {fileID: 0}
 --- !u!1 &6023831617121253959
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +268,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 101f4817518a86b4c9357acb2e63ab53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -308,7 +310,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3430998289051324005}
   - component: {fileID: 8837195500543767804}
-  - component: {fileID: 4150430789853345824}
   m_Layer: 0
   m_Name: DropBehaviours
   m_TagString: Untagged
@@ -345,33 +346,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropList:
   - {fileID: 11400000, guid: df83350a89119cf47bad9f3bea3417d7, type: 2}
-  - {fileID: 11400000, guid: 76ce40ee88f0d2d4ca43ec2938815f3c, type: 2}
-  - {fileID: 11400000, guid: 76ce40ee88f0d2d4ca43ec2938815f3c, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: 26a9852f43ccf144bb0233f5fe26d7ba, type: 2}
+  - {fileID: 11400000, guid: a2d6cf21f74d04847bdcdc5f7582ed82, type: 2}
   dropGoldFromRange: 1
   goldRangeMin: 1
   goldRangeMax: 9
   bulkGoldAmount: 0
   useMapPhaseFactor: 0
-  limitNumberOfDrops: 0
-  maxNumberOfDrops: 2
---- !u!114 &4150430789853345824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6958965019026499740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ee8154bedde0b42adbbbf182472aba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropList:
-  - {fileID: 11400000, guid: bd26a6f18a07de14fb04b02bde22fd79, type: 2}
-  dropGoldFromRange: 0
-  goldRangeMin: 0
-  goldRangeMax: 0
-  bulkGoldAmount: 0
-  useMapPhaseFactor: 1
   limitNumberOfDrops: 0
   maxNumberOfDrops: 2

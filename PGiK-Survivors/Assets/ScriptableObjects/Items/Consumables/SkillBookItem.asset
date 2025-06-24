@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c25f4e41df50429a1881d74578f2e, type: 3}
+  m_Name: SkillBookItem
+  m_EditorClassIdentifier: 
+  itemName: SkillBook
+  itemType: 5
+  sprite: {fileID: 21300000, guid: f62a4ee33e506c841a600dfc59261f82, type: 3}
+  prefab: {fileID: 8556961502794184966, guid: e7560744781da2f4584f454de8a0cd6e, type: 3}
+  usesDropChance: 1
+  dropChance: 1
+  useAmount: 1
