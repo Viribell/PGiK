@@ -13,19 +13,23 @@ MonoBehaviour:
   m_Name: Dertem
   m_EditorClassIdentifier: 
   entityName: Dertem
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 129503d05518fd14db7fe2a5b4fafab7, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
-  possibleEffects: []
+  possibleEffects:
+  - {fileID: 11400000, guid: ed2b09a2c652b2b4d9f711092c963bb7, type: 2}
   statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
   stats:
-    m_keys: 00000000020000000300000004000000050000000b000000
+    m_keys: 00000000020000000300000004000000050000000b0000000c00000010000000
     m_values:
-    - 30
-    - 0
-    - 0.01
-    - 0.1
-    - 1
+    - 300
     - 5
-  enemyType: 25
+    - 0.1
+    - 0.2
+    - 5
+    - 20
+    - 1.5
+    - 0.1
+  enemyType: 47
   prefab: {fileID: 2865282122434126760, guid: b7e6ac68781d3f347ad24cb96fac5107, type: 3}
+  spawnWeight: 0

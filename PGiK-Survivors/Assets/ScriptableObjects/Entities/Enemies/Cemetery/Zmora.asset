@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: Zmora
   m_EditorClassIdentifier: 
   entityName: Zmora
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ae1f8917feb54954aa46d49b13ac3c20, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
-  possibleEffects: []
+  possibleEffects:
+  - {fileID: 11400000, guid: 7e191fb46894657428e3dfc490792d17, type: 2}
   statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
   stats:
-    m_keys: 00000000020000000300000004000000050000000b000000
+    m_keys: 00000000020000000300000004000000050000000b00000013000000
     m_values:
     - 30
     - 0
     - 0.01
     - 0.1
-    - 1
+    - 2
     - 5
+    - 0.05
   enemyType: 7
   prefab: {fileID: 6671406090680763705, guid: a7d7fd7e9c097cc4c95c584e96de8b36, type: 3}
+  spawnWeight: 2

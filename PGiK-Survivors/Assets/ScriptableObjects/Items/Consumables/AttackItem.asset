@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c25f4e41df50429a1881d74578f2e, type: 3}
+  m_Name: AttackItem
+  m_EditorClassIdentifier: 
+  itemName: Attack_Item
+  itemType: 6
+  sprite: {fileID: 0}
+  prefab: {fileID: 3990650449215707305, guid: 0762a3ce9addf644c8bdd34bc1602818, type: 3}
+  usesDropChance: 1
+  dropChance: 0.03
+  useAmount: 1

@@ -53,6 +53,7 @@ public class SkillBookUI : MonoBehaviour {
     public void Activate(EntityController source) {
         choosingEntity = source;
         GameInput.Instance.SwitchToMap( ActionMapType.Dummy );
+        PauseControl.SetPause( true );
         skillBookUI.SetActive( true );
         isUiActive = true;
         LoadSkills();
@@ -62,6 +63,7 @@ public class SkillBookUI : MonoBehaviour {
         UnloadSkills();
         GameInput.Instance.SwitchToMap( ActionMapType.Player );
         skillBookUI.SetActive( false );
+        PauseControl.SetPause( false );
         isUiActive = false;
     }
 

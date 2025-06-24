@@ -23,15 +23,15 @@ MonoBehaviour:
     m_values:
     - 250
     - 0.2
-    - 2
+    - 4
     - 0.05
     - 0.5
-    - 10
+    - 7
     - 1.5
     - 1
     - 1
     - 1
-    - 5
+    - 4
     - 10
     - 0
     - 0
@@ -44,7 +44,8 @@ MonoBehaviour:
     - 0.05
     - 0.05
   <levelUpMods>k__BackingField:
-  - value: 10
+  - basicValue: 0
+    value: 10
     affectedStat: 0
     type: 100
     applyOrder: 0

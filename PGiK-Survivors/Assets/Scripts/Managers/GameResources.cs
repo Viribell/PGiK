@@ -59,6 +59,11 @@ public class GameResources : MonoBehaviour, IPersistentData {
     }
 
     public void SaveData( SaveData data ) {
+        if ( this != GameResources.Instance ) {
+            Debug.Log( "Wrong instance saving!" );
+            return;
+        }
+
         data.resources.Clear();
 
         foreach ( KeyValuePair<ResourceSO, int> entry in Resources) {

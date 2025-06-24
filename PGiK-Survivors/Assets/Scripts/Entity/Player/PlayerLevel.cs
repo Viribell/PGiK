@@ -25,6 +25,9 @@ public class PlayerLevel : MonoBehaviour, IEntityComponent {
 
     private List<StatModifier> classLvlMods;
 
+    public float GetCurrXP() { return currXP; }
+    public float GetRequiredXP() { return requiredXP; }
+
     private void Start() {
         if ( level <= 0 ) level = 1;
 

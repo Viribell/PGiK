@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Lataj\u0105caRyba"
   m_EditorClassIdentifier: 
   entityName: "Lataj\u0105ca Ryba"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d832b45121815534898ef94ea74b5417, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,11 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
+    - 20
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 7
+    - 8
   enemyType: 15
   prefab: {fileID: 4921578646021092170, guid: 1ad909a6c099af747bcc00277329bde5, type: 3}
+  spawnWeight: 3

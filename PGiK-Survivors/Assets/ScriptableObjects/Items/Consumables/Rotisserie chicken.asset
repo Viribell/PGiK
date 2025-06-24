@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rotisserie chicken
   itemType: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 801d8b26c79fdb6409e0c8e78a032083, type: 3}
   prefab: {fileID: 3299415955707264844, guid: 73dfa8f31ac4a7440bc04cb5d909546f, type: 3}
   usesDropChance: 1
-  dropChance: 0.1
+  dropChance: 0.05
   useAmount: 25

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u017BywyKaktus_Champion"
   m_EditorClassIdentifier: 
   entityName: "\u017Bywy Kaktus"
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2beb8418501977442a5d5b21c17de4b4, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
+    - 100
     - 0
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 2
+    - 15
   enemyType: 34
   prefab: {fileID: 4731914552247040145, guid: ad52908313c60b14b9b26079a6f828ae, type: 3}
-  spawnWeight: 0
+  spawnWeight: 1

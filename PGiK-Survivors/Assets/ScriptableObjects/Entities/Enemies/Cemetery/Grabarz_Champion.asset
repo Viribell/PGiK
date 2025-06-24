@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Grabarz_Champion
   m_EditorClassIdentifier: 
   entityName: Grabarz
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e2bcf04cabd71514385aab292a25cafb, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
+    - 112
+    - 1
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 3
+    - 15
   enemyType: 32
   prefab: {fileID: 8337442635761463020, guid: c63e2a44229b15e4084952992a293daf, type: 3}
-  spawnWeight: 0
+  spawnWeight: 1

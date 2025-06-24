@@ -65,6 +65,11 @@ public class GameState : MonoBehaviour, IPersistentData {
     }
 
     public void SaveData( SaveData data ) {
+        if ( this != GameState.Instance ) {
+            Debug.Log( "Wrong instance saving!" );
+            return;
+        }
+
         data.availableNPC.Clear();
 
         foreach ( KeyValuePair<NPCSO, bool> entry in availableNPC ) {

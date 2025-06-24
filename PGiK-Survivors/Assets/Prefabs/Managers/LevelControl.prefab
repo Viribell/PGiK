@@ -51,6 +51,7 @@ MonoBehaviour:
   worldScroll: {fileID: 0}
   compassUI: {fileID: 0}
   skillBookPrefab: {fileID: 4398166875561781046, guid: e7560744781da2f4584f454de8a0cd6e, type: 3}
+  relatedQuest: {fileID: 0}
   currentWave: []
   stadiumMods:
   - basicValue: 0
@@ -86,8 +87,8 @@ MonoBehaviour:
   spawnMulitpleOnTick: 1
   spawnChancePerStadium: 0.05
   maxEnemyTypes: 3
-  baseSpawnChance: 0.5
-  enemySpawnTime: 1.5
+  baseSpawnChance: 0.55
+  enemySpawnTime: 1.3
   enemySpawnDistance: 15
   enemySpawnDistanceMin: 15
   possibleChampions:

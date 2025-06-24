@@ -5,6 +5,7 @@ public class ClassStandInteractable : Interactable {
     [field: SerializeField] private ClassSO playerClass;
     [field: SerializeField] private SpriteRenderer spriteRenderer;
     [field: SerializeField] private EventChannelSO eventChannel;
+    [field: SerializeField] private QuestSO relatedQuest;
 
     [Header("State")]
     [field: SerializeField] private bool isUnlocked = true;
@@ -13,8 +14,15 @@ public class ClassStandInteractable : Interactable {
     private void Awake() {
         if ( playerClass != null ) Init();
 
-        gameObject.SetActive( isUnlocked );
         gameObject.SetActive( !isChosen );
+    }
+
+    private void Start() {
+        if ( relatedQuest != null ) {
+            isUnlocked = QuestControl.Instance.IsQuestCompleted( relatedQuest );
+        }
+
+        gameObject.SetActive( isUnlocked );
     }
 
     public void Init() {

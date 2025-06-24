@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fenek_Champion
   m_EditorClassIdentifier: 
   entityName: Fenek
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 80e2d9121fc20a345a67104fea3b68f8, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
+    - 80
+    - 1
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 8
+    - 15
   enemyType: 36
   prefab: {fileID: 4729952404885523912, guid: e034fa645b080dd4a84cfef9c1989775, type: 3}
-  spawnWeight: 0
+  spawnWeight: 1

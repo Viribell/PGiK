@@ -11,6 +11,9 @@ public class QuestControl : MonoBehaviour, IPersistentData {
     private List<KillQuestSO> killQuests;
     private List<TrackValueQuestSO> valueQuests;
 
+    public const string BEAT_SANCOEM = "Beat_Sancoem";
+    public const string BEAT_ARANTRUMRRA = "Beat_Arantrumrra";
+
     private void Awake() {
         if ( Instance == null ) { Instance = this; } else {
             Debug.LogWarning( "There is more than one instance of QuestControl. Destroying the new one." );
@@ -62,6 +65,11 @@ public class QuestControl : MonoBehaviour, IPersistentData {
         }
     }
 
+    public void UpdateGoalQuest( string quest ) {
+        GoalQuestSO goal = ( GoalQuestSO )quests[quest];
+        goal?.OnGoalReached();
+    }
+
     #region SaveLoad
     public void LoadData( SaveData data ) {
         List<QuestSaveData> questDataList = data.quests;
@@ -90,6 +98,11 @@ public class QuestControl : MonoBehaviour, IPersistentData {
     }
 
     public void SaveData( SaveData data ) {
+        if( this != QuestControl.Instance ) {
+            Debug.Log( "Wrong instance saving!" );
+            return;
+        }
+
         data.quests.Clear();
 
         foreach ( KeyValuePair<string, QuestSO> quest in quests ) {

@@ -27,6 +27,8 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
 
     //it prolly should be in Update(), but for now it will use this
     private void FixedUpdate() {
+        if ( PauseControl.IsGamePaused ) return;
+
         if( entityController.EntityStats.GetStatTotal( StatType.Regeneration ) > 0.0f ) StartHPRegeneration();
     }
 
@@ -96,6 +98,8 @@ public class EntityHealth : MonoBehaviour, IEntityComponent {
     private bool IsInvincible() { return lastTimeDamaged + invincibilityTime >= Time.time; }
     private bool IsDead() { return currHealth <= 0; }
     private bool IsFullHealth() { return currHealth >= maxHealth; }
+    public float GetCurrentHealth() { return currHealth; }
+    public float GetMaxHealth() { return maxHealth; }
 
     public void LoadEntityController( EntityController controller ) {
         entityController = controller;

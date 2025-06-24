@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -72,6 +70,7 @@ public class LevelControl : MonoBehaviour, IPersistentData {
     [field: SerializeField] private WorldScroll worldScroll;
     [field: SerializeField] private GameObject compassUI;
     [field: SerializeField] private SkillBookInteractable skillBookPrefab;
+    [field: SerializeField] private QuestSO relatedQuest;
 
     [Header( "Level State" )]
     [field: SerializeField] private List<EnemySO> currentWave;
@@ -351,6 +350,10 @@ public class LevelControl : MonoBehaviour, IPersistentData {
         MarkLevelBeaten();
 
         SpawnPortal();
+
+        if( relatedQuest != null ) {
+            QuestControl.Instance.UpdateGoalQuest( relatedQuest.questId );
+        }
     }
 
     private void SpawnPortal() {

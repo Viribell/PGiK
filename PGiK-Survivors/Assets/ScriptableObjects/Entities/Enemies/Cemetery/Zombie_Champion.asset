@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zombie_Champion
   m_EditorClassIdentifier: 
   entityName: Zombie
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b50faf7baaef26c4281fa672baa66312, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,12 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
+    - 120
+    - 2
     - 0.01
     - 0.1
-    - 1
-    - 5
+    - 2
+    - 20
   enemyType: 30
   prefab: {fileID: 6682612253365246071, guid: 7359168c29f9d3840b7c138b69100c2d, type: 3}
-  spawnWeight: 0
+  spawnWeight: 2

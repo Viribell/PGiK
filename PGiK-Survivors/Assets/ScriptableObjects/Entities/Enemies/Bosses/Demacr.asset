@@ -13,19 +13,23 @@ MonoBehaviour:
   m_Name: Demacr
   m_EditorClassIdentifier: 
   entityName: Demacr
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e534abab4ace13b4a830ed2b44e97a66, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
-  possibleEffects: []
+  possibleEffects:
+  - {fileID: 11400000, guid: 4b67fc8a504e2ff4db1dc68087a9d5ab, type: 2}
   statsTemplate: {fileID: 11400000, guid: 271cd1f7de2ae76419ef5d19c86c4654, type: 2}
   stats:
-    m_keys: 00000000020000000300000004000000050000000b000000
+    m_keys: 00000000020000000300000004000000050000000b000000110000000d000000
     m_values:
-    - 30
-    - 0
-    - 0.01
-    - 0.1
-    - 1
+    - 350
     - 5
-  enemyType: 27
+    - 0.1
+    - 0.2
+    - 5
+    - 25
+    - 0.1
+    - 1.5
+  enemyType: 49
   prefab: {fileID: 489954049524973301, guid: 7e368f702dbd91e4eb19b82c163f8c2b, type: 3}
+  spawnWeight: 0

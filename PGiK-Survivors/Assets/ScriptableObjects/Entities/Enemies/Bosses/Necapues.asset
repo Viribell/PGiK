@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Necapues
   m_EditorClassIdentifier: 
   entityName: Necapues
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: be7194198c15bac408a588e6ba15fade, type: 3}
   attackPrefab: {fileID: 0}
   spreadAngle: 30
   possibleEffects: []
@@ -21,11 +21,12 @@ MonoBehaviour:
   stats:
     m_keys: 00000000020000000300000004000000050000000b000000
     m_values:
-    - 30
-    - 0
-    - 0.01
-    - 0.1
-    - 1
+    - 350
     - 5
-  enemyType: 24
+    - 0.1
+    - 0.2
+    - 7
+    - 35
+  enemyType: 46
   prefab: {fileID: 3512873051125568382, guid: 5cb6a09833e9af94180d4315a21b8338, type: 3}
+  spawnWeight: 0
